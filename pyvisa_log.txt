@@ -1,0 +1,211 @@
+2024-02-26 16:10:24,859 - DEBUG - No visa library specified, trying to find alternatives.
+2024-02-26 16:10:24,859 - DEBUG - Environment variable PYVISA_LIBRARY is unset.
+2024-02-26 16:10:24,867 - DEBUG - No user defined configuration
+2024-02-26 16:10:24,872 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:10:24,873 - DEBUG - No user defined library files
+2024-02-26 16:10:24,873 - DEBUG - The IVI implementation available
+2024-02-26 16:10:24,873 - DEBUG - No user defined configuration
+2024-02-26 16:10:24,878 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:10:24,879 - DEBUG - No user defined library files
+2024-02-26 16:10:24,883 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:10:24,883 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-26 16:10:24,935 - DEBUG - viOpenDefaultRM('<ViObject object at 0x00000201A0CD96C0>',) -> 0
+2024-02-26 16:10:24,936 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:10:24,936 - DEBUG - No visa library specified, trying to find alternatives.
+2024-02-26 16:10:24,936 - DEBUG - Environment variable PYVISA_LIBRARY is unset.
+2024-02-26 16:10:24,936 - DEBUG - No user defined configuration
+2024-02-26 16:10:24,944 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:10:24,945 - DEBUG - No user defined library files
+2024-02-26 16:10:24,945 - DEBUG - The IVI implementation available
+2024-02-26 16:10:24,946 - DEBUG - No user defined configuration
+2024-02-26 16:10:24,950 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:10:24,951 - DEBUG - No user defined library files
+2024-02-26 16:10:24,952 - DEBUG - Reusing ResourceManager with session 4097
+2024-02-26 16:10:25,077 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x00000201A0CD96C0>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,077 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,078 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,078 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,078 - DEBUG - viClose(<ViObject object at 0x00000201A0CD96C0>,) -> 0
+2024-02-26 16:10:25,081 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x00000201A0CD96C0>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,081 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,082 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,082 - DEBUG - viFindNext(<ViObject object at 0x00000201A0CD96C0>, <ctypes.c_char_Array_256 object at 0x00000201B0024AC0>) -> 0
+2024-02-26 16:10:25,082 - DEBUG - viClose(<ViObject object at 0x00000201A0CD96C0>,) -> 0
+2024-02-26 16:10:25,083 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:10:25,085 - DEBUG - viClose(4097,) -> 0
+2024-02-26 16:12:48,068 - DEBUG - No visa library specified, trying to find alternatives.
+2024-02-26 16:12:48,068 - DEBUG - Environment variable PYVISA_LIBRARY is unset.
+2024-02-26 16:12:48,074 - DEBUG - No user defined configuration
+2024-02-26 16:12:48,080 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:12:48,080 - DEBUG - No user defined library files
+2024-02-26 16:12:48,080 - DEBUG - The IVI implementation available
+2024-02-26 16:12:48,080 - DEBUG - No user defined configuration
+2024-02-26 16:12:48,086 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:12:48,086 - DEBUG - No user defined library files
+2024-02-26 16:12:48,091 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:12:48,092 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-26 16:12:48,142 - DEBUG - viOpenDefaultRM('<ViObject object at 0x00000259AFBC9640>',) -> 0
+2024-02-26 16:12:48,142 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:12:48,251 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x00000259AFBC9640>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x00000259AFE252C0>) -> 0
+2024-02-26 16:12:48,251 - DEBUG - viFindNext(<ViObject object at 0x00000259AFBC9640>, <ctypes.c_char_Array_256 object at 0x00000259AFE252C0>) -> 0
+2024-02-26 16:12:48,251 - DEBUG - viFindNext(<ViObject object at 0x00000259AFBC9640>, <ctypes.c_char_Array_256 object at 0x00000259AFE252C0>) -> 0
+2024-02-26 16:12:48,251 - DEBUG - viFindNext(<ViObject object at 0x00000259AFBC9640>, <ctypes.c_char_Array_256 object at 0x00000259AFE252C0>) -> 0
+2024-02-26 16:12:48,251 - DEBUG - viClose(<ViObject object at 0x00000259AFBC9640>,) -> 0
+2024-02-26 16:12:48,252 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:12:48,253 - DEBUG - viClose(4097,) -> 0
+2024-02-26 16:13:16,088 - DEBUG - No visa library specified, trying to find alternatives.
+2024-02-26 16:13:16,088 - DEBUG - Environment variable PYVISA_LIBRARY is unset.
+2024-02-26 16:13:16,096 - DEBUG - No user defined configuration
+2024-02-26 16:13:16,100 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:13:16,100 - DEBUG - No user defined library files
+2024-02-26 16:13:16,101 - DEBUG - The IVI implementation available
+2024-02-26 16:13:16,101 - DEBUG - No user defined configuration
+2024-02-26 16:13:16,106 - DEBUG - Automatically found library files: [None, 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa32.dll', 'C:\\WINDOWS\\system32\\visa64.dll', 'C:\\WINDOWS\\system32\\visa64.dll']
+2024-02-26 16:13:16,106 - DEBUG - No user defined library files
+2024-02-26 16:13:16,111 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:13:16,111 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-26 16:13:16,161 - DEBUG - viOpenDefaultRM('<ViObject object at 0x000001D4231596C0>',) -> 0
+2024-02-26 16:13:16,161 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:13:16,267 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x000001D4231596C0>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x000001D4231B5340>) -> 0
+2024-02-26 16:13:16,268 - DEBUG - viFindNext(<ViObject object at 0x000001D4231596C0>, <ctypes.c_char_Array_256 object at 0x000001D4231B5340>) -> 0
+2024-02-26 16:13:16,268 - DEBUG - viFindNext(<ViObject object at 0x000001D4231596C0>, <ctypes.c_char_Array_256 object at 0x000001D4231B5340>) -> 0
+2024-02-26 16:13:16,268 - DEBUG - viFindNext(<ViObject object at 0x000001D4231596C0>, <ctypes.c_char_Array_256 object at 0x000001D4231B5340>) -> 0
+2024-02-26 16:13:16,268 - DEBUG - viClose(<ViObject object at 0x000001D4231596C0>,) -> 0
+2024-02-26 16:13:16,268 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x000001D4231B5340>, <ctypes.c_char_Array_256 object at 0x000001D4231B4A40>, <ctypes.c_char_Array_256 object at 0x000001D4231B5440>) -> -1073807202
+2024-02-26 16:13:16,272 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:13:16,274 - DEBUG - viClose(4097,) -> 0
+2024-02-26 16:24:05,303 - DEBUG - Could not open VISA wrapper <class 'pyvisa.ctwrapper.highlevel.IVIVisaLibrary'>: C:\WINDOWS\system32isa64.dll
+Error while accessing C:\WINDOWS\system32isa64.dll: Could not find module 'C:\WINDOWS\system32isa64.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-02-26 16:24:20,836 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:24:20,837 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa64.dll
+2024-02-26 16:24:20,885 - DEBUG - viOpenDefaultRM('<ViObject object at 0x000001AC64518AC0>',) -> 0
+2024-02-26 16:24:20,885 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:24:20,996 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x000001AC64518AC0>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x000001AC645188C0>) -> 0
+2024-02-26 16:24:20,996 - DEBUG - viFindNext(<ViObject object at 0x000001AC64518AC0>, <ctypes.c_char_Array_256 object at 0x000001AC645188C0>) -> 0
+2024-02-26 16:24:20,996 - DEBUG - viFindNext(<ViObject object at 0x000001AC64518AC0>, <ctypes.c_char_Array_256 object at 0x000001AC645188C0>) -> 0
+2024-02-26 16:24:20,996 - DEBUG - viFindNext(<ViObject object at 0x000001AC64518AC0>, <ctypes.c_char_Array_256 object at 0x000001AC645188C0>) -> 0
+2024-02-26 16:24:20,996 - DEBUG - viClose(<ViObject object at 0x000001AC64518AC0>,) -> 0
+2024-02-26 16:24:20,997 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x000001AC645188C0>, <ctypes.c_char_Array_256 object at 0x000001AC64518940>, <ctypes.c_char_Array_256 object at 0x000001AC64519140>) -> -1073807202
+2024-02-26 16:24:20,999 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:24:21,000 - DEBUG - viClose(4097,) -> 0
+2024-02-26 16:25:59,203 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:25:59,203 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa64.dll
+2024-02-26 16:25:59,254 - DEBUG - viOpenDefaultRM('<ViObject object at 0x0000029E9FECBD40>',) -> 0
+2024-02-26 16:25:59,254 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:25:59,360 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x0000029E9FECBD40>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x0000029E9FF188C0>) -> 0
+2024-02-26 16:25:59,361 - DEBUG - viFindNext(<ViObject object at 0x0000029E9FECBD40>, <ctypes.c_char_Array_256 object at 0x0000029E9FF188C0>) -> 0
+2024-02-26 16:25:59,361 - DEBUG - viFindNext(<ViObject object at 0x0000029E9FECBD40>, <ctypes.c_char_Array_256 object at 0x0000029E9FF188C0>) -> 0
+2024-02-26 16:25:59,361 - DEBUG - viFindNext(<ViObject object at 0x0000029E9FECBD40>, <ctypes.c_char_Array_256 object at 0x0000029E9FF188C0>) -> 0
+2024-02-26 16:25:59,361 - DEBUG - viClose(<ViObject object at 0x0000029E9FECBD40>,) -> 0
+2024-02-26 16:25:59,361 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:25:59,362 - DEBUG - viClose(4097,) -> 0
+2024-02-26 16:57:02,587 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 16:57:02,587 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa64.dll
+2024-02-26 16:57:02,637 - DEBUG - viOpenDefaultRM('<ViObject object at 0x0000022CB24EBD40>',) -> 0
+2024-02-26 16:57:02,638 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 16:57:02,638 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x0000022CB2820740>, <ctypes.c_char_Array_256 object at 0x0000022CB28205C0>, <ctypes.c_char_Array_256 object at 0x0000022CB28207C0>) -> -1073807202
+2024-02-26 16:57:02,640 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 16:57:02,641 - DEBUG - viClose(4097,) -> 0
+2024-02-26 17:12:13,324 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 17:12:13,325 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa64.dll
+2024-02-26 17:12:13,926 - DEBUG - viOpenDefaultRM('<ViObject object at 0x0000015F124CBD40>',) -> 0
+2024-02-26 17:12:13,927 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 17:12:13,928 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x0000015F125188C0>, <ctypes.c_char_Array_256 object at 0x0000015F12518740>, <ctypes.c_char_Array_256 object at 0x0000015F12518940>) -> -1073807202
+2024-02-26 17:12:13,970 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 17:12:13,973 - DEBUG - viClose(4097,) -> 0
+2024-02-26 17:17:53,923 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:17:53,985 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:17:54,238 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:17:54,244 - DEBUG - GPIBSession was not imported No module named 'gpib'.
+2024-02-26 17:17:54,244 - DEBUG - Created library wrapper for py
+2024-02-26 17:17:54,244 - DEBUG - Created ResourceManager with session 3913153
+2024-02-26 17:17:55,279 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:17:56,295 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:17:56,328 - DEBUG - Closing ResourceManager (session: 3913153)
+2024-02-26 17:30:15,277 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:30:16,455 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:30:20,881 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:30:20,967 - DEBUG - GPIBSession was not imported No module named 'gpib'.
+2024-02-26 17:30:20,969 - DEBUG - Created library wrapper for py
+2024-02-26 17:30:20,970 - DEBUG - Created ResourceManager with session 8062826
+2024-02-26 17:30:22,165 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:30:23,193 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:30:23,379 - DEBUG - Closing ResourceManager (session: 8062826)
+2024-02-26 17:31:09,588 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:31:09,659 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:31:09,945 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:31:10,068 - DEBUG - GPIBSession was not imported 'MockGPIB' object is not subscriptable.
+2024-02-26 17:31:10,070 - DEBUG - Created library wrapper for py
+2024-02-26 17:31:10,070 - DEBUG - Created ResourceManager with session 8221491
+2024-02-26 17:31:11,130 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:31:12,152 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:31:12,164 - DEBUG - Closing ResourceManager (session: 8221491)
+2024-02-26 17:32:03,903 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 17:32:03,904 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa64.dll
+2024-02-26 17:32:04,449 - DEBUG - viOpenDefaultRM('<ViObject object at 0x000001B04BE08DC0>',) -> 0
+2024-02-26 17:32:04,449 - DEBUG - Created ResourceManager with session 4097
+2024-02-26 17:32:04,757 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x000001B04BE08DC0>', 'c_ulong(4)', <ctypes.c_char_Array_256 object at 0x000001B04BE08BC0>) -> 0
+2024-02-26 17:32:04,758 - DEBUG - viFindNext(<ViObject object at 0x000001B04BE08DC0>, <ctypes.c_char_Array_256 object at 0x000001B04BE08BC0>) -> 0
+2024-02-26 17:32:04,759 - DEBUG - viFindNext(<ViObject object at 0x000001B04BE08DC0>, <ctypes.c_char_Array_256 object at 0x000001B04BE08BC0>) -> 0
+2024-02-26 17:32:04,759 - DEBUG - viFindNext(<ViObject object at 0x000001B04BE08DC0>, <ctypes.c_char_Array_256 object at 0x000001B04BE08BC0>) -> 0
+2024-02-26 17:32:04,760 - DEBUG - viClose(<ViObject object at 0x000001B04BE08DC0>,) -> 0
+2024-02-26 17:32:04,769 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x000001B04BE08BC0>, <ctypes.c_char_Array_256 object at 0x000001B04BE08C40>, <ctypes.c_char_Array_256 object at 0x000001B04BE08640>) -> -1073807195
+2024-02-26 17:32:04,806 - DEBUG - Closing ResourceManager (session: 4097)
+2024-02-26 17:32:04,809 - DEBUG - viClose(4097,) -> 0
+2024-02-26 17:32:54,636 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:32:54,707 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:32:54,959 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:32:54,980 - DEBUG - GPIBSession was not imported 'MockGPIB' object is not subscriptable.
+2024-02-26 17:32:54,981 - DEBUG - Created library wrapper for py
+2024-02-26 17:32:54,981 - DEBUG - Created ResourceManager with session 2778904
+2024-02-26 17:32:56,028 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:32:57,036 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:32:57,042 - DEBUG - Closing ResourceManager (session: 2778904)
+2024-02-26 17:34:35,511 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:34:35,550 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:34:35,686 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:34:35,688 - DEBUG - GPIBSession was not imported 'MockGPIB' object is not subscriptable.
+2024-02-26 17:34:35,688 - DEBUG - Created library wrapper for py
+2024-02-26 17:34:35,688 - DEBUG - Created ResourceManager with session 9827746
+2024-02-26 17:34:36,717 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:34:37,730 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:34:37,736 - DEBUG - Closing ResourceManager (session: 9827746)
+2024-02-26 17:36:27,851 - DEBUG - SerialSession was correctly imported.
+2024-02-26 17:36:27,884 - DEBUG - USBSession and USBRawSession were not imported No backend available.
+2024-02-26 17:36:28,008 - DEBUG - TCPIPSession was correctly imported.
+2024-02-26 17:36:28,009 - DEBUG - GPIBSession was not imported 'MockGPIB' object is not subscriptable.
+2024-02-26 17:36:28,010 - DEBUG - Created library wrapper for py
+2024-02-26 17:36:28,010 - DEBUG - Created ResourceManager with session 9532921
+2024-02-26 17:36:29,039 - DEBUG - Using proactor: IocpProactor
+2024-02-26 17:36:30,054 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-26 17:36:30,060 - DEBUG - Closing ResourceManager (session: 9532921)
+2024-02-26 17:53:04,334 - DEBUG - Could not open VISA wrapper <class 'pyvisa.ctwrapper.highlevel.IVIVisaLibrary'>: C:\WINDOWS\SysWOW64\visa32.dll
+Error while accessing C:\WINDOWS\SysWOW64\visa32.dll: [WinError 193] %1 is not a valid Win32 application
+2024-02-26 20:14:21,782 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-26 20:14:21,783 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-26 20:14:22,325 - DEBUG - viOpenDefaultRM('<ViObject object at 0x038FD1E0>',) -> 0
+2024-02-26 20:14:22,326 - DEBUG - Created ResourceManager with session 27813104
+2024-02-26 20:14:22,584 - DEBUG - viFindRsrc(27813104, '?*', '<ViObject object at 0x038FD300>', 'c_ulong(7)', <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,585 - DEBUG - viFindNext(<ViObject object at 0x038FD300>, <ctypes.c_char_Array_256 object at 0x038FD390>) -> 0
+2024-02-26 20:14:22,586 - DEBUG - viClose(<ViObject object at 0x038FD300>,) -> 0
+2024-02-26 20:14:22,586 - DEBUG - Closing ResourceManager (session: 27813104)
+2024-02-26 20:14:22,588 - DEBUG - viClose(27813104,) -> 0
+2024-02-27 12:17:41,647 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-27 12:17:41,648 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-27 12:17:42,230 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03C06198>',) -> 0
+2024-02-27 12:17:42,230 - DEBUG - Created ResourceManager with session 32090624
+2024-02-27 12:17:42,674 - DEBUG - viFindRsrc(32090624, '?*', '<ViObject object at 0x03C062B8>', 'c_ulong(7)', <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,675 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,675 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,675 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,676 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,676 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,677 - DEBUG - viFindNext(<ViObject object at 0x03C062B8>, <ctypes.c_char_Array_256 object at 0x03C06348>) -> 0
+2024-02-27 12:17:42,678 - DEBUG - viClose(<ViObject object at 0x03C062B8>,) -> 0
+2024-02-27 12:17:42,678 - DEBUG - Closing ResourceManager (session: 32090624)
+2024-02-27 12:17:42,680 - DEBUG - viClose(32090624,) -> 0
