@@ -1,30 +1,13 @@
-# from gpib_ctypes import make_default_gpib
-# make_default_gpib()
+import InstrumentController
+import LaserController
 
-# import ctypes
-# ctypes._load_lib('C:\\Windows\\System32\\gpib-32.dll')
+visa_resource_manager = InstrumentController.VisaResourceManager("'C:\\WINDOWS\\system32\\visa32.dll'")
 
-import pyvisa
-import logging
+laser = LaserController(visa_resource_manager, 'GPIB0::8::INSTR')
 
-# Configure the logger to write to a file
-logging.basicConfig(filename='pyvisa_log.txt', level=logging.DEBUG, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+laser.connect()
+laser.set_current(100)
 
-# print(pyvisa.ResourceManager().visalib)
-rm = pyvisa.ResourceManager('C:\\WINDOWS\\system32\\visa32.dll')
-#rm = pyvisa.ResourceManager('C:\\WINDOWS\\SysWOW64\\visa32.dll')
 
-# rm = pyvisa.ResourceManager('@py')
-print(rm.list_resources('?*'))
 
-#inst = rm.open_resource('GPIB0::8::INSTR')
-
-#print(rm.list_resources('?*'))
-
-#print(inst.query('*IDN?'))
-
-# oscilloscope = rm.open_resource('USB0::0x0957::0x175D::MY49520268::INSTR')
-
-# oscilloscope.write("*rst; status:preset; *cls")
 
