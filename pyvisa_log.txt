@@ -209,3 +209,1379 @@ Error while accessing C:\WINDOWS\SysWOW64\visa32.dll: [WinError 193] %1 is not a
 2024-02-27 12:17:42,678 - DEBUG - viClose(<ViObject object at 0x03C062B8>,) -> 0
 2024-02-27 12:17:42,678 - DEBUG - Closing ResourceManager (session: 32090624)
 2024-02-27 12:17:42,680 - DEBUG - viClose(32090624,) -> 0
+2024-02-29 13:38:01,885 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-29 13:38:01,886 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-29 13:38:02,833 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03834198>',) -> 0
+2024-02-29 13:38:02,833 - DEBUG - Created ResourceManager with session 30806712
+2024-02-29 13:38:03,295 - DEBUG - viFindRsrc(30806712, '?*', '<ViObject object at 0x03834198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viFindNext(<ViObject object at 0x03834198>, <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viFindNext(<ViObject object at 0x03834198>, <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viFindNext(<ViObject object at 0x03834198>, <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viFindNext(<ViObject object at 0x03834198>, <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viFindNext(<ViObject object at 0x03834198>, <ctypes.c_char_Array_256 object at 0x03834348>) -> 0
+2024-02-29 13:38:03,296 - DEBUG - viClose(<ViObject object at 0x03834198>,) -> 0
+2024-02-29 13:38:03,296 - DEBUG - Closing ResourceManager (session: 30806712)
+2024-02-29 13:38:03,300 - DEBUG - viClose(30806712,) -> 0
+2024-02-29 13:38:47,797 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-29 13:38:47,797 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-29 13:38:47,842 - DEBUG - viOpenDefaultRM('<ViObject object at 0x040A5198>',) -> 0
+2024-02-29 13:38:47,842 - DEBUG - Created ResourceManager with session 35489912
+2024-02-29 13:38:48,070 - DEBUG - viFindRsrc(35489912, '?*', '<ViObject object at 0x040A5198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,070 - DEBUG - viFindNext(<ViObject object at 0x040A5198>, <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,071 - DEBUG - viFindNext(<ViObject object at 0x040A5198>, <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,071 - DEBUG - viFindNext(<ViObject object at 0x040A5198>, <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,071 - DEBUG - viFindNext(<ViObject object at 0x040A5198>, <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,071 - DEBUG - viFindNext(<ViObject object at 0x040A5198>, <ctypes.c_char_Array_256 object at 0x040A5348>) -> 0
+2024-02-29 13:38:48,071 - DEBUG - viClose(<ViObject object at 0x040A5198>,) -> 0
+2024-02-29 13:38:48,073 - DEBUG - viParseRsrcEx(35489912, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x040A5930>, <ctypes.c_char_Array_256 object at 0x040A5978>, <ctypes.c_char_Array_256 object at 0x040A59C0>) -> 0
+2024-02-29 13:38:48,073 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-29 13:38:48,273 - DEBUG - viOpen(35489912, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x040A5930>') -> 0
+2024-02-29 13:38:48,273 - DEBUG - GPIB0::8::INSTR - is open with session 40899120
+2024-02-29 13:38:48,276 - DEBUG - viWrite(40899120, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-02-29 13:38:48,276 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:38:48,294 - DEBUG - viRead(40899120, <ctypes.c_char_Array_20480 object at 0x040A5C48>, 20480, 'c_ulong(30)') -> 0
+2024-02-29 13:38:48,295 - DEBUG - Closing ResourceManager (session: 35489912)
+2024-02-29 13:38:48,295 - DEBUG - GPIB0::8::INSTR - closing
+2024-02-29 13:38:48,296 - DEBUG - viDisableEvent(40899120, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-02-29 13:38:48,296 - DEBUG - viDiscardEvents(40899120, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-02-29 13:38:48,296 - DEBUG - viClose(40899120,) -> 0
+2024-02-29 13:38:48,297 - DEBUG - GPIB0::8::INSTR - is closed
+2024-02-29 13:38:48,299 - DEBUG - viClose(35489912,) -> 0
+2024-02-29 13:43:30,299 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-29 13:43:30,299 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-29 13:43:30,360 - DEBUG - viOpenDefaultRM('<ViObject object at 0x040A4198>',) -> 0
+2024-02-29 13:43:30,360 - DEBUG - Created ResourceManager with session 40254216
+2024-02-29 13:43:30,548 - DEBUG - viFindRsrc(40254216, '?*', '<ViObject object at 0x040A4198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viFindNext(<ViObject object at 0x040A4198>, <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viFindNext(<ViObject object at 0x040A4198>, <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viFindNext(<ViObject object at 0x040A4198>, <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viFindNext(<ViObject object at 0x040A4198>, <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viFindNext(<ViObject object at 0x040A4198>, <ctypes.c_char_Array_256 object at 0x040A4348>) -> 0
+2024-02-29 13:43:30,549 - DEBUG - viClose(<ViObject object at 0x040A4198>,) -> 0
+2024-02-29 13:43:30,551 - DEBUG - viParseRsrcEx(40254216, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x040A4930>, <ctypes.c_char_Array_256 object at 0x040A4978>, <ctypes.c_char_Array_256 object at 0x040A49C0>) -> 0
+2024-02-29 13:43:30,551 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-29 13:43:30,698 - DEBUG - viOpen(40254216, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x040A4930>') -> 0
+2024-02-29 13:43:30,699 - DEBUG - GPIB0::8::INSTR - is open with session 40762632
+2024-02-29 13:43:30,701 - DEBUG - viWrite(40762632, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-02-29 13:43:30,701 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:43:30,721 - DEBUG - viRead(40762632, <ctypes.c_char_Array_20480 object at 0x040A4C48>, 20480, 'c_ulong(30)') -> 0
+2024-02-29 13:43:30,725 - DEBUG - viWrite(40762632, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-02-29 13:43:30,726 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:43:31,085 - DEBUG - viRead(40762632, <ctypes.c_char_Array_20480 object at 0x040A4C90>, 20480, 'c_ulong(24)') -> 0
+2024-02-29 13:43:31,086 - DEBUG - Closing ResourceManager (session: 40254216)
+2024-02-29 13:43:31,086 - DEBUG - GPIB0::8::INSTR - closing
+2024-02-29 13:43:31,086 - DEBUG - viDisableEvent(40762632, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-02-29 13:43:31,087 - DEBUG - viDiscardEvents(40762632, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-02-29 13:43:31,088 - DEBUG - viClose(40762632,) -> 0
+2024-02-29 13:43:31,088 - DEBUG - GPIB0::8::INSTR - is closed
+2024-02-29 13:43:31,091 - DEBUG - viClose(40254216,) -> 0
+2024-02-29 13:43:59,585 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-29 13:43:59,585 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-29 13:43:59,628 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03944198>',) -> 0
+2024-02-29 13:43:59,630 - DEBUG - Created ResourceManager with session 32344320
+2024-02-29 13:43:59,792 - DEBUG - viFindRsrc(32344320, '?*', '<ViObject object at 0x03944198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,792 - DEBUG - viFindNext(<ViObject object at 0x03944198>, <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,792 - DEBUG - viFindNext(<ViObject object at 0x03944198>, <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,792 - DEBUG - viFindNext(<ViObject object at 0x03944198>, <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,793 - DEBUG - viFindNext(<ViObject object at 0x03944198>, <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,793 - DEBUG - viFindNext(<ViObject object at 0x03944198>, <ctypes.c_char_Array_256 object at 0x03944348>) -> 0
+2024-02-29 13:43:59,793 - DEBUG - viClose(<ViObject object at 0x03944198>,) -> 0
+2024-02-29 13:43:59,794 - DEBUG - viParseRsrcEx(32344320, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03944930>, <ctypes.c_char_Array_256 object at 0x03944978>, <ctypes.c_char_Array_256 object at 0x039449C0>) -> 0
+2024-02-29 13:43:59,795 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-29 13:43:59,911 - DEBUG - viOpen(32344320, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03944930>') -> 0
+2024-02-29 13:43:59,911 - DEBUG - GPIB0::8::INSTR - is open with session 32824128
+2024-02-29 13:43:59,914 - DEBUG - viWrite(32824128, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-02-29 13:43:59,914 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:43:59,934 - DEBUG - viRead(32824128, <ctypes.c_char_Array_20480 object at 0x03944C48>, 20480, 'c_ulong(30)') -> 0
+2024-02-29 13:43:59,938 - DEBUG - viWrite(32824128, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-02-29 13:43:59,939 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:43:59,969 - DEBUG - viRead(32824128, <ctypes.c_char_Array_20480 object at 0x03944C90>, 20480, 'c_ulong(24)') -> 0
+2024-02-29 13:43:59,970 - DEBUG - Closing ResourceManager (session: 32344320)
+2024-02-29 13:43:59,970 - DEBUG - GPIB0::8::INSTR - closing
+2024-02-29 13:43:59,970 - DEBUG - viDisableEvent(32824128, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-02-29 13:43:59,970 - DEBUG - viDiscardEvents(32824128, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-02-29 13:43:59,971 - DEBUG - viClose(32824128,) -> 0
+2024-02-29 13:43:59,971 - DEBUG - GPIB0::8::INSTR - is closed
+2024-02-29 13:43:59,973 - DEBUG - viClose(32344320,) -> 0
+2024-02-29 13:44:10,768 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-02-29 13:44:10,768 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-02-29 13:44:10,804 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03404198>',) -> 0
+2024-02-29 13:44:10,804 - DEBUG - Created ResourceManager with session 11719568
+2024-02-29 13:44:10,968 - DEBUG - viFindRsrc(11719568, '?*', '<ViObject object at 0x03404198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viFindNext(<ViObject object at 0x03404198>, <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viFindNext(<ViObject object at 0x03404198>, <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viFindNext(<ViObject object at 0x03404198>, <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viFindNext(<ViObject object at 0x03404198>, <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viFindNext(<ViObject object at 0x03404198>, <ctypes.c_char_Array_256 object at 0x03404348>) -> 0
+2024-02-29 13:44:10,968 - DEBUG - viClose(<ViObject object at 0x03404198>,) -> 0
+2024-02-29 13:44:10,971 - DEBUG - viParseRsrcEx(11719568, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03404930>, <ctypes.c_char_Array_256 object at 0x03404978>, <ctypes.c_char_Array_256 object at 0x034049C0>) -> 0
+2024-02-29 13:44:10,971 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-02-29 13:44:11,088 - DEBUG - viOpen(11719568, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03404930>') -> 0
+2024-02-29 13:44:11,088 - DEBUG - GPIB0::8::INSTR - is open with session 27333232
+2024-02-29 13:44:11,091 - DEBUG - viWrite(27333232, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-02-29 13:44:11,091 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:44:11,110 - DEBUG - viRead(27333232, <ctypes.c_char_Array_20480 object at 0x03404C48>, 20480, 'c_ulong(30)') -> 0
+2024-02-29 13:44:11,115 - DEBUG - viWrite(27333232, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-02-29 13:44:11,115 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-02-29 13:44:11,236 - DEBUG - viRead(27333232, <ctypes.c_char_Array_20480 object at 0x03404C90>, 20480, 'c_ulong(24)') -> 0
+2024-02-29 13:44:11,237 - DEBUG - Closing ResourceManager (session: 11719568)
+2024-02-29 13:44:11,238 - DEBUG - GPIB0::8::INSTR - closing
+2024-02-29 13:44:11,238 - DEBUG - viDisableEvent(27333232, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-02-29 13:44:11,238 - DEBUG - viDiscardEvents(27333232, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-02-29 13:44:11,239 - DEBUG - viClose(27333232,) -> 0
+2024-02-29 13:44:11,239 - DEBUG - GPIB0::8::INSTR - is closed
+2024-02-29 13:44:11,242 - DEBUG - viClose(11719568,) -> 0
+2024-03-01 13:09:14,651 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:09:14,652 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:09:15,175 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03144198>',) -> 0
+2024-03-01 13:09:15,176 - DEBUG - Created ResourceManager with session 7908792
+2024-03-01 13:09:15,605 - DEBUG - viFindRsrc(7908792, '?*', '<ViObject object at 0x03144198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viFindNext(<ViObject object at 0x03144198>, <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viFindNext(<ViObject object at 0x03144198>, <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viFindNext(<ViObject object at 0x03144198>, <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viFindNext(<ViObject object at 0x03144198>, <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viFindNext(<ViObject object at 0x03144198>, <ctypes.c_char_Array_256 object at 0x03144348>) -> 0
+2024-03-01 13:09:15,606 - DEBUG - viClose(<ViObject object at 0x03144198>,) -> 0
+2024-03-01 13:09:15,608 - DEBUG - viParseRsrcEx(7908792, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03144930>, <ctypes.c_char_Array_256 object at 0x03144978>, <ctypes.c_char_Array_256 object at 0x031449C0>) -> 0
+2024-03-01 13:09:15,608 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:09:15,793 - DEBUG - viOpen(7908792, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03144930>') -> 0
+2024-03-01 13:09:15,794 - DEBUG - GPIB0::8::INSTR - is open with session 24463296
+2024-03-01 13:09:15,796 - DEBUG - viWrite(24463296, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:09:15,796 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:09:15,816 - DEBUG - viRead(24463296, <ctypes.c_char_Array_20480 object at 0x03144C48>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:09:15,821 - DEBUG - viWrite(24463296, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:09:15,821 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:09:16,164 - DEBUG - viRead(24463296, <ctypes.c_char_Array_20480 object at 0x03144C90>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:09:16,164 - DEBUG - Closing ResourceManager (session: 7908792)
+2024-03-01 13:09:16,164 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:09:16,166 - DEBUG - viDisableEvent(24463296, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:09:16,166 - DEBUG - viDiscardEvents(24463296, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:09:16,166 - DEBUG - viClose(24463296,) -> 0
+2024-03-01 13:09:16,166 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:09:16,171 - DEBUG - viClose(7908792,) -> 0
+2024-03-01 13:09:44,236 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:09:44,237 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:09:44,287 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03724198>',) -> 0
+2024-03-01 13:09:44,288 - DEBUG - Created ResourceManager with session 30299416
+2024-03-01 13:09:44,454 - DEBUG - viFindRsrc(30299416, '?*', '<ViObject object at 0x03724198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viFindNext(<ViObject object at 0x03724198>, <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viFindNext(<ViObject object at 0x03724198>, <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viFindNext(<ViObject object at 0x03724198>, <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viFindNext(<ViObject object at 0x03724198>, <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viFindNext(<ViObject object at 0x03724198>, <ctypes.c_char_Array_256 object at 0x03724348>) -> 0
+2024-03-01 13:09:44,454 - DEBUG - viClose(<ViObject object at 0x03724198>,) -> 0
+2024-03-01 13:09:44,456 - DEBUG - viParseRsrcEx(30299416, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03724930>, <ctypes.c_char_Array_256 object at 0x03724978>, <ctypes.c_char_Array_256 object at 0x037249C0>) -> 0
+2024-03-01 13:09:44,456 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:09:44,572 - DEBUG - viOpen(30299416, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03724930>') -> 0
+2024-03-01 13:09:44,572 - DEBUG - GPIB0::8::INSTR - is open with session 30957368
+2024-03-01 13:09:44,576 - DEBUG - viWrite(30957368, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:09:44,576 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:09:44,595 - DEBUG - viRead(30957368, <ctypes.c_char_Array_20480 object at 0x03724C48>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:09:44,599 - DEBUG - viWrite(30957368, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:09:44,600 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:09:44,639 - DEBUG - viRead(30957368, <ctypes.c_char_Array_20480 object at 0x03724C90>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:09:44,639 - DEBUG - Closing ResourceManager (session: 30299416)
+2024-03-01 13:09:44,640 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:09:44,640 - DEBUG - viDisableEvent(30957368, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:09:44,640 - DEBUG - viDiscardEvents(30957368, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:09:44,640 - DEBUG - viClose(30957368,) -> 0
+2024-03-01 13:09:44,641 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:09:44,642 - DEBUG - viClose(30299416,) -> 0
+2024-03-01 13:10:07,264 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:10:07,264 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:10:07,300 - DEBUG - viOpenDefaultRM('<ViObject object at 0x038C4198>',) -> 0
+2024-03-01 13:10:07,300 - DEBUG - Created ResourceManager with session 31655192
+2024-03-01 13:10:07,471 - DEBUG - viFindRsrc(31655192, '?*', '<ViObject object at 0x038C4198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viFindNext(<ViObject object at 0x038C4198>, <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viFindNext(<ViObject object at 0x038C4198>, <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viFindNext(<ViObject object at 0x038C4198>, <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viFindNext(<ViObject object at 0x038C4198>, <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viFindNext(<ViObject object at 0x038C4198>, <ctypes.c_char_Array_256 object at 0x038C4348>) -> 0
+2024-03-01 13:10:07,471 - DEBUG - viClose(<ViObject object at 0x038C4198>,) -> 0
+2024-03-01 13:10:07,474 - DEBUG - viParseRsrcEx(31655192, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x038C4930>, <ctypes.c_char_Array_256 object at 0x038C4978>, <ctypes.c_char_Array_256 object at 0x038C49C0>) -> 0
+2024-03-01 13:10:07,474 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:10:07,593 - DEBUG - viOpen(31655192, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x038C4930>') -> 0
+2024-03-01 13:10:07,593 - DEBUG - GPIB0::8::INSTR - is open with session 32662528
+2024-03-01 13:10:07,597 - DEBUG - viWrite(32662528, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:10:07,597 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:10:07,617 - DEBUG - viRead(32662528, <ctypes.c_char_Array_20480 object at 0x038C4C48>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:10:07,621 - DEBUG - viWrite(32662528, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:10:07,621 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:10:07,687 - DEBUG - viRead(32662528, <ctypes.c_char_Array_20480 object at 0x038C4C90>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:10:07,687 - DEBUG - Closing ResourceManager (session: 31655192)
+2024-03-01 13:10:07,688 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:10:07,688 - DEBUG - viDisableEvent(32662528, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:10:07,688 - DEBUG - viDiscardEvents(32662528, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:10:07,688 - DEBUG - viClose(32662528,) -> 0
+2024-03-01 13:10:07,688 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:10:07,691 - DEBUG - viClose(31655192,) -> 0
+2024-03-01 13:12:27,799 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:12:27,801 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:12:27,837 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03D14198>',) -> 0
+2024-03-01 13:12:27,837 - DEBUG - Created ResourceManager with session 19789096
+2024-03-01 13:12:28,001 - DEBUG - viFindRsrc(19789096, '?*', '<ViObject object at 0x03D14198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viFindNext(<ViObject object at 0x03D14198>, <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viFindNext(<ViObject object at 0x03D14198>, <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viFindNext(<ViObject object at 0x03D14198>, <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viFindNext(<ViObject object at 0x03D14198>, <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viFindNext(<ViObject object at 0x03D14198>, <ctypes.c_char_Array_256 object at 0x03D14348>) -> 0
+2024-03-01 13:12:28,001 - DEBUG - viClose(<ViObject object at 0x03D14198>,) -> 0
+2024-03-01 13:12:28,003 - DEBUG - viParseRsrcEx(19789096, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03D14930>, <ctypes.c_char_Array_256 object at 0x03D14978>, <ctypes.c_char_Array_256 object at 0x03D149C0>) -> 0
+2024-03-01 13:12:28,003 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:12:28,120 - DEBUG - viOpen(19789096, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03D14930>') -> 0
+2024-03-01 13:12:28,121 - DEBUG - GPIB0::8::INSTR - is open with session 37075376
+2024-03-01 13:12:28,123 - DEBUG - viWrite(37075376, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:12:28,123 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:12:28,143 - DEBUG - viRead(37075376, <ctypes.c_char_Array_20480 object at 0x03D14C48>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:12:28,148 - DEBUG - viWrite(37075376, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:12:28,148 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:12:28,223 - DEBUG - viRead(37075376, <ctypes.c_char_Array_20480 object at 0x03D14C90>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:12:28,227 - DEBUG - viWrite(37075376, b':ILD:SET 0.01\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:12:28,227 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:12:30,270 - DEBUG - viRead(37075376, <ctypes.c_char_Array_20480 object at 0x03D14E40>, 20480, 'c_ulong(0)') -> -1073807339
+2024-03-01 13:12:30,270 - DEBUG - GPIB0::8::INSTR - exception while reading: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.
+Buffer content: bytearray(b'')
+2024-03-01 13:12:30,332 - DEBUG - Closing ResourceManager (session: 19789096)
+2024-03-01 13:12:30,332 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:12:30,332 - DEBUG - viDisableEvent(37075376, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:12:30,332 - DEBUG - viDiscardEvents(37075376, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:12:30,333 - DEBUG - viClose(37075376,) -> 0
+2024-03-01 13:12:30,333 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:12:30,335 - DEBUG - viClose(19789096,) -> 0
+2024-03-01 13:13:06,524 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:13:06,524 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:13:06,557 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03784198>',) -> 0
+2024-03-01 13:13:06,558 - DEBUG - Created ResourceManager with session 30687272
+2024-03-01 13:13:06,719 - DEBUG - viFindRsrc(30687272, '?*', '<ViObject object at 0x03784198>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viFindNext(<ViObject object at 0x03784198>, <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viFindNext(<ViObject object at 0x03784198>, <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viFindNext(<ViObject object at 0x03784198>, <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viFindNext(<ViObject object at 0x03784198>, <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viFindNext(<ViObject object at 0x03784198>, <ctypes.c_char_Array_256 object at 0x03784348>) -> 0
+2024-03-01 13:13:06,719 - DEBUG - viClose(<ViObject object at 0x03784198>,) -> 0
+2024-03-01 13:13:06,722 - DEBUG - viParseRsrcEx(30687272, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03784930>, <ctypes.c_char_Array_256 object at 0x03784978>, <ctypes.c_char_Array_256 object at 0x037849C0>) -> 0
+2024-03-01 13:13:06,722 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:13:06,839 - DEBUG - viOpen(30687272, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03784930>') -> 0
+2024-03-01 13:13:06,839 - DEBUG - GPIB0::8::INSTR - is open with session 31250312
+2024-03-01 13:13:06,842 - DEBUG - viWrite(31250312, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:13:06,842 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:06,862 - DEBUG - viRead(31250312, <ctypes.c_char_Array_20480 object at 0x03784C48>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:13:06,866 - DEBUG - viWrite(31250312, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:13:06,866 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:06,943 - DEBUG - viRead(31250312, <ctypes.c_char_Array_20480 object at 0x03784C90>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:13:06,946 - DEBUG - viWrite(31250312, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:13:06,946 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:08,988 - DEBUG - viRead(31250312, <ctypes.c_char_Array_20480 object at 0x03784E40>, 20480, 'c_ulong(0)') -> -1073807339
+2024-03-01 13:13:08,989 - DEBUG - GPIB0::8::INSTR - exception while reading: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.
+Buffer content: bytearray(b'')
+2024-03-01 13:13:09,002 - DEBUG - Closing ResourceManager (session: 30687272)
+2024-03-01 13:13:09,002 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:13:09,002 - DEBUG - viDisableEvent(31250312, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:13:09,002 - DEBUG - viDiscardEvents(31250312, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:13:09,002 - DEBUG - viClose(31250312,) -> 0
+2024-03-01 13:13:09,003 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:13:09,004 - DEBUG - viClose(30687272,) -> 0
+2024-03-01 13:13:29,898 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:13:29,898 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:13:29,934 - DEBUG - viOpenDefaultRM('<ViObject object at 0x033141E0>',) -> 0
+2024-03-01 13:13:29,934 - DEBUG - Created ResourceManager with session 25700432
+2024-03-01 13:13:30,095 - DEBUG - viFindRsrc(25700432, '?*', '<ViObject object at 0x033141E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,095 - DEBUG - viFindNext(<ViObject object at 0x033141E0>, <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,095 - DEBUG - viFindNext(<ViObject object at 0x033141E0>, <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,095 - DEBUG - viFindNext(<ViObject object at 0x033141E0>, <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,095 - DEBUG - viFindNext(<ViObject object at 0x033141E0>, <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,095 - DEBUG - viFindNext(<ViObject object at 0x033141E0>, <ctypes.c_char_Array_256 object at 0x03314390>) -> 0
+2024-03-01 13:13:30,096 - DEBUG - viClose(<ViObject object at 0x033141E0>,) -> 0
+2024-03-01 13:13:30,098 - DEBUG - viParseRsrcEx(25700432, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03314978>, <ctypes.c_char_Array_256 object at 0x033149C0>, <ctypes.c_char_Array_256 object at 0x03314A08>) -> 0
+2024-03-01 13:13:30,098 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:13:30,215 - DEBUG - viOpen(25700432, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03314978>') -> 0
+2024-03-01 13:13:30,215 - DEBUG - GPIB0::8::INSTR - is open with session 26500888
+2024-03-01 13:13:30,218 - DEBUG - viWrite(26500888, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:13:30,218 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:30,238 - DEBUG - viRead(26500888, <ctypes.c_char_Array_20480 object at 0x03314C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:13:30,242 - DEBUG - viWrite(26500888, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:13:30,242 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:30,297 - DEBUG - viRead(26500888, <ctypes.c_char_Array_20480 object at 0x03314CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:13:30,300 - DEBUG - viWrite(26500888, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:13:30,303 - DEBUG - viWrite(26500888, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:13:30,303 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:13:30,400 - DEBUG - viRead(26500888, <ctypes.c_char_Array_20480 object at 0x03314E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:13:30,400 - DEBUG - Closing ResourceManager (session: 25700432)
+2024-03-01 13:13:30,400 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:13:30,402 - DEBUG - viDisableEvent(26500888, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:13:30,402 - DEBUG - viDiscardEvents(26500888, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:13:30,403 - DEBUG - viClose(26500888,) -> 0
+2024-03-01 13:13:30,403 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:13:30,407 - DEBUG - viClose(25700432,) -> 0
+2024-03-01 13:15:45,236 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:15:45,237 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:15:45,272 - DEBUG - viOpenDefaultRM('<ViObject object at 0x034541E0>',) -> 0
+2024-03-01 13:15:45,273 - DEBUG - Created ResourceManager with session 26719800
+2024-03-01 13:15:45,440 - DEBUG - viFindRsrc(26719800, '?*', '<ViObject object at 0x034541E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viFindNext(<ViObject object at 0x034541E0>, <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viFindNext(<ViObject object at 0x034541E0>, <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viFindNext(<ViObject object at 0x034541E0>, <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viFindNext(<ViObject object at 0x034541E0>, <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viFindNext(<ViObject object at 0x034541E0>, <ctypes.c_char_Array_256 object at 0x03454390>) -> 0
+2024-03-01 13:15:45,440 - DEBUG - viClose(<ViObject object at 0x034541E0>,) -> 0
+2024-03-01 13:15:45,443 - DEBUG - viParseRsrcEx(26719800, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03454978>, <ctypes.c_char_Array_256 object at 0x034549C0>, <ctypes.c_char_Array_256 object at 0x03454A08>) -> 0
+2024-03-01 13:15:45,443 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:15:45,563 - DEBUG - viOpen(26719800, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03454978>') -> 0
+2024-03-01 13:15:45,563 - DEBUG - GPIB0::8::INSTR - is open with session 27645928
+2024-03-01 13:15:45,565 - DEBUG - viWrite(27645928, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:15:45,565 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:15:45,584 - DEBUG - viRead(27645928, <ctypes.c_char_Array_20480 object at 0x03454C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:15:45,589 - DEBUG - viWrite(27645928, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:15:45,589 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:15:45,609 - DEBUG - viRead(27645928, <ctypes.c_char_Array_20480 object at 0x03454CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:15:45,613 - DEBUG - viWrite(27645928, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:15:45,616 - DEBUG - viWrite(27645928, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:15:45,617 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:15:45,712 - DEBUG - viRead(27645928, <ctypes.c_char_Array_20480 object at 0x03454E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:15:45,713 - DEBUG - Closing ResourceManager (session: 26719800)
+2024-03-01 13:15:45,713 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:15:45,713 - DEBUG - viDisableEvent(27645928, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:15:45,713 - DEBUG - viDiscardEvents(27645928, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:15:45,714 - DEBUG - viClose(27645928,) -> 0
+2024-03-01 13:15:45,714 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:15:45,716 - DEBUG - viClose(26719800,) -> 0
+2024-03-01 13:23:13,474 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:23:13,474 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:23:13,507 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03F93228>',) -> 0
+2024-03-01 13:23:13,508 - DEBUG - Created ResourceManager with session 38698768
+2024-03-01 13:23:13,681 - DEBUG - viFindRsrc(38698768, '?*', '<ViObject object at 0x03F93228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,681 - DEBUG - viFindNext(<ViObject object at 0x03F93228>, <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,681 - DEBUG - viFindNext(<ViObject object at 0x03F93228>, <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,681 - DEBUG - viFindNext(<ViObject object at 0x03F93228>, <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,682 - DEBUG - viFindNext(<ViObject object at 0x03F93228>, <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,682 - DEBUG - viFindNext(<ViObject object at 0x03F93228>, <ctypes.c_char_Array_256 object at 0x03F933D8>) -> 0
+2024-03-01 13:23:13,682 - DEBUG - viClose(<ViObject object at 0x03F93228>,) -> 0
+2024-03-01 13:23:13,684 - DEBUG - viParseRsrcEx(38698768, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03F939C0>, <ctypes.c_char_Array_256 object at 0x03F93A08>, <ctypes.c_char_Array_256 object at 0x03F93A50>) -> 0
+2024-03-01 13:23:13,684 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:23:13,801 - DEBUG - viOpen(38698768, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03F939C0>') -> 0
+2024-03-01 13:23:13,801 - DEBUG - GPIB0::8::INSTR - is open with session 39740912
+2024-03-01 13:23:13,805 - DEBUG - viWrite(39740912, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:23:13,805 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:13,823 - DEBUG - viRead(39740912, <ctypes.c_char_Array_20480 object at 0x03F93CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:23:13,828 - DEBUG - viWrite(39740912, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:23:13,829 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:13,852 - DEBUG - viRead(39740912, <ctypes.c_char_Array_20480 object at 0x03F93D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:23:13,856 - DEBUG - viWrite(39740912, b':MODE CC\r\n', 10, 'c_ulong(10)') -> 0
+2024-03-01 13:23:13,875 - DEBUG - viWrite(39740912, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:23:13,878 - DEBUG - viWrite(39740912, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:23:13,878 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:13,954 - DEBUG - viRead(39740912, <ctypes.c_char_Array_20480 object at 0x03F93ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:23:13,955 - DEBUG - Closing ResourceManager (session: 38698768)
+2024-03-01 13:23:13,955 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:23:13,955 - DEBUG - viDisableEvent(39740912, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:23:13,955 - DEBUG - viDiscardEvents(39740912, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:23:13,956 - DEBUG - viClose(39740912,) -> 0
+2024-03-01 13:23:13,956 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:23:13,960 - DEBUG - viClose(38698768,) -> 0
+2024-03-01 13:23:45,759 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:23:45,759 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:23:45,792 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03283228>',) -> 0
+2024-03-01 13:23:45,792 - DEBUG - Created ResourceManager with session 25444912
+2024-03-01 13:23:45,961 - DEBUG - viFindRsrc(25444912, '?*', '<ViObject object at 0x03283228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viFindNext(<ViObject object at 0x03283228>, <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viFindNext(<ViObject object at 0x03283228>, <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viFindNext(<ViObject object at 0x03283228>, <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viFindNext(<ViObject object at 0x03283228>, <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viFindNext(<ViObject object at 0x03283228>, <ctypes.c_char_Array_256 object at 0x032833D8>) -> 0
+2024-03-01 13:23:45,961 - DEBUG - viClose(<ViObject object at 0x03283228>,) -> 0
+2024-03-01 13:23:45,963 - DEBUG - viParseRsrcEx(25444912, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x032839C0>, <ctypes.c_char_Array_256 object at 0x03283A08>, <ctypes.c_char_Array_256 object at 0x03283A50>) -> 0
+2024-03-01 13:23:45,963 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:23:46,080 - DEBUG - viOpen(25444912, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x032839C0>') -> 0
+2024-03-01 13:23:46,081 - DEBUG - GPIB0::8::INSTR - is open with session 26082784
+2024-03-01 13:23:46,084 - DEBUG - viWrite(26082784, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:23:46,085 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:46,103 - DEBUG - viRead(26082784, <ctypes.c_char_Array_20480 object at 0x03283CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:23:46,107 - DEBUG - viWrite(26082784, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:23:46,107 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:46,220 - DEBUG - viRead(26082784, <ctypes.c_char_Array_20480 object at 0x03283D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:23:46,225 - DEBUG - viWrite(26082784, b':MODE CC\r\n', 10, 'c_ulong(10)') -> 0
+2024-03-01 13:23:46,230 - DEBUG - viWrite(26082784, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:23:46,233 - DEBUG - viWrite(26082784, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:23:46,233 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:23:46,323 - DEBUG - viRead(26082784, <ctypes.c_char_Array_20480 object at 0x03283ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:23:46,324 - DEBUG - Closing ResourceManager (session: 25444912)
+2024-03-01 13:23:46,324 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:23:46,324 - DEBUG - viDisableEvent(26082784, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:23:46,324 - DEBUG - viDiscardEvents(26082784, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:23:46,325 - DEBUG - viClose(26082784,) -> 0
+2024-03-01 13:23:46,326 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:23:46,330 - DEBUG - viClose(25444912,) -> 0
+2024-03-01 13:24:13,091 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:24:13,091 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:24:13,123 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03953228>',) -> 0
+2024-03-01 13:24:13,123 - DEBUG - Created ResourceManager with session 32625184
+2024-03-01 13:24:13,291 - DEBUG - viFindRsrc(32625184, '?*', '<ViObject object at 0x03953228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viFindNext(<ViObject object at 0x03953228>, <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viFindNext(<ViObject object at 0x03953228>, <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viFindNext(<ViObject object at 0x03953228>, <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viFindNext(<ViObject object at 0x03953228>, <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viFindNext(<ViObject object at 0x03953228>, <ctypes.c_char_Array_256 object at 0x039533D8>) -> 0
+2024-03-01 13:24:13,291 - DEBUG - viClose(<ViObject object at 0x03953228>,) -> 0
+2024-03-01 13:24:13,294 - DEBUG - viParseRsrcEx(32625184, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x039539C0>, <ctypes.c_char_Array_256 object at 0x03953A08>, <ctypes.c_char_Array_256 object at 0x03953A50>) -> 0
+2024-03-01 13:24:13,294 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:24:13,411 - DEBUG - viOpen(32625184, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x039539C0>') -> 0
+2024-03-01 13:24:13,411 - DEBUG - GPIB0::8::INSTR - is open with session 33064056
+2024-03-01 13:24:13,414 - DEBUG - viWrite(33064056, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:24:13,414 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:24:13,433 - DEBUG - viRead(33064056, <ctypes.c_char_Array_20480 object at 0x03953CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:24:13,439 - DEBUG - viWrite(33064056, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:24:13,439 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:24:13,463 - DEBUG - viRead(33064056, <ctypes.c_char_Array_20480 object at 0x03953D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:24:13,466 - DEBUG - viWrite(33064056, b':MODE CC\r\n', 10, 'c_ulong(10)') -> 0
+2024-03-01 13:24:13,485 - DEBUG - viWrite(33064056, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:24:13,488 - DEBUG - viWrite(33064056, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:24:13,489 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:24:13,565 - DEBUG - viRead(33064056, <ctypes.c_char_Array_20480 object at 0x03953ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:24:13,566 - DEBUG - Closing ResourceManager (session: 32625184)
+2024-03-01 13:24:13,567 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:24:13,567 - DEBUG - viDisableEvent(33064056, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:24:13,567 - DEBUG - viDiscardEvents(33064056, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:24:13,568 - DEBUG - viClose(33064056,) -> 0
+2024-03-01 13:24:13,568 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:24:13,572 - DEBUG - viClose(32625184,) -> 0
+2024-03-01 13:25:10,568 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:25:10,569 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:25:10,604 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03623228>',) -> 0
+2024-03-01 13:25:10,604 - DEBUG - Created ResourceManager with session 29068488
+2024-03-01 13:25:10,759 - DEBUG - viFindRsrc(29068488, '?*', '<ViObject object at 0x03623228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viFindNext(<ViObject object at 0x03623228>, <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viFindNext(<ViObject object at 0x03623228>, <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viFindNext(<ViObject object at 0x03623228>, <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viFindNext(<ViObject object at 0x03623228>, <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viFindNext(<ViObject object at 0x03623228>, <ctypes.c_char_Array_256 object at 0x036233D8>) -> 0
+2024-03-01 13:25:10,759 - DEBUG - viClose(<ViObject object at 0x03623228>,) -> 0
+2024-03-01 13:25:10,761 - DEBUG - viParseRsrcEx(29068488, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x036239C0>, <ctypes.c_char_Array_256 object at 0x03623A08>, <ctypes.c_char_Array_256 object at 0x03623A50>) -> 0
+2024-03-01 13:25:10,761 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:25:10,879 - DEBUG - viOpen(29068488, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x036239C0>') -> 0
+2024-03-01 13:25:10,880 - DEBUG - GPIB0::8::INSTR - is open with session 29580272
+2024-03-01 13:25:10,883 - DEBUG - viWrite(29580272, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:25:10,883 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:10,902 - DEBUG - viRead(29580272, <ctypes.c_char_Array_20480 object at 0x03623CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:25:10,908 - DEBUG - viWrite(29580272, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:10,908 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:11,020 - DEBUG - viRead(29580272, <ctypes.c_char_Array_20480 object at 0x03623D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:25:11,023 - DEBUG - viWrite(29580272, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:25:11,028 - DEBUG - viWrite(29580272, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:25:11,031 - DEBUG - viWrite(29580272, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:11,032 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:11,035 - DEBUG - viRead(29580272, <ctypes.c_char_Array_20480 object at 0x03623ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:25:11,036 - DEBUG - Closing ResourceManager (session: 29068488)
+2024-03-01 13:25:11,036 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:25:11,036 - DEBUG - viDisableEvent(29580272, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:25:11,036 - DEBUG - viDiscardEvents(29580272, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:25:11,037 - DEBUG - viClose(29580272,) -> 0
+2024-03-01 13:25:11,037 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:25:11,039 - DEBUG - viClose(29068488,) -> 0
+2024-03-01 13:25:34,048 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:25:34,049 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:25:34,080 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03E83228>',) -> 0
+2024-03-01 13:25:34,080 - DEBUG - Created ResourceManager with session 37577056
+2024-03-01 13:25:34,236 - DEBUG - viFindRsrc(37577056, '?*', '<ViObject object at 0x03E83228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,236 - DEBUG - viFindNext(<ViObject object at 0x03E83228>, <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,236 - DEBUG - viFindNext(<ViObject object at 0x03E83228>, <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,237 - DEBUG - viFindNext(<ViObject object at 0x03E83228>, <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,237 - DEBUG - viFindNext(<ViObject object at 0x03E83228>, <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,237 - DEBUG - viFindNext(<ViObject object at 0x03E83228>, <ctypes.c_char_Array_256 object at 0x03E833D8>) -> 0
+2024-03-01 13:25:34,237 - DEBUG - viClose(<ViObject object at 0x03E83228>,) -> 0
+2024-03-01 13:25:34,239 - DEBUG - viParseRsrcEx(37577056, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03E839C0>, <ctypes.c_char_Array_256 object at 0x03E83A08>, <ctypes.c_char_Array_256 object at 0x03E83A50>) -> 0
+2024-03-01 13:25:34,239 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:25:34,357 - DEBUG - viOpen(37577056, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03E839C0>') -> 0
+2024-03-01 13:25:34,357 - DEBUG - GPIB0::8::INSTR - is open with session 38549032
+2024-03-01 13:25:34,361 - DEBUG - viWrite(38549032, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:25:34,361 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:34,362 - DEBUG - viRead(38549032, <ctypes.c_char_Array_20480 object at 0x03E83CD8>, 20480, 'c_ulong(1)') -> 0
+2024-03-01 13:25:34,367 - DEBUG - viWrite(38549032, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:34,367 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:34,382 - DEBUG - viRead(38549032, <ctypes.c_char_Array_20480 object at 0x03E83D20>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:25:34,385 - DEBUG - viWrite(38549032, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:25:34,385 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:34,473 - DEBUG - viRead(38549032, <ctypes.c_char_Array_20480 object at 0x03E83ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:25:34,478 - DEBUG - viWrite(38549032, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:25:34,482 - DEBUG - viWrite(38549032, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:34,482 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:34,486 - DEBUG - viRead(38549032, <ctypes.c_char_Array_20480 object at 0x03E83ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:25:34,487 - DEBUG - Closing ResourceManager (session: 37577056)
+2024-03-01 13:25:34,487 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:25:34,488 - DEBUG - viDisableEvent(38549032, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:25:34,488 - DEBUG - viDiscardEvents(38549032, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:25:34,488 - DEBUG - viClose(38549032,) -> 0
+2024-03-01 13:25:34,488 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:25:34,490 - DEBUG - viClose(37577056,) -> 0
+2024-03-01 13:25:53,010 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:25:53,010 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:25:53,045 - DEBUG - viOpenDefaultRM('<ViObject object at 0x037531E0>',) -> 0
+2024-03-01 13:25:53,045 - DEBUG - Created ResourceManager with session 30119560
+2024-03-01 13:25:53,211 - DEBUG - viFindRsrc(30119560, '?*', '<ViObject object at 0x037531E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viFindNext(<ViObject object at 0x037531E0>, <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viFindNext(<ViObject object at 0x037531E0>, <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viFindNext(<ViObject object at 0x037531E0>, <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viFindNext(<ViObject object at 0x037531E0>, <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viFindNext(<ViObject object at 0x037531E0>, <ctypes.c_char_Array_256 object at 0x03753390>) -> 0
+2024-03-01 13:25:53,212 - DEBUG - viClose(<ViObject object at 0x037531E0>,) -> 0
+2024-03-01 13:25:53,214 - DEBUG - viParseRsrcEx(30119560, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03753978>, <ctypes.c_char_Array_256 object at 0x037539C0>, <ctypes.c_char_Array_256 object at 0x03753A08>) -> 0
+2024-03-01 13:25:53,214 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:25:53,332 - DEBUG - viOpen(30119560, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03753978>') -> 0
+2024-03-01 13:25:53,332 - DEBUG - GPIB0::8::INSTR - is open with session 31015144
+2024-03-01 13:25:53,335 - DEBUG - viWrite(31015144, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:25:53,335 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:53,335 - DEBUG - viRead(31015144, <ctypes.c_char_Array_20480 object at 0x03753C90>, 20480, 'c_ulong(1)') -> 0
+2024-03-01 13:25:53,338 - DEBUG - viWrite(31015144, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:53,338 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:53,357 - DEBUG - viRead(31015144, <ctypes.c_char_Array_20480 object at 0x03753CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:25:53,359 - DEBUG - viWrite(31015144, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:25:53,359 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:53,420 - DEBUG - viRead(31015144, <ctypes.c_char_Array_20480 object at 0x03753E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:25:53,425 - DEBUG - viWrite(31015144, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:25:53,425 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:53,432 - DEBUG - viRead(31015144, <ctypes.c_char_Array_20480 object at 0x03753E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:25:53,436 - DEBUG - viWrite(31015144, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:25:53,436 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:25:53,523 - DEBUG - viRead(31015144, <ctypes.c_char_Array_20480 object at 0x03753E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:25:53,525 - DEBUG - Closing ResourceManager (session: 30119560)
+2024-03-01 13:25:53,525 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:25:53,525 - DEBUG - viDisableEvent(31015144, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:25:53,525 - DEBUG - viDiscardEvents(31015144, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:25:53,526 - DEBUG - viClose(31015144,) -> 0
+2024-03-01 13:25:53,527 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:25:53,530 - DEBUG - viClose(30119560,) -> 0
+2024-03-01 13:30:57,604 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:30:57,604 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:30:57,638 - DEBUG - viOpenDefaultRM('<ViObject object at 0x031E31E0>',) -> 0
+2024-03-01 13:30:57,638 - DEBUG - Created ResourceManager with session 24219880
+2024-03-01 13:30:57,806 - DEBUG - viFindRsrc(24219880, '?*', '<ViObject object at 0x031E31E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viFindNext(<ViObject object at 0x031E31E0>, <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viFindNext(<ViObject object at 0x031E31E0>, <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viFindNext(<ViObject object at 0x031E31E0>, <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viFindNext(<ViObject object at 0x031E31E0>, <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viFindNext(<ViObject object at 0x031E31E0>, <ctypes.c_char_Array_256 object at 0x031E3390>) -> 0
+2024-03-01 13:30:57,807 - DEBUG - viClose(<ViObject object at 0x031E31E0>,) -> 0
+2024-03-01 13:30:57,809 - DEBUG - viParseRsrcEx(24219880, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x031E3978>, <ctypes.c_char_Array_256 object at 0x031E39C0>, <ctypes.c_char_Array_256 object at 0x031E3A08>) -> 0
+2024-03-01 13:30:57,809 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:30:57,927 - DEBUG - viOpen(24219880, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x031E3978>') -> 0
+2024-03-01 13:30:57,927 - DEBUG - GPIB0::8::INSTR - is open with session 25078016
+2024-03-01 13:30:57,930 - DEBUG - viWrite(25078016, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:30:57,931 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:30:57,950 - DEBUG - viRead(25078016, <ctypes.c_char_Array_20480 object at 0x031E3C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:30:57,955 - DEBUG - viWrite(25078016, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:30:57,955 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:30:58,002 - DEBUG - viRead(25078016, <ctypes.c_char_Array_20480 object at 0x031E3CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:30:58,005 - DEBUG - viWrite(25078016, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:30:58,005 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:30:58,013 - DEBUG - viRead(25078016, <ctypes.c_char_Array_20480 object at 0x031E3E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:30:58,032 - DEBUG - viWrite(25078016, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:30:58,032 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:00,070 - DEBUG - viRead(25078016, <ctypes.c_char_Array_20480 object at 0x031E3E88>, 20480, 'c_ulong(0)') -> -1073807339
+2024-03-01 13:31:00,070 - DEBUG - GPIB0::8::INSTR - exception while reading: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.
+Buffer content: bytearray(b'')
+2024-03-01 13:31:00,078 - DEBUG - Closing ResourceManager (session: 24219880)
+2024-03-01 13:31:00,080 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:31:00,080 - DEBUG - viDisableEvent(25078016, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:31:00,080 - DEBUG - viDiscardEvents(25078016, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:31:00,080 - DEBUG - viClose(25078016,) -> 0
+2024-03-01 13:31:00,081 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:31:00,083 - DEBUG - viClose(24219880,) -> 0
+2024-03-01 13:31:11,598 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:31:11,598 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:31:11,632 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03994228>',) -> 0
+2024-03-01 13:31:11,632 - DEBUG - Created ResourceManager with session 32484264
+2024-03-01 13:31:11,798 - DEBUG - viFindRsrc(32484264, '?*', '<ViObject object at 0x03994228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viFindNext(<ViObject object at 0x03994228>, <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viFindNext(<ViObject object at 0x03994228>, <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viFindNext(<ViObject object at 0x03994228>, <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viFindNext(<ViObject object at 0x03994228>, <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viFindNext(<ViObject object at 0x03994228>, <ctypes.c_char_Array_256 object at 0x039943D8>) -> 0
+2024-03-01 13:31:11,798 - DEBUG - viClose(<ViObject object at 0x03994228>,) -> 0
+2024-03-01 13:31:11,800 - DEBUG - viParseRsrcEx(32484264, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x039949C0>, <ctypes.c_char_Array_256 object at 0x03994A08>, <ctypes.c_char_Array_256 object at 0x03994A50>) -> 0
+2024-03-01 13:31:11,800 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:31:11,918 - DEBUG - viOpen(32484264, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x039949C0>') -> 0
+2024-03-01 13:31:11,919 - DEBUG - GPIB0::8::INSTR - is open with session 33474736
+2024-03-01 13:31:11,922 - DEBUG - viWrite(33474736, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:31:11,922 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:11,934 - DEBUG - viRead(33474736, <ctypes.c_char_Array_20480 object at 0x03994CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:31:11,939 - DEBUG - viWrite(33474736, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:31:11,939 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:12,033 - DEBUG - viRead(33474736, <ctypes.c_char_Array_20480 object at 0x03994D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:31:12,038 - DEBUG - viWrite(33474736, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:31:12,039 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:12,046 - DEBUG - viRead(33474736, <ctypes.c_char_Array_20480 object at 0x03994ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:31:12,050 - DEBUG - viWrite(33474736, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:31:12,053 - DEBUG - viWrite(33474736, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:31:12,053 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:12,084 - DEBUG - viRead(33474736, <ctypes.c_char_Array_20480 object at 0x03994ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:31:39,114 - DEBUG - Closing ResourceManager (session: 32484264)
+2024-03-01 13:31:39,114 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:31:39,114 - DEBUG - viDisableEvent(33474736, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:31:39,115 - DEBUG - viDiscardEvents(33474736, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:31:39,115 - DEBUG - viClose(33474736,) -> 0
+2024-03-01 13:31:39,115 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:31:39,117 - DEBUG - viClose(32484264,) -> 0
+2024-03-01 13:31:54,662 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:31:54,662 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:31:54,695 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03663228>',) -> 0
+2024-03-01 13:31:54,695 - DEBUG - Created ResourceManager with session 28929088
+2024-03-01 13:31:54,863 - DEBUG - viFindRsrc(28929088, '?*', '<ViObject object at 0x03663228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viFindNext(<ViObject object at 0x03663228>, <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viFindNext(<ViObject object at 0x03663228>, <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viFindNext(<ViObject object at 0x03663228>, <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viFindNext(<ViObject object at 0x03663228>, <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viFindNext(<ViObject object at 0x03663228>, <ctypes.c_char_Array_256 object at 0x036633D8>) -> 0
+2024-03-01 13:31:54,863 - DEBUG - viClose(<ViObject object at 0x03663228>,) -> 0
+2024-03-01 13:31:54,865 - DEBUG - viParseRsrcEx(28929088, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x036639C0>, <ctypes.c_char_Array_256 object at 0x03663A08>, <ctypes.c_char_Array_256 object at 0x03663A50>) -> 0
+2024-03-01 13:31:54,866 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:31:54,982 - DEBUG - viOpen(28929088, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x036639C0>') -> 0
+2024-03-01 13:31:54,983 - DEBUG - GPIB0::8::INSTR - is open with session 25672944
+2024-03-01 13:31:54,986 - DEBUG - viWrite(25672944, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:31:54,986 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:55,005 - DEBUG - viRead(25672944, <ctypes.c_char_Array_20480 object at 0x03663CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:31:55,010 - DEBUG - viWrite(25672944, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:31:55,010 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:55,048 - DEBUG - viRead(25672944, <ctypes.c_char_Array_20480 object at 0x03663D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:31:55,051 - DEBUG - viWrite(25672944, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:31:55,052 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:55,060 - DEBUG - viRead(25672944, <ctypes.c_char_Array_20480 object at 0x03663ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:31:55,064 - DEBUG - viWrite(25672944, b':ILD:SET 1.5E-2\r\n', 17, 'c_ulong(17)') -> 0
+2024-03-01 13:31:55,067 - DEBUG - viWrite(25672944, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:31:55,068 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:31:55,101 - DEBUG - viRead(25672944, <ctypes.c_char_Array_20480 object at 0x03663ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:32:09,208 - DEBUG - Closing ResourceManager (session: 28929088)
+2024-03-01 13:32:09,208 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:32:09,208 - DEBUG - viDisableEvent(25672944, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:32:09,208 - DEBUG - viDiscardEvents(25672944, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:32:09,209 - DEBUG - viClose(25672944,) -> 0
+2024-03-01 13:32:09,209 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:32:09,212 - DEBUG - viClose(28929088,) -> 0
+2024-03-01 13:32:12,089 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:32:12,089 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:32:12,125 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03EB3228>',) -> 0
+2024-03-01 13:32:12,125 - DEBUG - Created ResourceManager with session 37873024
+2024-03-01 13:32:12,304 - DEBUG - viFindRsrc(37873024, '?*', '<ViObject object at 0x03EB3228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viFindNext(<ViObject object at 0x03EB3228>, <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viFindNext(<ViObject object at 0x03EB3228>, <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viFindNext(<ViObject object at 0x03EB3228>, <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viFindNext(<ViObject object at 0x03EB3228>, <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viFindNext(<ViObject object at 0x03EB3228>, <ctypes.c_char_Array_256 object at 0x03EB33D8>) -> 0
+2024-03-01 13:32:12,305 - DEBUG - viClose(<ViObject object at 0x03EB3228>,) -> 0
+2024-03-01 13:32:12,308 - DEBUG - viParseRsrcEx(37873024, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03EB39C0>, <ctypes.c_char_Array_256 object at 0x03EB3A08>, <ctypes.c_char_Array_256 object at 0x03EB3A50>) -> 0
+2024-03-01 13:32:12,308 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:32:12,437 - DEBUG - viOpen(37873024, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03EB39C0>') -> 0
+2024-03-01 13:32:12,437 - DEBUG - GPIB0::8::INSTR - is open with session 38788176
+2024-03-01 13:32:12,440 - DEBUG - viWrite(38788176, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:32:12,441 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:12,452 - DEBUG - viRead(38788176, <ctypes.c_char_Array_20480 object at 0x03EB3CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:32:12,456 - DEBUG - viWrite(38788176, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:32:12,456 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:12,561 - DEBUG - viRead(38788176, <ctypes.c_char_Array_20480 object at 0x03EB3D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:32:12,565 - DEBUG - viWrite(38788176, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:32:12,565 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:12,573 - DEBUG - viRead(38788176, <ctypes.c_char_Array_20480 object at 0x03EB3ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:32:12,579 - DEBUG - viWrite(38788176, b':ILD:SET 1.5E-2\r\n', 17, 'c_ulong(17)') -> 0
+2024-03-01 13:32:12,582 - DEBUG - viWrite(38788176, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:32:12,583 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:12,614 - DEBUG - viRead(38788176, <ctypes.c_char_Array_20480 object at 0x03EB3ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:32:12,614 - DEBUG - Closing ResourceManager (session: 37873024)
+2024-03-01 13:32:12,614 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:32:12,614 - DEBUG - viDisableEvent(38788176, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:32:12,614 - DEBUG - viDiscardEvents(38788176, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:32:12,615 - DEBUG - viClose(38788176,) -> 0
+2024-03-01 13:32:12,615 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:32:12,617 - DEBUG - viClose(37873024,) -> 0
+2024-03-01 13:32:27,538 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:32:27,538 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:32:27,571 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03CD3228>',) -> 0
+2024-03-01 13:32:27,571 - DEBUG - Created ResourceManager with session 36079136
+2024-03-01 13:32:27,739 - DEBUG - viFindRsrc(36079136, '?*', '<ViObject object at 0x03CD3228>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viFindNext(<ViObject object at 0x03CD3228>, <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viFindNext(<ViObject object at 0x03CD3228>, <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viFindNext(<ViObject object at 0x03CD3228>, <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viFindNext(<ViObject object at 0x03CD3228>, <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viFindNext(<ViObject object at 0x03CD3228>, <ctypes.c_char_Array_256 object at 0x03CD33D8>) -> 0
+2024-03-01 13:32:27,740 - DEBUG - viClose(<ViObject object at 0x03CD3228>,) -> 0
+2024-03-01 13:32:27,741 - DEBUG - viParseRsrcEx(36079136, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03CD39C0>, <ctypes.c_char_Array_256 object at 0x03CD3A08>, <ctypes.c_char_Array_256 object at 0x03CD3A50>) -> 0
+2024-03-01 13:32:27,741 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:32:27,857 - DEBUG - viOpen(36079136, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03CD39C0>') -> 0
+2024-03-01 13:32:27,857 - DEBUG - GPIB0::8::INSTR - is open with session 36570832
+2024-03-01 13:32:27,859 - DEBUG - viWrite(36570832, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:32:27,859 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:27,879 - DEBUG - viRead(36570832, <ctypes.c_char_Array_20480 object at 0x03CD3CD8>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:32:27,883 - DEBUG - viWrite(36570832, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:32:27,883 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:27,924 - DEBUG - viRead(36570832, <ctypes.c_char_Array_20480 object at 0x03CD3D20>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:32:27,927 - DEBUG - viWrite(36570832, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:32:27,927 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:27,935 - DEBUG - viRead(36570832, <ctypes.c_char_Array_20480 object at 0x03CD3ED0>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:32:27,939 - DEBUG - viWrite(36570832, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:32:27,942 - DEBUG - viWrite(36570832, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:32:27,942 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:32:27,972 - DEBUG - viRead(36570832, <ctypes.c_char_Array_20480 object at 0x03CD3ED0>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:32:27,974 - DEBUG - Closing ResourceManager (session: 36079136)
+2024-03-01 13:32:27,974 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:32:27,974 - DEBUG - viDisableEvent(36570832, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:32:27,974 - DEBUG - viDiscardEvents(36570832, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:32:27,975 - DEBUG - viClose(36570832,) -> 0
+2024-03-01 13:32:27,975 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:32:27,976 - DEBUG - viClose(36079136,) -> 0
+2024-03-01 13:34:35,410 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:34:35,410 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:34:35,442 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03C731E0>',) -> 0
+2024-03-01 13:34:35,442 - DEBUG - Created ResourceManager with session 35307496
+2024-03-01 13:34:35,618 - DEBUG - viFindRsrc(35307496, '?*', '<ViObject object at 0x03C731E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,618 - DEBUG - viFindNext(<ViObject object at 0x03C731E0>, <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,618 - DEBUG - viFindNext(<ViObject object at 0x03C731E0>, <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,618 - DEBUG - viFindNext(<ViObject object at 0x03C731E0>, <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,618 - DEBUG - viFindNext(<ViObject object at 0x03C731E0>, <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,618 - DEBUG - viFindNext(<ViObject object at 0x03C731E0>, <ctypes.c_char_Array_256 object at 0x03C73390>) -> 0
+2024-03-01 13:34:35,619 - DEBUG - viClose(<ViObject object at 0x03C731E0>,) -> 0
+2024-03-01 13:34:35,621 - DEBUG - viParseRsrcEx(35307496, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03C73978>, <ctypes.c_char_Array_256 object at 0x03C739C0>, <ctypes.c_char_Array_256 object at 0x03C73A08>) -> 0
+2024-03-01 13:34:35,621 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:34:35,738 - DEBUG - viOpen(35307496, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03C73978>') -> 0
+2024-03-01 13:34:35,738 - DEBUG - GPIB0::8::INSTR - is open with session 36352456
+2024-03-01 13:34:35,740 - DEBUG - viWrite(36352456, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:34:35,741 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:34:35,761 - DEBUG - viRead(36352456, <ctypes.c_char_Array_20480 object at 0x03C73C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:34:35,764 - DEBUG - viWrite(36352456, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:34:35,764 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:34:35,840 - DEBUG - viRead(36352456, <ctypes.c_char_Array_20480 object at 0x03C73CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:34:35,844 - DEBUG - viWrite(36352456, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:34:35,844 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:34:35,851 - DEBUG - viRead(36352456, <ctypes.c_char_Array_20480 object at 0x03C73E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:34:35,856 - DEBUG - viWrite(36352456, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:34:35,858 - DEBUG - viWrite(36352456, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:34:35,858 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:34:35,891 - DEBUG - viRead(36352456, <ctypes.c_char_Array_20480 object at 0x03C73E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:34:35,895 - DEBUG - viWrite(36352456, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:34:35,895 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:34:35,917 - DEBUG - viRead(36352456, <ctypes.c_char_Array_20480 object at 0x03C73E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:34:35,918 - DEBUG - Closing ResourceManager (session: 35307496)
+2024-03-01 13:34:35,918 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:34:35,919 - DEBUG - viDisableEvent(36352456, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:34:35,919 - DEBUG - viDiscardEvents(36352456, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:34:35,919 - DEBUG - viClose(36352456,) -> 0
+2024-03-01 13:34:35,919 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:34:35,920 - DEBUG - viClose(35307496,) -> 0
+2024-03-01 13:34:59,937 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:34:59,937 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:34:59,970 - DEBUG - viOpenDefaultRM('<ViObject object at 0x037D31E0>',) -> 0
+2024-03-01 13:34:59,970 - DEBUG - Created ResourceManager with session 30833432
+2024-03-01 13:35:00,131 - DEBUG - viFindRsrc(30833432, '?*', '<ViObject object at 0x037D31E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viFindNext(<ViObject object at 0x037D31E0>, <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viFindNext(<ViObject object at 0x037D31E0>, <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viFindNext(<ViObject object at 0x037D31E0>, <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viFindNext(<ViObject object at 0x037D31E0>, <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viFindNext(<ViObject object at 0x037D31E0>, <ctypes.c_char_Array_256 object at 0x037D3390>) -> 0
+2024-03-01 13:35:00,132 - DEBUG - viClose(<ViObject object at 0x037D31E0>,) -> 0
+2024-03-01 13:35:00,134 - DEBUG - viParseRsrcEx(30833432, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x037D3978>, <ctypes.c_char_Array_256 object at 0x037D39C0>, <ctypes.c_char_Array_256 object at 0x037D3A08>) -> 0
+2024-03-01 13:35:00,134 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:35:00,250 - DEBUG - viOpen(30833432, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x037D3978>') -> 0
+2024-03-01 13:35:00,251 - DEBUG - GPIB0::8::INSTR - is open with session 26302152
+2024-03-01 13:35:00,252 - DEBUG - viWrite(26302152, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:35:00,252 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:35:00,273 - DEBUG - viRead(26302152, <ctypes.c_char_Array_20480 object at 0x037D3C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:35:00,278 - DEBUG - viWrite(26302152, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:35:00,278 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:35:00,317 - DEBUG - viRead(26302152, <ctypes.c_char_Array_20480 object at 0x037D3CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:35:00,319 - DEBUG - viWrite(26302152, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:35:00,319 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:35:00,328 - DEBUG - viRead(26302152, <ctypes.c_char_Array_20480 object at 0x037D3E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:35:00,332 - DEBUG - viWrite(26302152, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:35:00,335 - DEBUG - viWrite(26302152, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:35:00,335 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:35:00,367 - DEBUG - viRead(26302152, <ctypes.c_char_Array_20480 object at 0x037D3E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:35:00,370 - DEBUG - viWrite(26302152, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:35:00,370 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:35:00,728 - DEBUG - viRead(26302152, <ctypes.c_char_Array_20480 object at 0x037D3E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:35:00,729 - DEBUG - Closing ResourceManager (session: 30833432)
+2024-03-01 13:35:00,729 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:35:00,729 - DEBUG - viDisableEvent(26302152, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:35:00,729 - DEBUG - viDiscardEvents(26302152, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:35:00,730 - DEBUG - viClose(26302152,) -> 0
+2024-03-01 13:35:00,730 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:35:00,731 - DEBUG - viClose(30833432,) -> 0
+2024-03-01 13:36:11,941 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:36:11,943 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:36:12,224 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03F441E0>',) -> 0
+2024-03-01 13:36:12,225 - DEBUG - Created ResourceManager with session 38441176
+2024-03-01 13:36:13,662 - DEBUG - viFindRsrc(38441176, '?*', '<ViObject object at 0x03F441E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,663 - DEBUG - viFindNext(<ViObject object at 0x03F441E0>, <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,665 - DEBUG - viFindNext(<ViObject object at 0x03F441E0>, <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,665 - DEBUG - viFindNext(<ViObject object at 0x03F441E0>, <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,669 - DEBUG - viFindNext(<ViObject object at 0x03F441E0>, <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,670 - DEBUG - viFindNext(<ViObject object at 0x03F441E0>, <ctypes.c_char_Array_256 object at 0x03F44390>) -> 0
+2024-03-01 13:36:13,671 - DEBUG - viClose(<ViObject object at 0x03F441E0>,) -> 0
+2024-03-01 13:36:13,746 - DEBUG - viParseRsrcEx(38441176, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03F44978>, <ctypes.c_char_Array_256 object at 0x03F449C0>, <ctypes.c_char_Array_256 object at 0x03F44A08>) -> 0
+2024-03-01 13:36:13,747 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:36:13,962 - DEBUG - viOpen(38441176, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03F44978>') -> 0
+2024-03-01 13:36:13,963 - DEBUG - GPIB0::8::INSTR - is open with session 39338368
+2024-03-01 13:36:13,967 - DEBUG - viWrite(39338368, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:36:13,968 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:13,986 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:36:14,016 - DEBUG - viWrite(39338368, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:36:14,017 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:14,364 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:36:14,369 - DEBUG - viWrite(39338368, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:36:14,370 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:14,378 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:36:14,385 - DEBUG - viWrite(39338368, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:36:14,389 - DEBUG - viWrite(39338368, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:36:14,390 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:14,419 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:36:14,429 - DEBUG - viWrite(39338368, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:36:14,430 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:14,775 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:36:14,783 - DEBUG - viWrite(39338368, b'RESI:SET 1E+4\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:36:14,787 - DEBUG - viWrite(39338368, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:36:14,788 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:36:14,814 - DEBUG - viRead(39338368, <ctypes.c_char_Array_20480 object at 0x03F44E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:36:14,845 - DEBUG - Closing ResourceManager (session: 38441176)
+2024-03-01 13:36:14,845 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:36:14,846 - DEBUG - viDisableEvent(39338368, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:36:14,847 - DEBUG - viDiscardEvents(39338368, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:36:14,861 - DEBUG - viClose(39338368,) -> 0
+2024-03-01 13:36:14,862 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:36:14,874 - DEBUG - viClose(38441176,) -> 0
+2024-03-01 13:37:37,139 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:37:37,140 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:37:37,337 - DEBUG - viOpenDefaultRM('<ViObject object at 0x039831E0>',) -> 0
+2024-03-01 13:37:37,337 - DEBUG - Created ResourceManager with session 32195296
+2024-03-01 13:37:38,195 - DEBUG - viFindRsrc(32195296, '?*', '<ViObject object at 0x039831E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,196 - DEBUG - viFindNext(<ViObject object at 0x039831E0>, <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,197 - DEBUG - viFindNext(<ViObject object at 0x039831E0>, <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,198 - DEBUG - viFindNext(<ViObject object at 0x039831E0>, <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,198 - DEBUG - viFindNext(<ViObject object at 0x039831E0>, <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,198 - DEBUG - viFindNext(<ViObject object at 0x039831E0>, <ctypes.c_char_Array_256 object at 0x03983390>) -> 0
+2024-03-01 13:37:38,199 - DEBUG - viClose(<ViObject object at 0x039831E0>,) -> 0
+2024-03-01 13:37:38,212 - DEBUG - viParseRsrcEx(32195296, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03983978>, <ctypes.c_char_Array_256 object at 0x039839C0>, <ctypes.c_char_Array_256 object at 0x03983A08>) -> 0
+2024-03-01 13:37:38,213 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:37:38,387 - DEBUG - viOpen(32195296, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03983978>') -> 0
+2024-03-01 13:37:38,387 - DEBUG - GPIB0::8::INSTR - is open with session 32820856
+2024-03-01 13:37:38,391 - DEBUG - viWrite(32820856, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:37:38,392 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:38,410 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:37:38,415 - DEBUG - viWrite(32820856, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:37:38,416 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:38,754 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:37:38,759 - DEBUG - viWrite(32820856, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:37:38,759 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:38,767 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:37:38,772 - DEBUG - viWrite(32820856, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:37:38,776 - DEBUG - viWrite(32820856, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:37:38,777 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:38,806 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:37:38,812 - DEBUG - viWrite(32820856, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:37:38,813 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:39,165 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:37:39,171 - DEBUG - viWrite(32820856, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:37:39,171 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:39,193 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:37:39,199 - DEBUG - viWrite(32820856, b'RESI:SET 1E+4\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:37:39,204 - DEBUG - viWrite(32820856, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:37:39,204 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:37:39,229 - DEBUG - viRead(32820856, <ctypes.c_char_Array_20480 object at 0x03983E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:37:39,231 - DEBUG - Closing ResourceManager (session: 32195296)
+2024-03-01 13:37:39,232 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:37:39,233 - DEBUG - viDisableEvent(32820856, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:37:39,234 - DEBUG - viDiscardEvents(32820856, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:37:39,236 - DEBUG - viClose(32820856,) -> 0
+2024-03-01 13:37:39,237 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:37:39,247 - DEBUG - viClose(32195296,) -> 0
+2024-03-01 13:38:19,112 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:38:19,113 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:38:19,342 - DEBUG - viOpenDefaultRM('<ViObject object at 0x038751E0>',) -> 0
+2024-03-01 13:38:19,344 - DEBUG - Created ResourceManager with session 31314680
+2024-03-01 13:38:20,590 - DEBUG - viFindRsrc(31314680, '?*', '<ViObject object at 0x038751E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,590 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,591 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,591 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,592 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,593 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:38:20,593 - DEBUG - viClose(<ViObject object at 0x038751E0>,) -> 0
+2024-03-01 13:38:20,621 - DEBUG - viParseRsrcEx(31314680, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03875978>, <ctypes.c_char_Array_256 object at 0x038759C0>, <ctypes.c_char_Array_256 object at 0x03875A08>) -> 0
+2024-03-01 13:38:20,623 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:38:20,829 - DEBUG - viOpen(31314680, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03875978>') -> 0
+2024-03-01 13:38:20,830 - DEBUG - GPIB0::8::INSTR - is open with session 32318936
+2024-03-01 13:38:20,834 - DEBUG - viWrite(32318936, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:38:20,835 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:20,853 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:38:20,860 - DEBUG - viWrite(32318936, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:38:20,861 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,256 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:38:21,266 - DEBUG - viWrite(32318936, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:38:21,267 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,274 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:38:21,282 - DEBUG - viWrite(32318936, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:38:21,287 - DEBUG - viWrite(32318936, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:38:21,289 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,318 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:38:21,332 - DEBUG - viWrite(32318936, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:21,333 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,769 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:21,776 - DEBUG - viWrite(32318936, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:21,778 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,800 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:21,808 - DEBUG - viWrite(32318936, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:21,810 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,832 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:21,842 - DEBUG - viWrite(32318936, b'RESI:SET 1E+4\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:38:21,847 - DEBUG - viWrite(32318936, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:21,849 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:21,875 - DEBUG - viRead(32318936, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:21,883 - DEBUG - Closing ResourceManager (session: 31314680)
+2024-03-01 13:38:21,884 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:38:21,886 - DEBUG - viDisableEvent(32318936, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:38:21,888 - DEBUG - viDiscardEvents(32318936, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:38:21,917 - DEBUG - viClose(32318936,) -> 0
+2024-03-01 13:38:21,918 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:38:21,934 - DEBUG - viClose(31314680,) -> 0
+2024-03-01 13:38:56,157 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:38:56,159 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:38:56,435 - DEBUG - viOpenDefaultRM('<ViObject object at 0x035041E0>',) -> 0
+2024-03-01 13:38:56,436 - DEBUG - Created ResourceManager with session 27630032
+2024-03-01 13:38:58,002 - DEBUG - viFindRsrc(27630032, '?*', '<ViObject object at 0x035041E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,003 - DEBUG - viFindNext(<ViObject object at 0x035041E0>, <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,004 - DEBUG - viFindNext(<ViObject object at 0x035041E0>, <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,005 - DEBUG - viFindNext(<ViObject object at 0x035041E0>, <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,006 - DEBUG - viFindNext(<ViObject object at 0x035041E0>, <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,007 - DEBUG - viFindNext(<ViObject object at 0x035041E0>, <ctypes.c_char_Array_256 object at 0x03504390>) -> 0
+2024-03-01 13:38:58,007 - DEBUG - viClose(<ViObject object at 0x035041E0>,) -> 0
+2024-03-01 13:38:58,033 - DEBUG - viParseRsrcEx(27630032, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03504978>, <ctypes.c_char_Array_256 object at 0x035049C0>, <ctypes.c_char_Array_256 object at 0x03504A08>) -> 0
+2024-03-01 13:38:58,033 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:38:58,278 - DEBUG - viOpen(27630032, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03504978>') -> 0
+2024-03-01 13:38:58,279 - DEBUG - GPIB0::8::INSTR - is open with session 28594344
+2024-03-01 13:38:58,284 - DEBUG - viWrite(28594344, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:38:58,285 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:58,303 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:38:58,310 - DEBUG - viWrite(28594344, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:38:58,311 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:58,843 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:38:58,849 - DEBUG - viWrite(28594344, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:38:58,850 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:58,857 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:38:58,864 - DEBUG - viWrite(28594344, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:38:58,869 - DEBUG - viWrite(28594344, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:38:58,872 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:58,898 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:38:58,907 - DEBUG - viWrite(28594344, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:58,908 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:59,254 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:59,264 - DEBUG - viWrite(28594344, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:59,265 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:59,286 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:59,294 - DEBUG - viWrite(28594344, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:59,295 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:59,316 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:59,337 - DEBUG - viWrite(28594344, b':RESI:SET 1E+4\r\n', 16, 'c_ulong(16)') -> 0
+2024-03-01 13:38:59,343 - DEBUG - viWrite(28594344, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:38:59,344 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:38:59,383 - DEBUG - viRead(28594344, <ctypes.c_char_Array_20480 object at 0x03504E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:38:59,389 - DEBUG - Closing ResourceManager (session: 27630032)
+2024-03-01 13:38:59,391 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:38:59,392 - DEBUG - viDisableEvent(28594344, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:38:59,393 - DEBUG - viDiscardEvents(28594344, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:38:59,397 - DEBUG - viClose(28594344,) -> 0
+2024-03-01 13:38:59,399 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:38:59,414 - DEBUG - viClose(27630032,) -> 0
+2024-03-01 13:40:42,622 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:40:42,624 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:40:48,271 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03DB51E0>',) -> 0
+2024-03-01 13:40:48,272 - DEBUG - Created ResourceManager with session 36745832
+2024-03-01 13:40:52,123 - DEBUG - viFindRsrc(36745832, '?*', '<ViObject object at 0x03DB51E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,124 - DEBUG - viFindNext(<ViObject object at 0x03DB51E0>, <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,125 - DEBUG - viFindNext(<ViObject object at 0x03DB51E0>, <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,125 - DEBUG - viFindNext(<ViObject object at 0x03DB51E0>, <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,126 - DEBUG - viFindNext(<ViObject object at 0x03DB51E0>, <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,126 - DEBUG - viFindNext(<ViObject object at 0x03DB51E0>, <ctypes.c_char_Array_256 object at 0x03DB5390>) -> 0
+2024-03-01 13:40:52,127 - DEBUG - viClose(<ViObject object at 0x03DB51E0>,) -> 0
+2024-03-01 13:40:52,140 - DEBUG - viParseRsrcEx(36745832, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03DB5978>, <ctypes.c_char_Array_256 object at 0x03DB59C0>, <ctypes.c_char_Array_256 object at 0x03DB5A08>) -> 0
+2024-03-01 13:40:52,141 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:40:52,788 - DEBUG - viOpen(36745832, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03DB5978>') -> 0
+2024-03-01 13:40:52,789 - DEBUG - GPIB0::8::INSTR - is open with session 37607728
+2024-03-01 13:40:52,793 - DEBUG - viWrite(37607728, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:40:52,794 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:40:52,812 - DEBUG - viRead(37607728, <ctypes.c_char_Array_20480 object at 0x03DB5C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:40:52,817 - DEBUG - viWrite(37607728, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:40:52,818 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:40:53,241 - DEBUG - viRead(37607728, <ctypes.c_char_Array_20480 object at 0x03DB5CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:40:53,246 - DEBUG - viWrite(37607728, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:40:53,247 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:40:53,255 - DEBUG - viRead(37607728, <ctypes.c_char_Array_20480 object at 0x03DB5E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:40:53,261 - DEBUG - viWrite(37607728, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:40:53,265 - DEBUG - viWrite(37607728, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:40:53,266 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:40:53,296 - DEBUG - viRead(37607728, <ctypes.c_char_Array_20480 object at 0x03DB5E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:40:53,309 - DEBUG - Closing ResourceManager (session: 36745832)
+2024-03-01 13:40:53,311 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:40:53,312 - DEBUG - viDisableEvent(37607728, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:40:53,313 - DEBUG - viDiscardEvents(37607728, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:40:53,316 - DEBUG - viClose(37607728,) -> 0
+2024-03-01 13:40:53,317 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:40:53,329 - DEBUG - viClose(36745832,) -> 0
+2024-03-01 13:41:07,721 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:41:07,723 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:41:08,039 - DEBUG - viOpenDefaultRM('<ViObject object at 0x031651E0>',) -> 0
+2024-03-01 13:41:08,040 - DEBUG - Created ResourceManager with session 24084600
+2024-03-01 13:41:09,714 - DEBUG - viFindRsrc(24084600, '?*', '<ViObject object at 0x031651E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,715 - DEBUG - viFindNext(<ViObject object at 0x031651E0>, <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,716 - DEBUG - viFindNext(<ViObject object at 0x031651E0>, <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,717 - DEBUG - viFindNext(<ViObject object at 0x031651E0>, <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,718 - DEBUG - viFindNext(<ViObject object at 0x031651E0>, <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,718 - DEBUG - viFindNext(<ViObject object at 0x031651E0>, <ctypes.c_char_Array_256 object at 0x03165390>) -> 0
+2024-03-01 13:41:09,719 - DEBUG - viClose(<ViObject object at 0x031651E0>,) -> 0
+2024-03-01 13:41:09,740 - DEBUG - viParseRsrcEx(24084600, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03165978>, <ctypes.c_char_Array_256 object at 0x031659C0>, <ctypes.c_char_Array_256 object at 0x03165A08>) -> 0
+2024-03-01 13:41:09,741 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:41:09,953 - DEBUG - viOpen(24084600, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03165978>') -> 0
+2024-03-01 13:41:09,954 - DEBUG - GPIB0::8::INSTR - is open with session 24476256
+2024-03-01 13:41:09,958 - DEBUG - viWrite(24476256, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:41:09,959 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:09,977 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:41:09,982 - DEBUG - viWrite(24476256, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:41:09,984 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,038 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:41:10,048 - DEBUG - viWrite(24476256, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:41:10,049 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,055 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:41:10,062 - DEBUG - viWrite(24476256, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:41:10,067 - DEBUG - viWrite(24476256, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:41:10,068 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,096 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:41:10,101 - DEBUG - viWrite(24476256, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:41:10,102 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,114 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:41:10,123 - DEBUG - viWrite(24476256, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:10,123 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,550 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:10,559 - DEBUG - viWrite(24476256, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:10,559 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,581 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:10,590 - DEBUG - viWrite(24476256, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:10,591 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,612 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:10,626 - DEBUG - viWrite(24476256, b':RESI:SET 1E+4\r\n', 16, 'c_ulong(16)') -> 0
+2024-03-01 13:41:10,630 - DEBUG - viWrite(24476256, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:10,632 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:10,671 - DEBUG - viRead(24476256, <ctypes.c_char_Array_20480 object at 0x03165A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:10,675 - DEBUG - Closing ResourceManager (session: 24084600)
+2024-03-01 13:41:10,676 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:41:10,677 - DEBUG - viDisableEvent(24476256, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:41:10,681 - DEBUG - viDiscardEvents(24476256, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:41:10,684 - DEBUG - viClose(24476256,) -> 0
+2024-03-01 13:41:10,685 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:41:10,699 - DEBUG - viClose(24084600,) -> 0
+2024-03-01 13:41:46,694 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:41:46,694 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:41:46,824 - DEBUG - viOpenDefaultRM('<ViObject object at 0x040151E0>',) -> 0
+2024-03-01 13:41:46,825 - DEBUG - Created ResourceManager with session 39074448
+2024-03-01 13:41:47,510 - DEBUG - viFindRsrc(39074448, '?*', '<ViObject object at 0x040151E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,511 - DEBUG - viFindNext(<ViObject object at 0x040151E0>, <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,511 - DEBUG - viFindNext(<ViObject object at 0x040151E0>, <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,511 - DEBUG - viFindNext(<ViObject object at 0x040151E0>, <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,512 - DEBUG - viFindNext(<ViObject object at 0x040151E0>, <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,512 - DEBUG - viFindNext(<ViObject object at 0x040151E0>, <ctypes.c_char_Array_256 object at 0x04015390>) -> 0
+2024-03-01 13:41:47,512 - DEBUG - viClose(<ViObject object at 0x040151E0>,) -> 0
+2024-03-01 13:41:47,521 - DEBUG - viParseRsrcEx(39074448, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x04015978>, <ctypes.c_char_Array_256 object at 0x040159C0>, <ctypes.c_char_Array_256 object at 0x04015A08>) -> 0
+2024-03-01 13:41:47,521 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:41:47,672 - DEBUG - viOpen(39074448, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x04015978>') -> 0
+2024-03-01 13:41:47,672 - DEBUG - GPIB0::8::INSTR - is open with session 39518080
+2024-03-01 13:41:47,675 - DEBUG - viWrite(39518080, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:41:47,677 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:47,696 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:41:47,701 - DEBUG - viWrite(39518080, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:41:47,701 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,137 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:41:48,142 - DEBUG - viWrite(39518080, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:41:48,142 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,150 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:41:48,156 - DEBUG - viWrite(39518080, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:41:48,160 - DEBUG - viWrite(39518080, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:41:48,160 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,190 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:41:48,197 - DEBUG - viWrite(39518080, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:41:48,198 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,208 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:41:48,213 - DEBUG - viWrite(39518080, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:48,215 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,651 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:48,657 - DEBUG - viWrite(39518080, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:48,657 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,678 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:48,683 - DEBUG - viWrite(39518080, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:48,683 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,705 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:48,712 - DEBUG - viWrite(39518080, b':RESI:SET 1E+4\r\n', 16, 'c_ulong(16)') -> 0
+2024-03-01 13:41:48,716 - DEBUG - viWrite(39518080, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:41:48,716 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:41:48,753 - DEBUG - viRead(39518080, <ctypes.c_char_Array_20480 object at 0x04015A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:41:48,756 - DEBUG - Closing ResourceManager (session: 39074448)
+2024-03-01 13:41:48,756 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:41:48,757 - DEBUG - viDisableEvent(39518080, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:41:48,757 - DEBUG - viDiscardEvents(39518080, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:41:48,758 - DEBUG - viClose(39518080,) -> 0
+2024-03-01 13:41:48,759 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:41:48,768 - DEBUG - viClose(39074448,) -> 0
+2024-03-01 13:42:01,242 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:42:01,242 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:42:01,322 - DEBUG - viOpenDefaultRM('<ViObject object at 0x039551E0>',) -> 0
+2024-03-01 13:42:01,322 - DEBUG - Created ResourceManager with session 19249864
+2024-03-01 13:42:01,724 - DEBUG - viFindRsrc(19249864, '?*', '<ViObject object at 0x039551E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,724 - DEBUG - viFindNext(<ViObject object at 0x039551E0>, <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,725 - DEBUG - viFindNext(<ViObject object at 0x039551E0>, <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,725 - DEBUG - viFindNext(<ViObject object at 0x039551E0>, <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,725 - DEBUG - viFindNext(<ViObject object at 0x039551E0>, <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,725 - DEBUG - viFindNext(<ViObject object at 0x039551E0>, <ctypes.c_char_Array_256 object at 0x03955390>) -> 0
+2024-03-01 13:42:01,725 - DEBUG - viClose(<ViObject object at 0x039551E0>,) -> 0
+2024-03-01 13:42:01,730 - DEBUG - viParseRsrcEx(19249864, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03955978>, <ctypes.c_char_Array_256 object at 0x039559C0>, <ctypes.c_char_Array_256 object at 0x03955A08>) -> 0
+2024-03-01 13:42:01,730 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:42:01,864 - DEBUG - viOpen(19249864, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03955978>') -> 0
+2024-03-01 13:42:01,864 - DEBUG - GPIB0::8::INSTR - is open with session 32862824
+2024-03-01 13:42:01,867 - DEBUG - viWrite(32862824, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:42:01,867 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:01,886 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:42:01,891 - DEBUG - viWrite(32862824, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:42:01,891 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,271 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:42:02,275 - DEBUG - viWrite(32862824, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:42:02,275 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,283 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:42:02,289 - DEBUG - viWrite(32862824, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:42:02,293 - DEBUG - viWrite(32862824, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:42:02,293 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,323 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:42:02,327 - DEBUG - viWrite(32862824, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:42:02,327 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,338 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:42:02,343 - DEBUG - viWrite(32862824, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:02,343 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,682 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:02,687 - DEBUG - viWrite(32862824, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:02,687 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,709 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:02,713 - DEBUG - viWrite(32862824, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:02,714 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,735 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:02,741 - DEBUG - viWrite(32862824, b':RESI:SET 1E+4\r\n', 16, 'c_ulong(16)') -> 0
+2024-03-01 13:42:02,745 - DEBUG - viWrite(32862824, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:02,745 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:02,801 - DEBUG - viRead(32862824, <ctypes.c_char_Array_20480 object at 0x03955A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:02,821 - DEBUG - Closing ResourceManager (session: 19249864)
+2024-03-01 13:42:02,821 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:42:02,821 - DEBUG - viDisableEvent(32862824, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:42:02,822 - DEBUG - viDiscardEvents(32862824, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:42:02,822 - DEBUG - viClose(32862824,) -> 0
+2024-03-01 13:42:02,823 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:42:02,827 - DEBUG - viClose(19249864,) -> 0
+2024-03-01 13:42:15,870 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:42:15,871 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:42:15,964 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03ED51E0>',) -> 0
+2024-03-01 13:42:15,964 - DEBUG - Created ResourceManager with session 37841504
+2024-03-01 13:42:16,420 - DEBUG - viFindRsrc(37841504, '?*', '<ViObject object at 0x03ED51E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,421 - DEBUG - viFindNext(<ViObject object at 0x03ED51E0>, <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,421 - DEBUG - viFindNext(<ViObject object at 0x03ED51E0>, <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,421 - DEBUG - viFindNext(<ViObject object at 0x03ED51E0>, <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,421 - DEBUG - viFindNext(<ViObject object at 0x03ED51E0>, <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,421 - DEBUG - viFindNext(<ViObject object at 0x03ED51E0>, <ctypes.c_char_Array_256 object at 0x03ED5390>) -> 0
+2024-03-01 13:42:16,422 - DEBUG - viClose(<ViObject object at 0x03ED51E0>,) -> 0
+2024-03-01 13:42:16,428 - DEBUG - viParseRsrcEx(37841504, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03ED5978>, <ctypes.c_char_Array_256 object at 0x03ED59C0>, <ctypes.c_char_Array_256 object at 0x03ED5A08>) -> 0
+2024-03-01 13:42:16,429 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:42:16,571 - DEBUG - viOpen(37841504, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03ED5978>') -> 0
+2024-03-01 13:42:16,571 - DEBUG - GPIB0::8::INSTR - is open with session 38852680
+2024-03-01 13:42:16,574 - DEBUG - viWrite(38852680, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:42:16,574 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:16,594 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:42:16,599 - DEBUG - viWrite(38852680, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:42:16,599 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,019 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:42:17,022 - DEBUG - viWrite(38852680, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:42:17,023 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,031 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:42:17,036 - DEBUG - viWrite(38852680, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:42:17,040 - DEBUG - viWrite(38852680, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:42:17,040 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,071 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:42:17,075 - DEBUG - viWrite(38852680, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:42:17,076 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,087 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:42:17,091 - DEBUG - viWrite(38852680, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:17,092 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,533 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:17,538 - DEBUG - viWrite(38852680, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:17,538 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,560 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:17,564 - DEBUG - viWrite(38852680, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:17,565 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,587 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:17,593 - DEBUG - viWrite(38852680, b':RESI:SET 1E+4\r\n', 16, 'c_ulong(16)') -> 0
+2024-03-01 13:42:17,597 - DEBUG - viWrite(38852680, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:42:17,597 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:42:17,635 - DEBUG - viRead(38852680, <ctypes.c_char_Array_20480 object at 0x03ED5A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:42:17,637 - DEBUG - Closing ResourceManager (session: 37841504)
+2024-03-01 13:42:17,637 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:42:17,638 - DEBUG - viDisableEvent(38852680, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:42:17,638 - DEBUG - viDiscardEvents(38852680, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:42:17,640 - DEBUG - viClose(38852680,) -> 0
+2024-03-01 13:42:17,640 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:42:17,646 - DEBUG - viClose(37841504,) -> 0
+2024-03-01 13:43:52,516 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:43:52,516 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:43:52,648 - DEBUG - viOpenDefaultRM('<ViObject object at 0x032C51E0>',) -> 0
+2024-03-01 13:43:52,648 - DEBUG - Created ResourceManager with session 25518768
+2024-03-01 13:43:53,355 - DEBUG - viFindRsrc(25518768, '?*', '<ViObject object at 0x032C51E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,355 - DEBUG - viFindNext(<ViObject object at 0x032C51E0>, <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,356 - DEBUG - viFindNext(<ViObject object at 0x032C51E0>, <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,356 - DEBUG - viFindNext(<ViObject object at 0x032C51E0>, <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,356 - DEBUG - viFindNext(<ViObject object at 0x032C51E0>, <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,356 - DEBUG - viFindNext(<ViObject object at 0x032C51E0>, <ctypes.c_char_Array_256 object at 0x032C5390>) -> 0
+2024-03-01 13:43:53,357 - DEBUG - viClose(<ViObject object at 0x032C51E0>,) -> 0
+2024-03-01 13:43:53,365 - DEBUG - viParseRsrcEx(25518768, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x032C5978>, <ctypes.c_char_Array_256 object at 0x032C59C0>, <ctypes.c_char_Array_256 object at 0x032C5A08>) -> 0
+2024-03-01 13:43:53,366 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:43:53,516 - DEBUG - viOpen(25518768, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x032C5978>') -> 0
+2024-03-01 13:43:53,516 - DEBUG - GPIB0::8::INSTR - is open with session 25929328
+2024-03-01 13:43:53,520 - DEBUG - viWrite(25929328, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:43:53,520 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:53,540 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:43:53,545 - DEBUG - viWrite(25929328, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:43:53,545 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:53,908 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:43:53,913 - DEBUG - viWrite(25929328, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:43:53,913 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:53,921 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:43:53,927 - DEBUG - viWrite(25929328, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:43:53,931 - DEBUG - viWrite(25929328, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:43:53,931 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:53,961 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:43:53,966 - DEBUG - viWrite(25929328, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:43:53,966 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:53,977 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:43:53,983 - DEBUG - viWrite(25929328, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:43:53,983 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:54,422 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:43:54,428 - DEBUG - viWrite(25929328, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:43:54,428 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:54,450 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:43:54,455 - DEBUG - viWrite(25929328, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:43:54,455 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:54,476 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:43:54,483 - DEBUG - viWrite(25929328, b':RESI:SET 1.1E+4\r\n', 18, 'c_ulong(18)') -> 0
+2024-03-01 13:43:54,486 - DEBUG - viWrite(25929328, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:43:54,486 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:43:54,526 - DEBUG - viRead(25929328, <ctypes.c_char_Array_20480 object at 0x032C5A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:43:54,528 - DEBUG - Closing ResourceManager (session: 25518768)
+2024-03-01 13:43:54,528 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:43:54,528 - DEBUG - viDisableEvent(25929328, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:43:54,529 - DEBUG - viDiscardEvents(25929328, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:43:54,530 - DEBUG - viClose(25929328,) -> 0
+2024-03-01 13:43:54,530 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:43:54,535 - DEBUG - viClose(25518768,) -> 0
+2024-03-01 13:44:35,689 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-01 13:44:35,692 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-01 13:44:36,143 - DEBUG - viOpenDefaultRM('<ViObject object at 0x038751E0>',) -> 0
+2024-03-01 13:44:36,144 - DEBUG - Created ResourceManager with session 31488840
+2024-03-01 13:44:38,315 - DEBUG - viFindRsrc(31488840, '?*', '<ViObject object at 0x038751E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,316 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,317 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,318 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,319 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,320 - DEBUG - viFindNext(<ViObject object at 0x038751E0>, <ctypes.c_char_Array_256 object at 0x03875390>) -> 0
+2024-03-01 13:44:38,320 - DEBUG - viClose(<ViObject object at 0x038751E0>,) -> 0
+2024-03-01 13:44:38,363 - DEBUG - viParseRsrcEx(31488840, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03875978>, <ctypes.c_char_Array_256 object at 0x038759C0>, <ctypes.c_char_Array_256 object at 0x03875A08>) -> 0
+2024-03-01 13:44:38,365 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-01 13:44:38,611 - DEBUG - viOpen(31488840, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03875978>') -> 0
+2024-03-01 13:44:38,612 - DEBUG - GPIB0::8::INSTR - is open with session 31823232
+2024-03-01 13:44:38,616 - DEBUG - viWrite(31823232, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:44:38,618 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:38,636 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-01 13:44:38,643 - DEBUG - viWrite(31823232, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:44:38,644 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,076 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:44:39,083 - DEBUG - viWrite(31823232, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-01 13:44:39,084 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,091 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:44:39,101 - DEBUG - viWrite(31823232, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-01 13:44:39,106 - DEBUG - viWrite(31823232, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-01 13:44:39,107 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,134 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-01 13:44:39,144 - DEBUG - viWrite(31823232, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-01 13:44:39,145 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,156 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-01 13:44:39,164 - DEBUG - viWrite(31823232, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:44:39,165 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,590 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:44:39,598 - DEBUG - viWrite(31823232, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:44:39,599 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,620 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:44:39,634 - DEBUG - viWrite(31823232, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:44:39,636 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,656 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:44:39,664 - DEBUG - viWrite(31823232, b':RESI:SET 1.1E+4\r\n', 18, 'c_ulong(18)') -> 0
+2024-03-01 13:44:39,669 - DEBUG - viWrite(31823232, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-01 13:44:39,671 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-01 13:44:39,708 - DEBUG - viRead(31823232, <ctypes.c_char_Array_20480 object at 0x03875A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-01 13:46:03,692 - DEBUG - Closing ResourceManager (session: 31488840)
+2024-03-01 13:46:03,693 - DEBUG - GPIB0::8::INSTR - closing
+2024-03-01 13:46:03,693 - DEBUG - viDisableEvent(31823232, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676291
+2024-03-01 13:46:03,694 - DEBUG - viDiscardEvents(31823232, <EventType.all_enabled: 1073709055>, <EventMechanism.all: 65535>) -> 1073676292
+2024-03-01 13:46:03,696 - DEBUG - viClose(31823232,) -> 0
+2024-03-01 13:46:03,696 - DEBUG - GPIB0::8::INSTR - is closed
+2024-03-01 13:46:03,704 - DEBUG - viClose(31488840,) -> 0
+2024-03-11 12:44:40,391 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-11 12:44:40,392 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-11 12:44:41,298 - DEBUG - viOpenDefaultRM('<ViObject object at 0x034661E0>',) -> 0
+2024-03-11 12:44:41,299 - DEBUG - Created ResourceManager with session 22701552
+2024-03-11 12:44:41,830 - DEBUG - viFindRsrc(22701552, '?*', '<ViObject object at 0x034661E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viFindNext(<ViObject object at 0x034661E0>, <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viFindNext(<ViObject object at 0x034661E0>, <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viFindNext(<ViObject object at 0x034661E0>, <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viFindNext(<ViObject object at 0x034661E0>, <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viFindNext(<ViObject object at 0x034661E0>, <ctypes.c_char_Array_256 object at 0x03466390>) -> 0
+2024-03-11 12:44:41,830 - DEBUG - viClose(<ViObject object at 0x034661E0>,) -> 0
+2024-03-11 12:44:41,832 - DEBUG - viParseRsrcEx(22701552, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03466978>, <ctypes.c_char_Array_256 object at 0x034669C0>, <ctypes.c_char_Array_256 object at 0x03466A08>) -> 0
+2024-03-11 12:44:41,832 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-11 12:44:42,032 - DEBUG - viOpen(22701552, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03466978>') -> 0
+2024-03-11 12:44:42,032 - DEBUG - GPIB0::8::INSTR - is open with session 27658320
+2024-03-11 12:44:42,035 - DEBUG - viWrite(27658320, b'*IDN?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-11 12:44:42,035 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,054 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466C90>, 20480, 'c_ulong(30)') -> 0
+2024-03-11 12:44:42,058 - DEBUG - viWrite(27658320, b':ILD:ACT?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-11 12:44:42,058 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,494 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466CD8>, 20480, 'c_ulong(24)') -> 0
+2024-03-11 12:44:42,498 - DEBUG - viWrite(27658320, b':MODE?\r\n', 8, 'c_ulong(8)') -> 0
+2024-03-11 12:44:42,498 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,505 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-11 12:44:42,510 - DEBUG - viWrite(27658320, b':ILD:SET 1E-2\r\n', 15, 'c_ulong(15)') -> 0
+2024-03-11 12:44:42,513 - DEBUG - viWrite(27658320, b':ILD:SET?\r\n', 11, 'c_ulong(11)') -> 0
+2024-03-11 12:44:42,513 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,543 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(24)') -> 0
+2024-03-11 12:44:42,546 - DEBUG - viWrite(27658320, b':TEC?\r\n', 7, 'c_ulong(7)') -> 0
+2024-03-11 12:44:42,547 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,558 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(9)') -> 0
+2024-03-11 12:44:42,562 - DEBUG - viWrite(27658320, b':RESI:ACT?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-11 12:44:42,562 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,905 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-11 12:44:42,909 - DEBUG - viWrite(27658320, b':RESI:MIN?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-11 12:44:42,909 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,932 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-11 12:44:42,937 - DEBUG - viWrite(27658320, b':RESI:MAX?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-11 12:44:42,937 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:42,958 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466E88>, 20480, 'c_ulong(25)') -> 0
+2024-03-11 12:44:42,962 - DEBUG - viWrite(27658320, b':RESI:SET 1.1E+4\r\n', 18, 'c_ulong(18)') -> 0
+2024-03-11 12:44:42,965 - DEBUG - viWrite(27658320, b':RESI:SET?\r\n', 12, 'c_ulong(12)') -> 0
+2024-03-11 12:44:42,966 - DEBUG - GPIB0::8::INSTR - reading 20480 bytes (last status <StatusCode.success_max_count_read: 1073676294>)
+2024-03-11 12:44:43,007 - DEBUG - viRead(27658320, <ctypes.c_char_Array_20480 object at 0x03466A08>, 20480, 'c_ulong(25)') -> 0
+2024-03-13 10:54:30,689 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-03-13 10:54:30,690 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-03-13 10:54:31,293 - DEBUG - viOpenDefaultRM('<ViObject object at 0x035561E0>',) -> 0
+2024-03-13 10:54:31,293 - DEBUG - Created ResourceManager with session 28220032
+2024-03-13 10:54:31,683 - DEBUG - viFindRsrc(28220032, '?*', '<ViObject object at 0x035561E0>', 'c_ulong(6)', <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viFindNext(<ViObject object at 0x035561E0>, <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viFindNext(<ViObject object at 0x035561E0>, <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viFindNext(<ViObject object at 0x035561E0>, <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viFindNext(<ViObject object at 0x035561E0>, <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viFindNext(<ViObject object at 0x035561E0>, <ctypes.c_char_Array_256 object at 0x03556390>) -> 0
+2024-03-13 10:54:31,684 - DEBUG - viClose(<ViObject object at 0x035561E0>,) -> 0
+2024-03-13 10:54:31,686 - DEBUG - viParseRsrcEx(28220032, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x03556978>, <ctypes.c_char_Array_256 object at 0x035569C0>, <ctypes.c_char_Array_256 object at 0x03556A08>) -> 0
+2024-03-13 10:54:31,686 - DEBUG - GPIB0::8::INSTR - opening ...
+2024-03-13 10:54:32,549 - DEBUG - viOpen(28220032, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x03556978>') -> -1073807343
+2024-03-13 10:54:32,573 - DEBUG - Closing ResourceManager (session: 28220032)
+2024-03-13 10:54:32,576 - DEBUG - viClose(28220032,) -> 0
