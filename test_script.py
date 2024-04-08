@@ -6,7 +6,10 @@ visa_resource_manager = InstrumentController.VisaResourceManager("'C:\\WINDOWS\\
 laser = LaserController(visa_resource_manager, 'GPIB0::8::INSTR')
 
 laser.connect()
-laser.set_current(100)
+
+print(laser.status())
+
+
 
 
 

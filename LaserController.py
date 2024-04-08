@@ -1,10 +1,12 @@
 import InstrumentController
 import logging
 
-class LaserController(InstrumentController):
+class LaserController(InstrumentController.InstrumentController):
     def set_current(self, intensity):
-        self.send_command(f':ILD:SET {intensity}')
-        logging.info(f"Current set to {intensity}")
+        # Convert the current value from mA to A and format it in scientific notation
+        current_in_A = "{:.2e}".format(int(intensity) * 10**-3)
+        self.send_command(f':ILD:SET {current_in_A}')
+        logging.info(f"Current set to {current_in_A} A")
 
     def get_current(self):
         return self.query(':ILD:ACT?')
