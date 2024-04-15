@@ -1,5 +1,6 @@
 import pyvisa
 import logging
+from InstrumentBase import InstrumentBase
 
 # Class to wrap around PyVisa's resource manager
 class VisaResourceManager:
@@ -9,19 +10,19 @@ class VisaResourceManager:
 
     def list_resources(self):
         """List all connected VISA resources."""
-        return self.resource_manager.list_resources()
+        return self.resource_manager.list_resources('?*')
 
 
 # Generic Instrement Controller class
 # Includes methods for connecting, disconnecting, sending commands, and querying
-class InstrumentController:
+class InstrumentController(InstrumentBase):
     def __init__(self, visa_resource_manager, resource_address):
         self.visa_resource_manager = visa_resource_manager
         self.resource_address = resource_address
         self.instrument = None
 
     def connect(self):
-        self.instrument = self.resource_manager.open_resource(self.resource_address)
+        self.instrument = self.visa_resource_manager.resource_manager.open_resource(self.resource_address)
         logging.info(f"Connected to {self.resource_address}")
 
         logging.info(f"Connected to Inst. at: {self.instrument.query("*IDN?")}")
@@ -30,6 +31,9 @@ class InstrumentController:
         if self.instrument:
             self.instrument.close()
             logging.info(f"Disconnected from {self.resource_address}")
+
+    def is_connected(self):
+        return self.instrument is not None
 
     def status(self):
         if self.instrument:

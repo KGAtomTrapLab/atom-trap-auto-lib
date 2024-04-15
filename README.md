@@ -6,6 +6,10 @@ Python based Hardware Abstraction Layer for interfacing with Lab Equipment
 
 ## Dependencies
 
+install from requirements.txt
+
+```pip install -r dependencies.txt```
+
 - Python 3.8+
 - Visa Backend
    - NI - VISA
