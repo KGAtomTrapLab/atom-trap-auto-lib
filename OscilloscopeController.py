@@ -2,6 +2,10 @@ import InstrumentController
 import logging
 
 class OscilloscopeController(InstrumentController):
+    def __init__(self, address, port):
+        super().__init__(address, port)
+        
+
     def reset(self):
         self.send_command("*rst; status:preset; *cls")
         logging.info("Oscilloscope reset")

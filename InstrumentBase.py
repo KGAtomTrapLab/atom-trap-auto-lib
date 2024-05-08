@@ -18,7 +18,7 @@ class InstrumentBase(ABC):
         pass
 
     @abstractmethod
-    def is_connected(self):
+    def status(self):
         pass
 
 
