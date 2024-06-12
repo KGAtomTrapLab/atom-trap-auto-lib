@@ -1617,3 +1617,30 @@ Buffer content: bytearray(b'')
 2024-04-11 17:00:32,504 - DEBUG - viOpen(24345000, 'GPIB0::8::INSTR', <AccessModes.no_lock: 0>, 0, '<ViObject object at 0x031F6978>') -> -1073807343
 2024-04-11 17:00:32,516 - DEBUG - Closing ResourceManager (session: 24345000)
 2024-04-11 17:00:32,534 - DEBUG - viClose(24345000,) -> 0
+2024-05-09 17:32:13,339 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-05-09 17:32:13,340 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-05-09 17:32:13,426 - DEBUG - viOpenDefaultRM('<ViObject object at 0x0000024E6BD9C450>',) -> 0
+2024-05-09 17:32:13,426 - DEBUG - Created ResourceManager with session 4097
+2024-05-09 17:32:13,702 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x0000024E6BD9C650>', 'c_ulong(2)', <ctypes.c_char_Array_256 object at 0x0000024E6BD9C6D0>) -> 0
+2024-05-09 17:32:13,703 - DEBUG - viFindNext(<ViObject object at 0x0000024E6BD9C650>, <ctypes.c_char_Array_256 object at 0x0000024E6BD9C6D0>) -> 0
+2024-05-09 17:32:13,703 - DEBUG - viClose(<ViObject object at 0x0000024E6BD9C650>,) -> 0
+2024-05-09 17:32:13,710 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x0000024E6BD9CAD0>, <ctypes.c_char_Array_256 object at 0x0000024E6BD9CB50>, <ctypes.c_char_Array_256 object at 0x0000024E6BD9CBD0>) -> -1073807195
+2024-05-09 17:32:13,745 - DEBUG - Closing ResourceManager (session: 4097)
+2024-05-09 17:32:13,747 - DEBUG - viClose(4097,) -> 0
+2024-05-09 20:32:12,023 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-05-09 20:32:12,023 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-05-09 20:32:12,625 - DEBUG - viOpenDefaultRM('<ViObject object at 0x000001433E79C450>',) -> 0
+2024-05-09 20:32:12,626 - DEBUG - Created ResourceManager with session 4097
+2024-05-09 20:32:12,950 - DEBUG - viFindRsrc(4097, '?*', '<ViObject object at 0x000001433E79C650>', 'c_ulong(2)', <ctypes.c_char_Array_256 object at 0x000001433E79C6D0>) -> 0
+2024-05-09 20:32:12,951 - DEBUG - viFindNext(<ViObject object at 0x000001433E79C650>, <ctypes.c_char_Array_256 object at 0x000001433E79C6D0>) -> 0
+2024-05-09 20:32:12,951 - DEBUG - viClose(<ViObject object at 0x000001433E79C650>,) -> 0
+2024-05-09 20:32:12,957 - DEBUG - viParseRsrcEx(4097, 'GPIB0::8::INSTR', 'c_ushort(1)', 'c_ushort(0)', <ctypes.c_char_Array_256 object at 0x000001433E79CAD0>, <ctypes.c_char_Array_256 object at 0x000001433E79CB50>, <ctypes.c_char_Array_256 object at 0x000001433E79CBD0>) -> -1073807195
+2024-05-09 20:32:13,030 - DEBUG - Closing ResourceManager (session: 4097)
+2024-05-09 20:32:13,034 - DEBUG - viClose(4097,) -> 0
+2024-05-16 17:41:54,198 - DEBUG - Library signatures: 90 ok, 0 failed
+2024-05-16 17:41:54,198 - DEBUG - Created library wrapper for C:\WINDOWS\system32\visa32.dll
+2024-05-16 17:41:54,260 - DEBUG - viOpenDefaultRM('<ViObject object at 0x03B3C150>',) -> 0
+2024-05-16 17:41:54,260 - DEBUG - Created ResourceManager with session 34067632
+2024-05-16 17:42:00,297 - DEBUG - viFindRsrc(34067632, '?*', '<ViObject object at 0x03B3C150>', 'c_ulong(0)', <ctypes.c_char_Array_256 object at 0x03B3C300>) -> -1073807302
+2024-05-16 17:42:00,303 - DEBUG - Closing ResourceManager (session: 34067632)
+2024-05-16 17:42:00,305 - DEBUG - viClose(34067632,) -> 0

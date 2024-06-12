@@ -11,7 +11,7 @@ class RampController(InstrumentBase.InstrumentBase):
         self.baud_rate = baud_rate
         self.ser = None
         self.period = 1000 # Period of the ramp in mS
-        self.voltage = 75 # Max voltage of the ramp in V
+        self.voltage = 70 # Max voltage of the ramp in V
         
 
 
@@ -19,6 +19,10 @@ class RampController(InstrumentBase.InstrumentBase):
         self.ser = serial.Serial(self.serial_port, self.baud_rate, timeout=1)
 
         if self.ser.isOpen():
+
+            while(self.ser.readline().decode('utf-8').strip() != 'Serial Initilized'):
+                print("Waiting for ramp controller to connect")
+
             print("Ramp controller connected")
 
             # Send inital period command
@@ -45,8 +49,9 @@ class RampController(InstrumentBase.InstrumentBase):
     def send_command(self, command):
         self.ser.write(command.encode())
 
+        response = self.ser.readline()
         # return response
-        return self.ser.readline()
+        return response.decode('utf-8').strip()
     
     def set_period(self, period):
 
@@ -54,10 +59,11 @@ class RampController(InstrumentBase.InstrumentBase):
             print("Period out of range")
             print(" Period should be between 0 and " + str(RampController.Max_Period))
             return None
+        
+        # Send command to set period
+        response = self.send_command(f"period {period}")
 
-        response = self.send_command(f"P{period}")
-
-        if response == f'New Period: {period}':
+        if response == f"New Period: {period}":
             self.period = period
             return response
         else:
@@ -67,6 +73,8 @@ class RampController(InstrumentBase.InstrumentBase):
     
     def set_voltage(self, voltage):
         pass
+    
+
     
     
 

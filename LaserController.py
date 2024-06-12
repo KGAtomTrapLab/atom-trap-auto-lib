@@ -1,6 +1,8 @@
 import InstrumentController
 import logging
 
+# Class for controlling the Laser Controller
+# Inherits from InstrumentController
 class LaserController(InstrumentController.InstrumentController):
     
     def __init__(self, resource_manager, resource_address):

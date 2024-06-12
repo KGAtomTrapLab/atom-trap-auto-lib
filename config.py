@@ -1,5 +1,5 @@
 ### This file contains global configuration varibles expected to be resused across the project
-#   Its intended to change certain values here 
+#   Its intended to change certain values here rather than during runtime scripts
 
 
 ### NI-VISA Library Path
