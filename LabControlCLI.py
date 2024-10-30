@@ -1,3 +1,6 @@
+# Example of using this library with a simple CMD  
+# line interface, INCOMPLETE, Needs expansion
+
 import cmd
 from LaserController import LaserController
 
@@ -9,7 +12,7 @@ class LabControlCLI(cmd.Cmd):
         'Set the current of the laser: set_current <current>'
         # laser_controller = LaserController()
         # laser_controller.set_current(float(arg))
-        print("doing something")
+        print("Not actually setting the current just printing")
 
     # def do_get_current(self, arg):
     #     'Get the current of the laser: get_current'

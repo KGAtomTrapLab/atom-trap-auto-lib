@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 
 
-# Generic Base Class for Instruments
-# Used to define basic methods that all instruments must implement
+# Generic Base Class for Instruments and custom devices
+# Used to define basic methods that all instruments and devices
+# must implement
 
 class InstrumentBase(ABC):
     @abstractmethod

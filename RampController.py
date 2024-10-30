@@ -10,8 +10,10 @@ class RampController(InstrumentBase.InstrumentBase):
         self.serial_port = serial_port
         self.baud_rate = baud_rate
         self.ser = None
-        self.period = 1000 # Period of the ramp in mS
+        self.period = 1000 # Default Period of the ramp in mS
         self.voltage = 70 # Max voltage of the ramp in V
+        self.pot_value = 127 # Poteiometer value from 1-127 Directly corrilated with voltage
+        # Will likley need some varibles used for this voltage -> Pot value conversion
         
 
 
@@ -50,7 +52,8 @@ class RampController(InstrumentBase.InstrumentBase):
         self.ser.write(command.encode())
 
         response = self.ser.readline()
-        # return response
+        
+        # return response for message verification
         return response.decode('utf-8').strip()
     
     def set_period(self, period):
@@ -70,7 +73,28 @@ class RampController(InstrumentBase.InstrumentBase):
             print("Error setting period")
             print("Response: " + response)
             return None
+        
+    def set_pot(self, pot):
+        
+        if pot < 0 or pot > 127:
+            print("Pot Value out of range")
+            print(" Pot should be between 1 and 127")
+            return None
+        
+        # Send command to set period
+        response = self.send_command(f"pot {pot}")
+
+        if response == f"New Wiper Position: {pot}" :
+            self.pot = pot
+            return response
+        else:
+            print("Error setting pot value")
+            print("Response: " + response)
+            return None
     
+    '''TODO'''
+    # Setitng the voltage requires some calculations using voltage values measured after amplification
+    #  
     def set_voltage(self, voltage):
         pass
     

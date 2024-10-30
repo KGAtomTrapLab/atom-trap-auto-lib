@@ -1,13 +1,17 @@
 import InstrumentController
 import logging
 
+'''TODO'''
+# Expand class to utilize Osciliscope VISA commands
+
+
 # Class to control the Oscilloscope
 # Inherits from InstrumentController
 class OscilloscopeController(InstrumentController):
     def __init__(self, address, port):
         super().__init__(address, port)
     
-    def set_aqquire_mode(self, mode):
+    def set_acquire_mode(self, mode):
         allowed_modes = ["NORMAL", "PEAK", "AVERAGE"]
         if mode not in allowed_modes:
             print(f"Invalid acquire mode: {mode}. Allowed modes: {allowed_modes}")

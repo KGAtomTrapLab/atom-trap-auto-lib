@@ -1,8 +1,15 @@
 # QC Atom Trap Lab Automation Library
-Python based Hardware Abstraction Layer for interfacing with Lab Equipment
+Python based Hardware Abstraction Library for interfacing with Lab Equipment and custom devices
 
 
 # PyVisa Setup on Windows
+
+PyVisa requires a backend VISA manager / library to perform VISA commands. By default this limits the library to be run on a windows machine and for the the NI VISA library and to be configured correctly.
+
+Keysight connection expert provides a Windows driver for our GPIB -> USB adapters necessary to communicate with our laser controller.
+
+PyVisa offers a pure python based backend that has not been extensivly tested with this library but may prove effective going forward.
+
 
 *~todo*
 
@@ -28,8 +35,15 @@ source lab_python_env/bin/Activate.ps1
 ```
 **Install the dependencies**
 ```
-pip install -r requirements.txt
+pip install -r dependencies.txt
 ```
+
+**Update Dependencies file**
+Warning, running this command will overwrite the current dependencies file with EVERY python package found in the current running python enviornment. Make sure the correct virtual enviornment is setup before updating.
+```
+pip freeeze > dependencies.txt
+```
+
 
 
 - Python 3.8+
