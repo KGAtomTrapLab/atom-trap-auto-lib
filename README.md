@@ -35,16 +35,14 @@ source lab_python_env/bin/Activate.ps1
 ```
 **Install the dependencies**
 ```
-pip install -r dependencies.txt
+lab_python_env/bin/pip install -r dependencies.txt
 ```
 
 **Update Dependencies file**
 Warning, running this command will overwrite the current dependencies file with EVERY python package found in the current running python enviornment. Make sure the correct virtual enviornment is setup before updating.
 ```
-pip freeeze > dependencies.txt
+lab_python_env/bin/pip freeeze > dependencies.txt
 ```
-
-
 
 - Python 3.8+
 - Visa Backend
@@ -52,3 +50,27 @@ pip freeeze > dependencies.txt
    - PyVisa-Py
 - USB → GPIB Driver
    - Keysight Connection Expert
+ 
+**If python modules can't be found when running**
+Instead of messing with which path to use, run a virtual environment:
+1. Make sure a virtual environment exists in the directory(should be called "lab_python_env" or something similar)
+   - See "Activate the Virtual Environment" above.
+2. Make sure VS Code knows which interpreter to use:
+   - Open the command pallete(ctrl+shift+P)
+   - Type "Python: Select Interpreter" and choose that option
+   - At the bottom should be the venv for this environment. Choose that.
+3. Activate the environment in the command line(optional)
+   - On the command line, type in the command
+```
+source lab_python_env/bin/activate
+```
+   - Prompts on the command should now start with `(lab_python_env)`
+4. Commands need to be run from the "virtual" python.
+   - To run python commands, run
+```
+lab_python_env\bin\python
+```
+   - To install modules with pip, run
+```
+lab_python_env\bin\pip
+```
