@@ -49,7 +49,5 @@ class LaserController(InstrumentController.InstrumentController):
     def lower_current(self, amount):
         current = self.get_current()
         self.set_current(current - amount)
-        
-    
 
 
