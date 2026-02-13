@@ -50,6 +50,18 @@ class LaserController(InstrumentController.InstrumentController):
         current = self.get_current()
         self.set_current(current - amount)
         
-    
+    def set_resistance_and_wait(self, amount, threshold=100):
+        '''
+        Set the resistance value and block until the controller reaches this resistance.
 
+        :param amount: Resistance value in ohms
+        :param threshold: The ohmic range that the the resistance is considered within the target
+        '''
+        
+        self.set_thm_res(amount)
+
+        while abs(amount - self.get_thm_res()) > 100:
+            pass
+
+        return
 
