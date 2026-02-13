@@ -1,5 +1,6 @@
 import InstrumentController
 import LaserController
+import time
 
 class Laser_Control_Calibrator():
     def __init__(self):
@@ -11,8 +12,9 @@ class Laser_Control_Calibrator():
         device_manager = InstrumentController.DeviceManager("C:\\Windows\\System32\\visa32.dll")
 
         print(device_manager.list_devices())
+        # TODO: Look for a device with the address GPIB0
 
-        laser_controller_address = "GPIOB0::2::INSTR"
+        laser_controller_address = "GPIB0::8::INSTR"
 
         self.laser_controller = LaserController.LaserController(device_manager, laser_controller_address)
 
@@ -43,3 +45,6 @@ class Laser_Control_Calibrator():
 if __name__ == "__main__":
     control_calibrator = Laser_Control_Calibrator()
     control_calibrator.test_laser_connection()
+    print(control_calibrator.laser_controller.set_thm_res(14200))
+    time.sleep(60)
+    # control_calibrator.gather_data(0, 100, 1, 80, 120, 1)
