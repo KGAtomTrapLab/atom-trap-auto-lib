@@ -1,13 +1,12 @@
 from .devices import Ramp_Controller, Arduino, PD_Reader, Fake_Ramp
 from .font_colors import color_yellow
 from .display_data import graph_data
-from .log_data import DataLogger
 
 class Digital_DAVLL():
     ADC_RESOLUTION = 4096
     ADC_SUPPLY_VOLTAGE= 5
 
-    def __init__(self, log_file_dir="./logs", ramp_port="COM7", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
+    def __init__(self, data_logger, ramp_port="COM7", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
         '''
         Create an instance of the DAVLL with the connection data
         
@@ -17,9 +16,7 @@ class Digital_DAVLL():
         :param pd_port: Address of the photodiode reader port
         :param pd_baud_rate: Baud rate of the photodiode reader
         '''
-
-        self.log_file_dir = log_file_dir
-        self.run_logger = DataLogger(log_file_dir)
+        self.run_logger = data_logger
 
         self.ramp_port = ramp_port
         self.ramp_baud_rate = ramp_baud_rate

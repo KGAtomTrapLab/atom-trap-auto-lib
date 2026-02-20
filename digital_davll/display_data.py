@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import sys, time
 import struct
-from .log_data import DataLogger
 from .input_thread import RampCMDHandler
 
 from .devices import Ramp_Controller, PD_Reader
@@ -13,7 +12,7 @@ xView = 800
 ADC_RESOLUTION = 4096
 ADC_SUPPLY_VOLTAGE = 5
 
-def process_data(ramp: Ramp_Controller, davll: PD_Reader, logger: DataLogger):
+def process_data(ramp: Ramp_Controller, davll: PD_Reader, logger):
     global i
     '''
     The primary control loop for getting data from the DAVLL.
@@ -52,7 +51,7 @@ def process_data(ramp: Ramp_Controller, davll: PD_Reader, logger: DataLogger):
 
     return output_data_lines[0], valley_position
 
-def graph_data(ramp: Ramp_Controller, davll: PD_Reader, logger: DataLogger):
+def graph_data(ramp: Ramp_Controller, davll: PD_Reader, logger):
 
     fig, ax = plt.subplots()
     response_signal, = ax.plot([], [])   # a line object

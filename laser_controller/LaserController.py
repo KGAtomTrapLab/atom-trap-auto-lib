@@ -64,4 +64,19 @@ class LaserController(InstrumentController):
             pass
 
         return
+    
+    def set_current_and_wait(self, amount, threshold=100):
+        '''
+        Set the current value and block until the controller reaches this.
+
+        :param amount: Current value in mA
+        :param threshold: The range that the the current is considered within the target
+        '''
+        
+        self.set_current(amount)
+
+        while abs(amount - self.get_current()) > threshold:
+            pass
+
+        return
 
