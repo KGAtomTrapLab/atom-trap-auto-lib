@@ -1,4 +1,4 @@
-import InstrumentBase
+import laser_controller.InstrumentBase as InstrumentBase
 import serial
 
 # Class to interface with custom voltage ramp

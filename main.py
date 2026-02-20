@@ -1,5 +1,5 @@
-import InstrumentController
-import LaserController
+import laser_controller.InstrumentController as InstrumentController
+import laser_controller.LaserController as LaserController
 import time
 
 from digital_davll.digital_davll import Digital_DAVLL

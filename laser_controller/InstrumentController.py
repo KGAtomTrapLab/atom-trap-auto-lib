@@ -1,6 +1,6 @@
 import pyvisa
 import logging
-from InstrumentBase import InstrumentBase
+from laser_controller.InstrumentBase import InstrumentBase
 
 # Class to wrap around PyVisa's resource manager
 # Needed for managing connected devices, required for all VISA Instruments

@@ -2,7 +2,7 @@
 # line interface, INCOMPLETE, Needs expansion
 
 import cmd
-from LaserController import LaserController
+from laser_controller.LaserController import LaserController
 
 class LabControlCLI(cmd.Cmd):
     intro = 'Welcome to the lab control CLI. Type help or ? to list commands.\n'
