@@ -60,7 +60,7 @@ class LaserController(InstrumentController.InstrumentController):
         
         self.set_thm_res(amount)
 
-        while abs(amount - self.get_thm_res()) > 100:
+        while abs(amount - self.get_thm_res()) > threshold:
             pass
 
         return

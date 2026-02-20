@@ -2,6 +2,8 @@ import InstrumentController
 import LaserController
 import time
 
+from digital_davll.digital_davll import Digital_DAVLL
+
 class Laser_Control_Calibrator():
     def __init__(self):
         self.laser_controller = None
@@ -26,6 +28,7 @@ class Laser_Control_Calibrator():
         device_manager = InstrumentController.DeviceManager("C:\\Windows\\System32\\visa32.dll")
 
         found_devices = device_manager.list_devices()
+
     
     def gather_data(self, res_min, res_max, res_step, cur_min, cur_max, cur_step):
         '''
@@ -42,9 +45,14 @@ class Laser_Control_Calibrator():
             # Run through all current values
 
 
+
 if __name__ == "__main__":
     control_calibrator = Laser_Control_Calibrator()
     control_calibrator.test_laser_connection()
+    digital_davll = Digital_DAVLL()
+    digital_davll.connect()
+    while True:
+        print(digital_davll.get_data_line())
     print(control_calibrator.laser_controller.set_thm_res(14200))
     time.sleep(60)
     # control_calibrator.gather_data(0, 100, 1, 80, 120, 1)
