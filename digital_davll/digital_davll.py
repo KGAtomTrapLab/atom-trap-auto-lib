@@ -86,6 +86,9 @@ class Digital_DAVLL():
         self.run_logger.write_dataline(output_data, valley_position)
 
         return output_data, valley_position
+    
+    def clear_queue(self):
+        self.pd_reader.clear_buffer()
 
 if __name__ == "__main__":
     graph_davll = Digital_DAVLL()

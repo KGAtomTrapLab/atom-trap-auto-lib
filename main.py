@@ -9,7 +9,7 @@ if __name__ == "__main__":
     digital_davll = Digital_DAVLL(data_logger)
     digital_davll.connect()
 
-    control_calibrator.gather_data(10000, 130000, 50, 90, 130, 0.01, digital_davll)
+    control_calibrator.gather_data(12850, 14500, 100, 80, 120, 0.5, digital_davll, data_logger)
     # while True:
     #     print(digital_davll.get_data_line())
     # control_calibrator.gather_data(0, 100, 1, 80, 120, 1)

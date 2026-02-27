@@ -28,6 +28,7 @@ class InstrumentController(InstrumentBase):
     def connect(self):
         try:
             self.instrument = self.visa_resource_manager.resource_manager.open_resource(self.resource_address)
+            # self.instrument.timeout = 1000
         except pyvisa.errors.VisaIOError as e:
             print(f"Failed to connect to {self.resource_address}: {e}")
             return False

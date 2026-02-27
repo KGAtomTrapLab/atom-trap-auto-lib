@@ -196,6 +196,10 @@ class PD_Reader(Arduino):
 
         return result_values
     
+    def clear_buffer(self):
+        # Clear the serial buffer
+        self.serial_connection.reset_input_buffer()
+    
 class Fake_Ramp(Ramp_Controller):
     '''
         Ramp Simulator for testing purposes
