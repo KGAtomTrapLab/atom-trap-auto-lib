@@ -11,10 +11,14 @@
             "id": "9352c0585480f274",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2026-03-03.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-03-03"
             }
           }
         ]
@@ -177,5 +181,9 @@
     }
   },
   "active": "9352c0585480f274",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "useful-logs.md",
+    "2026-03-03.md",
+    "README.md"
+  ]
 }
