@@ -81,9 +81,10 @@ class Digital_DAVLL():
                 calibrated_data_point = (data_points[i] / Digital_DAVLL.ADC_RESOLUTION) * Digital_DAVLL.ADC_SUPPLY_VOLTAGE
                 output_data[i].append(calibrated_data_point)
             # If the signal is a 2(indicating valley), mark its position so it can be graphed
+            # print(output_data)
             if signal == 2:
                 valley_position = len(output_data) - 1
-        self.run_logger.write_dataline(output_data, valley_position)
+        # self.run_logger.write_dataline(output_data, valley_position)
 
         return output_data, valley_position
     
