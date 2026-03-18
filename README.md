@@ -44,6 +44,12 @@ Warning, running this command will overwrite the current dependencies file with 
 pip freeeze > dependencies.txt
 ```
 
+## load_log_data
+
+This reads in a DAVLL log and graphs the data,
+where you can control recorded current and resistance.
+This is useful for observing how the data changes as
+the values change.
 
 
 - Python 3.8+
