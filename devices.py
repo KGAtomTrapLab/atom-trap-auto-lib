@@ -113,23 +113,40 @@ class Ramp_Controller(Arduino):
         self.send(f"pot {value}")
         self.pot = value
 
+    def read_short(self):
+        first_byte = self.read()
+        second_byte = self.read()
+
+        return first_byte + second_byte
+
 
     
     def read_packet(self):
         '''
             Read a packet being sent across the arduino
         '''
-
+        read_value = self.read()
         # Await the header, parse single or dual channel
+        while read_value != b'\xcc' and read_value != b'\xcd':
+            read_value = self.read()
 
         # Read length
 
         # Read position of the valley point
+        valley_position = self.read_short()
+        print("here")
 
         # Read arrays
+        result_array = []
+        while True:
+            first_byte = self.read()
+            second_byte = self.read()
+            if first_byte == b'\xcb': break
+            result = value = int.from_bytes(first_byte + second_byte, byteorder='little', signed=True)
+            result_array.append(result)
 
         # Await footer
-        return "Hello"
+        return result_array
 
 
 

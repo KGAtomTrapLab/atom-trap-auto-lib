@@ -1,5 +1,5 @@
 from LaserControlCalibrator import LaserControlCalibrator
-from digital_davll.digital_davll import Digital_DAVLL
+#from digital_davll.digital_davll import Digital_DAVLL
 from log_data import DataLogger
 from LabControlCLI import LabControlCLI
 

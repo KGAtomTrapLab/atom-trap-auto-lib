@@ -49,6 +49,7 @@ class Digital_DAVLL():
             print(f"Current period (ms): {color_yellow(controller_status[0])}")
             print(f"Current Potentiometer Value: {color_yellow(controller_status[1])}")
             self._start_serial_reader()
+            return 0
         except Exception as e:
             self.run_logger.log("Ramp Connection Error.")
             self.run_logger.log(str(e))
