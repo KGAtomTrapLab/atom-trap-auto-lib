@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import sys, time
 import struct
-from .input_thread import RampCMDHandler
+from input_thread import RampCMDHandler
 
-from .devices import Ramp_Controller, PD_Reader
+from devices import Ramp_Controller, PD_Reader
 
 # Default xView - adapts with the number of samples
 xView = 800

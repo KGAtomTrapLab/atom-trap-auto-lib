@@ -1,12 +1,149 @@
-# Example of using this library with a simple CMD  
-# line interface, INCOMPLETE, Needs expansion
+# Example of using this library with a simple CMD 
+from log_data import DataLogger
+from digital_davll import Digital_DAVLL
+from LaserControlCalibrator import LaserControlCalibrator
+from test_devices import Test_DAVLL
 
-import cmd
+import pathlib
+import cmd2
+from cmd2 import (
+    Color,
+    stylize,
+)
+from rich.style import Style
 from laser_controller.LaserController import LaserController
 
-class LabControlCLI(cmd.Cmd):
-    intro = 'Welcome to the lab control CLI. Type help or ? to list commands.\n'
-    prompt = '|QC-atom-lab|> '
+class LabControlCLI(cmd2.Cmd):
+    """Cmd2 application to demonstrate many common features."""
+
+    def __init__(self) -> None:
+        """Initialize the CLI."""
+        # Startup script that defines a couple aliases for running shell commands
+        alias_script = pathlib.Path(__file__).absolute().parent / '.cmd2rc'
+
+        # Create a shortcut for one of our commands
+        shortcuts = cmd2.DEFAULT_SHORTCUTS
+        shortcuts.update({'&': 'intro'})
+        super().__init__(
+            include_ipy=True,
+            multiline_commands=['echo'],
+            persistent_history_file='cmd2_history.dat',
+            shortcuts=shortcuts,
+            startup_script=str(alias_script),
+        )
+
+        # Prints an intro banner once upon application startup
+        self.intro = (
+            stylize(
+                'Welcome to the lab control CLI. Type help or ? to list commands.\n',
+                style=Style(color=Color.GREEN1, bold=True),
+            )
+        )
+
+        # Show this as the prompt when asking for input
+        self.prompt = '|QC-atom-lab|> '
+
+        # Used as prompt for multiline commands after the first line
+        self.continuation_prompt = '... '
+
+        # Allow access to your application in py and ipy via self
+        self.self_in_py = True
+
+        # Set the default category name
+        self.default_category = 'General Commands'
+
+        # Color to output text in with echo command
+        self.foreground_color = Color.CYAN.value
+
+        # Make echo_fg settable at runtime
+        fg_colors = [c.value for c in Color]
+        self.add_settable(
+            cmd2.Settable(
+                'foreground_color',
+                str,
+                'Foreground color to use with echo command',
+                self,
+                choices=fg_colors,
+            )
+        )
+
+
+    # CUSTOM_CATEGORY = 'Default Commands'
+    # @cmd2.with_category(CUSTOM_CATEGORY)
+    # def do_intro(self, _: cmd2.Statement) -> None:
+    #     """Display the intro banner."""
+    #     self.poutput(self.intro)
+
+    # @cmd2.with_category(CUSTOM_CATEGORY)
+    # def do_echo(self, arg: cmd2.Statement) -> None:
+    #     """Multiline command."""
+    #     self.poutput(
+    #         stylize(
+    #             arg,
+    #             style=Style(color=self.foreground_color),
+    #         )
+    #     )
+
+    def preloop(self) -> None:
+        # Initiate the log at the beginning of each run
+        self.data_logger = DataLogger("./logs")
+        print(f"Log created at {self.data_logger.filename}")
+
+    
+    RAMP_CATEGORY = "Ramp Commands"
+
+    # INITIALIZATION METHODS
+    connect_parser = cmd2.Cmd2ArgumentParser()
+    connect_parser.add_argument("--port", type=str, default="COM7")
+    connect_parser.add_argument("--baud", type=int, default=115200)
+    connect_parser.add_argument('-t', '--test', action='store_true', help='Run in test mode(not connected to arduino)')
+    connect_parser.add_argument("--mode", type=str, default="std")
+
+    @cmd2.with_argparser(connect_parser)
+    def do_connect(self, args):
+        """Connect to the ramp and laser controller"""
+        # Create fake ramp if in test mode
+        if args.test:
+            print("Creating TEST mode.")
+            self.davll = Test_DAVLL(self.data_logger, args.port, args.baud)
+            self.davll.connect()
+            return
+        self.davll = Digital_DAVLL(self.data_logger, args.port, args.baud)
+        if self.davll.connect() < 0: self.perror("Ramp Error. Check log for more info.")
+
+        try:
+            self.control_calibrator = LaserControlCalibrator()
+            self.control_calibrator.connect_laser_controller()
+        except Exception as e:
+            self.perror("Laser Controller Error.")
+            self.perror(e)
+
+
+    def do_graph(self, args):
+        'View the live graph of data coming from the ramp'
+        # self.davll.print = not self.davll.print
+        self.davll.display_graph()
+        # print(self.davll.ramp_controller.print)
+
+    # Ramp commands
+
+    period_parser = cmd2.Cmd2ArgumentParser()
+    period_parser.add_argument("time", type=int)
+
+    @cmd2.with_argparser(period_parser)
+    def do_period(self, args):
+        'Set the period of the ramp (must be greater than 0)'
+        self.davll.ramp_controller.set_period(args.time)
+        print(f"Set period to {args.time}")
+        
+
+    pot_parser = cmd2.Cmd2ArgumentParser()
+    pot_parser.add_argument("wiper", type=int)
+
+    @cmd2.with_argparser(pot_parser)
+    def do_pot(self, args):
+        # TODO: Implement
+        'Set the wiper position of the ramp  (0-127)'
 
     def do_set_current(self, arg):
         'Set the current of the laser: set_current <current>'
@@ -19,8 +156,12 @@ class LabControlCLI(cmd.Cmd):
     #     laser_controller = LaserController()
     #     print(laser_controller.get_current())
 
+    
+
     def do_exit(self, arg):
         'Exit the CLI'
+        self.data_logger.close_log()  # flushes buffer and closes file
+        print("Log saved.")
         return True
 
 if __name__ == '__main__':

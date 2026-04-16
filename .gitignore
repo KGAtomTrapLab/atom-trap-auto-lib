@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Virtual environment
-lab_python_env/
+py-venv/
 .env
 .venv
 

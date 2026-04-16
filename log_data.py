@@ -18,6 +18,7 @@ class DataLogger():
         # Make string for start time
         timestr = time.strftime("%Y%m%d-%H%M%S")
         self.file = open(f"{self.folder}/{timestr}.log", "w")
+        self.filename = f"{self.folder}/{timestr}.log"
         # Print some standard information
         self.file.write(f"Gillen Atom Trap Ramp Controller\nSTART TIME: {time.strftime('%H:%M:%S %m-%d-%Y')}\n")
 

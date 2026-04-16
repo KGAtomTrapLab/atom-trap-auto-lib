@@ -1,0 +1,8 @@
+Gillen Atom Trap Ramp Controller
+START TIME: 14:29:28 04-15-2026
+14:29:32 04-15-2026	Attempting to connect ramp on port COM7 with baud rate 115200
+14:29:32 04-15-2026	Ramp Connection Error.
+14:29:32 04-15-2026	[Errno 2] could not open port COM7: [Errno 2] No such file or directory: 'COM7'
+14:29:35 04-15-2026	Attempting to connect ramp on port COM7 with baud rate 115200
+14:29:35 04-15-2026	Ramp Connection Error.
+14:29:35 04-15-2026	[Errno 2] could not open port COM7: [Errno 2] No such file or directory: 'COM7'
