@@ -13,9 +13,9 @@ def f(t, therm_val, current_val, channel = 0):
 # t = 
 
 # Grab the dictionary
-file_values, current_values, thermistor_values = load_log_data("logs/20260303-163614.log")
+file_values, current_values, thermistor_values = load_log_data("logs/20260226-172143.log")
 
-print(len(file_values[80.0][13050.0]))
+# print(len(file_values[80.0][13050.0]))
 
 # Define initial parameters
 init_amplitude = thermistor_values[2]
