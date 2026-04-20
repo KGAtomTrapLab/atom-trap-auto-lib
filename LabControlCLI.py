@@ -138,13 +138,14 @@ class LabControlCLI(cmd2.Cmd):
         
 
     pot_parser = cmd2.Cmd2ArgumentParser()
-    pot_parser.add_argument("--wiper", type=int)
+    pot_parser.add_argument("wiper", type=int)
 
     @cmd2.with_argparser(pot_parser)
     def do_pot(self, args):
         # TODO: Implement
         'Set the wiper position of the ramp  (0-127)'
-
+        self.davll.ramp_controller.set_wiper(args.wiper)
+        print(f"Set wiper to {args.wiper}")
 
     laser_parser = cmd2.Cmd2ArgumentParser()
     laser_parser.add_argument('state', choices=['on', 'off'], help='Turn laser on or off')
@@ -156,7 +157,7 @@ class LabControlCLI(cmd2.Cmd):
             self.control_calibrator.laser_controller.laser_on()
             self.control_calibrator.laser_controller.tec_on()
         elif args.state == "off":
-            self.control_calibrator.laser_controller.laser_off(
+            self.control_calibrator.laser_controller.laser_off()
             self.control_calibrator.laser_controller.tec_off()
         else: self.perror("Provide a --pwr setting.")
     
