@@ -119,9 +119,9 @@ class Digital_DAVLL():
 
         return output_data, valley_position
     
-    # Record a line of data from the ramp
-    def record_data_line(self):
-        
+    # # Record a line of data from the ramp
+    # def record_data_line(self):
+
     
     def clear_queue(self):
         self.pd_reader.clear_buffer()

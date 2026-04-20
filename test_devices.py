@@ -19,7 +19,7 @@ class Test_DAVLL(Digital_DAVLL):
         print(f"Current Potentiometer Value: {color_yellow(controller_status[1])}")
         self._start_serial_reader()
     
-    def process_packet(self, packet):
+    def process_packet(self, packet, array_length):
         output_array = []
         # Create a sine wave vased on the period
         for i in range(0, 4096):
@@ -44,7 +44,7 @@ class Test_Ramp(Ramp_Controller):
         return self.device_port
     
     def read_packet(self):
-        return ""
+        return 2, ""
     
     def check_for_peak_valley(self):
         check_time = time.perf_counter()
