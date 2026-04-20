@@ -66,6 +66,8 @@ class LabControlCLI(cmd2.Cmd):
                 choices=fg_colors,
             )
         )
+        # Collection Loop on or off
+        self.collection_loop_running = False
 
 
     # CUSTOM_CATEGORY = 'Default Commands'
@@ -125,6 +127,12 @@ class LabControlCLI(cmd2.Cmd):
         self.davll.display_graph()
         # print(self.davll.ramp_controller.print)
 
+    def do_record(self, args):
+        'Record all data from the ramp'
+        result = self.davll.toggle_record()
+        if result: print("Recording started")
+        else: print("Recording stopped")
+
     # Ramp commands
 
     period_parser = cmd2.Cmd2ArgumentParser()
@@ -161,6 +169,17 @@ class LabControlCLI(cmd2.Cmd):
             self.control_calibrator.laser_controller.tec_off()
         else: self.perror("Provide a --pwr setting.")
     
+
+
+    def do_collect(self, args):
+        'Collect data from the laser.'
+        if self.collection_loop_running:
+            self.perror("Collection loop already started. Stop the program and try again.")
+            return
+        self.collection_loop_running = True
+        print("Starting the collection loop...")
+        self.control_calibrator.gather_data(12000, 15000, 100, 60, 120, 1, self.davll, self.data_logger)
+        print("Collection loop finished.")
 
     # def do_set(self, args):
     #     'Set the current of the laser: set_current <current>'

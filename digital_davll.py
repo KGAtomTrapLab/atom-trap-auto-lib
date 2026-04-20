@@ -1,6 +1,7 @@
 from devices import Ramp_Controller, Arduino, PD_Reader
 from font_colors import color_yellow
 from display_data import Data_Graph
+from log_data import DataLogger
 import threading
 import random
 
@@ -8,7 +9,7 @@ class Digital_DAVLL():
     ADC_RESOLUTION = 4096
     ADC_SUPPLY_VOLTAGE= 5
 
-    def __init__(self, data_logger, ramp_port="COM7", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
+    def __init__(self, data_logger: DataLogger, ramp_port="COM7", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
         '''
         Create an instance of the DAVLL with the connection data
         
@@ -36,6 +37,19 @@ class Digital_DAVLL():
 
         self.graph = Data_Graph()
         self.graphing = False
+        # Record all lines from the reader
+        self.recording_all = False
+
+        # Output from PD readers
+        self.davll_output = []
+        
+        '''
+            A flag that is toggled once a new line of data has been processed.
+            The reader constantly sets it to True, and other functions can set it
+            to False and await it being true
+        '''
+        self.new_output_event = threading.Event()
+
 
     def connect(self):
         # Connect the ramp
@@ -71,13 +85,24 @@ class Digital_DAVLL():
         def read_loop():
             while True:
                 arrays_length, self.last_packet = self.ramp_controller.read_packet()
-                processed_lines = self.process_packet(self.last_packet, arrays_length)
+                self.davll_output = self.process_packet(self.last_packet, arrays_length)
+                self.new_output_event.set()
+                # Record if enabled
+                if self.recording_all:
+                    self.run_logger.write_dataline(self.davll_output)
                 if self.graphing:
-                    self.graph.update_graph(processed_lines[1])
+                    self.graph.update_graph(self.davll_output[1])
                 threading.Event().wait(self.ramp_controller.period / 1000)
 
         t = threading.Thread(target=read_loop, daemon=True)
         t.start()
+
+    def toggle_record(self):
+        '''
+            Turn recording of all ramp data on or off
+        '''
+        self.recording_all = not self.recording_all
+        return self.recording_all
 
     def process_packet(self, packet, arrays_length):
         first_packet = packet[0:arrays_length]
@@ -99,25 +124,10 @@ class Digital_DAVLL():
         Returns
 
         '''
-        # The array where each output from the DAVLL will be stored.
-        output_data = [[],[]]
-        # The index into output_data where the ramp changed directions from low to high
-        valley_position = 0
-        # Wait for peak signal, assigns the value to signal so it can be used for logic
-        while (signal := self.ramp_controller.check_for_peak_valley()) != 1:
-            # Grab the latest signal from the davll. 
-            data_points = self.pd_reader.get_short()
-            # Calibrate the voltage based on the ADC settings
-            for i in range(0, self.channel_mode):
-                calibrated_data_point = (data_points[i] / Digital_DAVLL.ADC_RESOLUTION) * Digital_DAVLL.ADC_SUPPLY_VOLTAGE
-                output_data[i].append(calibrated_data_point)
-            # If the signal is a 2(indicating valley), mark its position so it can be graphed
-            # print(output_data)
-            if signal == 2:
-                valley_position = len(output_data) - 1
-        # self.run_logger.write_dataline(output_data, valley_position)
-
-        return output_data, valley_position
+        # Clear the output flag and wait for it to be set
+        self.new_output_event.clear()
+        self.new_output_event.wait()  # blocks efficiently
+        return self.davll_output
     
     # # Record a line of data from the ramp
     # def record_data_line(self):

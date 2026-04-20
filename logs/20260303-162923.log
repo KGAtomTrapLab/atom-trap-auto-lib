@@ -1,6 +1,0 @@
-Gillen Atom Trap Ramp Controller
-START TIME: 16:29:23 03-03-2026
-16:29:24 03-03-2026	Attempting to connect ramp on port COM7 with baud rate 9600
-16:29:24 03-03-2026	Ramp successfully connected on port COM7
-16:29:25 03-03-2026	Ramp Connection Error
-16:29:25 03-03-2026	invalid literal for int() with base 10: 'Serial Initilized\r\n'

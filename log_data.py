@@ -27,7 +27,7 @@ class DataLogger():
         self.file.write(msg)
         self.file.write("\n")
 
-    def write_dataline(self, dataArray, valley_position=0):
+    def write_dataline(self, dataArray, ):
         '''
         write a line of data, synchronized with one ramp edge
         
@@ -35,7 +35,6 @@ class DataLogger():
         :param valley_position: the index into the array where the ramp started rising
         '''
         self.writeTime()
-        self.file.write(f"RAMP START: {valley_position},")
         self.file.write("DAVLL: ")
         for number in dataArray:
             self.file.write(f"{number},")

@@ -55,7 +55,8 @@ class LaserControlCalibrator():
                 digital_davll.clear_queue()
 
                 for i in range(0, 5):
-                    output_data, valley_position = digital_davll.get_data_line()
+                    # Blocking function that gets a line of data, records it
+                    output_data = digital_davll.get_data_line()
                     data_logger.log(f"Target Resistance: {target_resistance} Target Current: {target_current}")
                     data_logger.log(f"Actual Resistance: {self.laser_controller.get_thm_res()} Actual Current: {self.laser_controller.get_current()}")
-                    data_logger.write_dataline(output_data, valley_position)
+                    data_logger.write_dataline(output_data)
