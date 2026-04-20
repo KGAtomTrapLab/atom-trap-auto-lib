@@ -3,6 +3,7 @@ from devices import Ramp_Controller
 from digital_davll import Digital_DAVLL
 from font_colors import color_red, color_yellow
 import time
+import math
 import random
 
 class Test_DAVLL(Digital_DAVLL):
@@ -20,8 +21,9 @@ class Test_DAVLL(Digital_DAVLL):
     
     def process_packet(self, packet):
         output_array = []
-        for i in range(0, 200):
-            output_array.append(random.random())
+        # Create a sine wave vased on the period
+        for i in range(0, 4096):
+            output_array.append(((16 * self.ramp_controller.pot) * math.cos(i / self.ramp_controller.period)) + ((random.random()-0.5) * 100))
 
         return output_array
 
@@ -41,6 +43,9 @@ class Test_Ramp(Ramp_Controller):
         self.connected = True
         return self.device_port
     
+    def read_packet(self):
+        return ""
+    
     def check_for_peak_valley(self):
         check_time = time.perf_counter()
         if (check_time >= (self.last_peak + (self.period / 1000))):
@@ -49,6 +54,12 @@ class Test_Ramp(Ramp_Controller):
         # if (check_time >= self.last_peak + (self.valley_period / 100)):
         #     return 2
         return 0
+    
+    def set_period(self, value: int):
+        self.period = value
+    
+    def set_wiper(self, value: int):
+        self.pot = value
      
     def get_status(self):
         return self.period, 0

@@ -21,6 +21,7 @@ class Data_Graph():
 
     def create_graph(self):
         self.fig, self.ax = plt.subplots()
+        self.ax.set_ylim(-2048, 2048)
         self.line, = self.ax.plot(self.data)
         plt.show()
 
@@ -31,7 +32,7 @@ class Data_Graph():
         self.line.set_xdata(range(len(new_data)))
         self.line.set_ydata(new_data)
         self.ax.relim()
-        self.ax.autoscale_view()
+        self.ax.autoscale_view(scaley=False)
         self.fig.canvas.draw_idle()  # thread-safe redraw request
 
 def process_data(ramp: Ramp_Controller, davll: PD_Reader, logger):

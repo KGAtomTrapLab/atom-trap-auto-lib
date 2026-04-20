@@ -134,7 +134,6 @@ class Ramp_Controller(Arduino):
 
         # Read position of the valley point
         valley_position = self.read_short()
-        print("here")
 
         # Read arrays
         result_array = []
