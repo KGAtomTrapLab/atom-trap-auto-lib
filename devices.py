@@ -131,9 +131,7 @@ class Ramp_Controller(Arduino):
             read_value = self.read()
 
         # Read length
-
-        # Read position of the valley point
-        valley_position = self.read_short()
+        arrays_length = int.from_bytes(self.read_short(), byteorder='little', signed=True)
 
         # Read arrays
         result_array = []
@@ -141,11 +139,11 @@ class Ramp_Controller(Arduino):
             first_byte = self.read()
             second_byte = self.read()
             if first_byte == b'\xcb': break
-            result = value = int.from_bytes(first_byte + second_byte, byteorder='little', signed=True)
+            result = int.from_bytes(first_byte + second_byte, byteorder='little', signed=True)
             result_array.append(result)
 
         # Await footer
-        return result_array
+        return arrays_length, result_array
 
 
 

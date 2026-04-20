@@ -70,21 +70,20 @@ class Digital_DAVLL():
         print("Starting reader")
         def read_loop():
             while True:
-                self.last_packet = self.ramp_controller.read_packet()
-                processed_lines = self.process_packet(self.last_packet)
+                arrays_length, self.last_packet = self.ramp_controller.read_packet()
+                processed_lines = self.process_packet(self.last_packet, arrays_length)
                 if self.graphing:
-                    self.graph.update_graph(processed_lines)
+                    self.graph.update_graph(processed_lines[1])
                 threading.Event().wait(self.ramp_controller.period / 1000)
 
         t = threading.Thread(target=read_loop, daemon=True)
         t.start()
 
-    def process_packet(self, packet):
-        output_array = []
-        for i in range(0, 200):
-            output_array.append(random.random())
+    def process_packet(self, packet, arrays_length):
+        first_packet = packet[0:arrays_length]
+        second_packet = packet[arrays_length:]
 
-        return output_array
+        return first_packet, second_packet
 
     def display_graph(self):
         self.graphing = True
