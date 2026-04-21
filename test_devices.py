@@ -20,12 +20,16 @@ class Test_DAVLL(Digital_DAVLL):
         self._start_serial_reader()
     
     def process_packet(self, packet, array_length):
-        output_array = []
+        output_array_0 = []
+        output_array_1 = []
         # Create a sine wave vased on the period
         for i in range(0, 4096):
-            output_array.append(((16 * self.ramp_controller.pot) * math.cos(i / self.ramp_controller.period)) + ((random.random()-0.5) * 100))
+            output_value_0 = ((16 * self.ramp_controller.pot) * math.cos(i / self.ramp_controller.period)) 
+            output_value_1 = ((16 * self.ramp_controller.pot) * math.sin(i / self.ramp_controller.period)) 
+            output_array_0.append(output_value_0+ ((random.random()-0.5) * 100))
+            output_array_1.append(output_value_1+ ((random.random()-0.5) * 100))
 
-        return output_array
+        return output_array_0, output_array_1
 
 class Test_Ramp(Ramp_Controller):
     '''

@@ -91,7 +91,7 @@ class Digital_DAVLL():
                 if self.recording_all:
                     self.run_logger.write_dataline(self.davll_output)
                 if self.graphing:
-                    self.graph.update_graph(self.davll_output[1])
+                    self.graph.update_graph(self.davll_output)
                 threading.Event().wait(self.ramp_controller.period / 1000)
 
         t = threading.Thread(target=read_loop, daemon=True)
