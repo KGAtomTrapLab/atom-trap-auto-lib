@@ -1,6 +1,0 @@
-Gillen Atom Trap Ramp Controller
-START TIME: 18:17:43 02-24-2026
-18:17:44 02-24-2026	Attempting to connect ramp on port COM7 with baud rate 9600
-18:17:44 02-24-2026	Ramp successfully connected on port COM7
-18:17:44 02-24-2026	Ramp Connection Error
-18:17:44 02-24-2026	invalid literal for int() with base 10: '\r\n'
