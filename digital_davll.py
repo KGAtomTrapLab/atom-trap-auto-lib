@@ -4,12 +4,14 @@ from display_data import Data_Graph
 from log_data import DataLogger
 import threading
 import random
+import time
+import traceback
 
 class Digital_DAVLL():
     ADC_RESOLUTION = 4096
     ADC_SUPPLY_VOLTAGE= 5
 
-    def __init__(self, data_logger: DataLogger, ramp_port="COM7", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
+    def __init__(self, data_logger: DataLogger, ramp_port="COM4", ramp_baud_rate = 9600, pd_port="COM4", pd_baud_rate=115200):
         '''
         Create an instance of the DAVLL with the connection data
         
@@ -57,15 +59,22 @@ class Digital_DAVLL():
             self.run_logger.log(f"Attempting to connect ramp on port {self.ramp_port} with baud rate {self.ramp_baud_rate}")
             self.ramp_controller = Ramp_Controller(self.ramp_port, self.ramp_baud_rate) 
             connection_port = self.ramp_controller.connect()
+            self.ramp_controller.serial_connection.reset_input_buffer()
             print(f"Ramp controller connected on port {connection_port}")
             self.run_logger.log(f"Ramp successfully connected on port {connection_port}")
-            controller_status = self.ramp_controller.get_status()
-            print(f"Current period (ms): {color_yellow(controller_status[0])}")
-            print(f"Current Potentiometer Value: {color_yellow(controller_status[1])}")
+            try:
+                controller_status = self.ramp_controller.get_status()
+                print(f"Current period (ms): {color_yellow(controller_status[0])}")
+                print(f"Current Potentiometer Value: {color_yellow(controller_status[1])}")
+            except:
+                print("Could not get controller status")
+
+            
             self._start_serial_reader()
             return 0
         except Exception as e:
             self.run_logger.log("Ramp Connection Error.")
+            traceback.print_exc()
             self.run_logger.log(str(e))
             return -1
 
@@ -84,15 +93,18 @@ class Digital_DAVLL():
         print("Starting reader")
         def read_loop():
             while True:
-                arrays_length, self.last_packet = self.ramp_controller.read_packet()
-                self.davll_output = self.process_packet(self.last_packet, arrays_length)
-                self.new_output_event.set()
-                # Record if enabled
-                if self.recording_all:
-                    self.run_logger.write_dataline(self.davll_output)
-                if self.graphing:
-                    self.graph.update_graph(self.davll_output)
-                threading.Event().wait(self.ramp_controller.period / 1000)
+                try:
+                    arrays_length, self.last_packet = self.ramp_controller.read_packet()
+                    self.davll_output = self.process_packet(self.last_packet, arrays_length)
+                    self.new_output_event.set()
+                    # Record if enabled
+                    if self.recording_all:
+                        self.run_logger.write_dataline(self.davll_output)
+                    if self.graphing:
+                        self.graph.update_graph(self.davll_output)
+                except Exception as e:
+                    print("Read crash:")
+                    traceback.print_exc()
 
         t = threading.Thread(target=read_loop, daemon=True)
         t.start()

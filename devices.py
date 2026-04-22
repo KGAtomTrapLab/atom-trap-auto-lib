@@ -106,7 +106,7 @@ class Ramp_Controller(Arduino):
         :param value: Number from 0-127.
         '''
         # Do not send if the value isn't an int
-        if (value % 1 != 0) or (value <= 0) or (value >= 128):
+        if (value % 1 != 0) or (value < 0) or (value >= 128):
             print("Please send an integer between 0-127")
             return
         

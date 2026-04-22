@@ -96,7 +96,7 @@ class LabControlCLI(cmd2.Cmd):
 
     # INITIALIZATION METHODS
     connect_parser = cmd2.Cmd2ArgumentParser()
-    connect_parser.add_argument("--port", type=str, default="COM7")
+    connect_parser.add_argument("--port", type=str, default="COM4")
     connect_parser.add_argument("--baud", type=int, default=115200)
     connect_parser.add_argument('-t', '--test', action='store_true', help='Run in test mode(not connected to arduino)')
     connect_parser.add_argument("--mode", type=str, default="std")
@@ -178,7 +178,7 @@ class LabControlCLI(cmd2.Cmd):
             return
         self.collection_loop_running = True
         print("Starting the collection loop...")
-        self.control_calibrator.gather_data(12000, 15000, 100, 60, 120, 1, self.davll, self.data_logger)
+        self.control_calibrator.gather_data(13800, 14000, 200, 95, 125, 1, self.davll, self.data_logger)
         print("Collection loop finished.")
 
     # def do_set(self, args):

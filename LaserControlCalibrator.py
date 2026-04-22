@@ -52,7 +52,6 @@ class LaserControlCalibrator():
                 self.laser_controller.set_current_and_wait(target_current)
                 print("Current set.")
                 print("Reading line of data...")
-                digital_davll.clear_queue()
 
                 for i in range(0, 5):
                     # Blocking function that gets a line of data, records it
