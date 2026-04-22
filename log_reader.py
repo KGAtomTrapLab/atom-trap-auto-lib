@@ -12,20 +12,53 @@ def f(t, therm_val, current_val, channel = 0):
 
 # t = 
 
+def make_3d(current_values, therm_value):
+    # Build the Z grid by collecting all results
+    Z = []
+    for current_value in current_values:
+        result = f(0, therm_value, current_value, 0)
+        Z.append(result)
+
+    Z = np.array(Z)  # shape: (len(current_values), len(result))
+
+    # Build X and Y grids
+    y_points = np.linspace(0, len(Z[0]), len(Z[0]))
+    X, Y = np.meshgrid(current_values, y_points)
+
+    return X, Y, Z
+
 # Grab the dictionary
 file_values, current_values, thermistor_values = load_log_data("logs/20260421-183026.log")
 
 # print(len(file_values[80.0][13050.0]))
 
 # Define initial parameters
-init_amplitude = thermistor_values[2]
-init_frequency = current_values[2]
+init_therm = thermistor_values[2]
+init_current = current_values[2]
 
 # Create the figure and the line that we will manipulate
-fig, ax = plt.subplots()
-chnl1, = ax.plot(f(0, init_amplitude, init_frequency, 0), lw=2)
-chnl2, = ax.plot(f(0, init_amplitude, init_frequency, 1), lw=2)
-ax.set_xlabel('Time [s]')
+# fig, ax = plt.subplots()
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+i = 0
+
+# for current_value in current_values:
+#     result = f(0, init_amplitude, current_value, 0)
+#     chnl1, = ax.plot3D(i, np.linspace(0, len(result), len(result)), result, lw=2)
+    
+#     i += 1
+
+
+X, Y, Z = make_3d(current_values, init_therm)
+
+# Plot the surface (note the transpose)
+ax.plot_surface(X, Y, Z.T, cmap='viridis')
+
+
+
+
+# chnl2, = ax.plot(f(0, init_amplitude, init_frequency, 1), lw=2)
+ax.set_xlabel('Current [mA]')
 
 # adjust the main plot to make room for the sliders
 fig.subplots_adjust(left=0.25, bottom=0.25)
@@ -37,7 +70,7 @@ freq_slider = Slider(
     label='Current',
     valmin=min(current_values),
     valmax=max(current_values),
-    valinit=init_frequency,
+    valinit=init_current,
     valstep=current_values,
 )
 
@@ -48,7 +81,7 @@ amp_slider = Slider(
     label="Resistance",
     valmin=min(thermistor_values),
     valmax=max(thermistor_values),
-    valinit=init_amplitude,
+    valinit=init_therm,
     valstep=thermistor_values,
     orientation="vertical"
 )
@@ -63,6 +96,12 @@ def update(val):
     chnl2values = f(0, amp_slider.val, freq_slider.val, 1)
     x = np.arange(len(chnl2values))
     chnl2.set_data(x, chnl2values)
+
+    X, Y, Z = make_3d(current_values, init_therm)
+
+    # Plot the surface (note the transpose)
+    ax.plot_surface(X, Y, Z.T, cmap='viridis')
+
 
     
     ax.relim()
@@ -88,6 +127,6 @@ def reset(event):
     amp_slider.reset()
 button.on_clicked(reset)
 
-ax.set_ylim([0, 1000])
+ax.set_ylim([0, 4096])
 
 plt.show()
