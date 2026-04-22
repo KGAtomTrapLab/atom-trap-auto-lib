@@ -47,13 +47,12 @@ def load_log_data(logfile_name):
                     current_dictionary[target_current][target_resistance] = []
 
             # Grab the data from the line
-            if "RAMP START" in current_line:
+            if "DAVLL" in current_line:
                 filtered_line = current_line.split(",")
                 filtered_line = filtered_line[0].split()
                 ramp_start = filtered_line[-1]
 
                 filtered_line = current_line.split("DAVLL: ")[1]
-                # print(filtered_line)
 
                 # Create an array for the first and second line
                 data_lines = []
@@ -80,4 +79,4 @@ def load_log_data(logfile_name):
     # 
 
 if __name__ == "__main__":
-    load_log_data("logs/20260226-172143.log")
+    load_log_data("logs/20260421-195722.log")

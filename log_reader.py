@@ -13,7 +13,7 @@ def f(t, therm_val, current_val, channel = 0):
 # t = 
 
 # Grab the dictionary
-file_values, current_values, thermistor_values = load_log_data("logs/20260226-172143.log")
+file_values, current_values, thermistor_values = load_log_data("logs/20260421-183026.log")
 
 # print(len(file_values[80.0][13050.0]))
 
@@ -88,6 +88,6 @@ def reset(event):
     amp_slider.reset()
 button.on_clicked(reset)
 
-ax.set_ylim([-5, 5])
+ax.set_ylim([0, 1000])
 
 plt.show()
