@@ -137,8 +137,8 @@ class Digital_DAVLL():
 
         '''
         # Clear the output flag and wait for it to be set
+        self.new_output_event.wait()
         self.new_output_event.clear()
-        self.new_output_event.wait()  # blocks efficiently
         return self.davll_output
     
     # # Record a line of data from the ramp

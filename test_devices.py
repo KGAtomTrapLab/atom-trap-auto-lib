@@ -20,6 +20,7 @@ class Test_DAVLL(Digital_DAVLL):
         self._start_serial_reader()
     
     def process_packet(self, packet, array_length):
+        time.sleep(self.ramp_controller.period / 1000)
         output_array_0 = []
         output_array_1 = []
         # Create a sine wave vased on the period

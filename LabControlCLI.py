@@ -3,6 +3,7 @@ from log_data import DataLogger
 from digital_davll import Digital_DAVLL
 from LaserControlCalibrator import LaserControlCalibrator
 from test_devices import Test_DAVLL
+from log_reader import graph_log
 
 import pathlib
 import cmd2
@@ -176,11 +177,22 @@ class LabControlCLI(cmd2.Cmd):
         if self.collection_loop_running:
             self.perror("Collection loop already started. Stop the program and try again.")
             return
+        try:
+            response = self.read_input("Start collection loop. Are you sure? [y/n]")
+        except EOFError:
+            response = "n"
+        if response !=  "y":
+            return
         self.collection_loop_running = True
         print("Starting the collection loop...")
         self.control_calibrator.gather_data(13800, 14000, 200, 95, 125, 1, self.davll, self.data_logger)
         print("Collection loop finished.")
 
+    def do_logview(self, arg):
+        'Load a log file into a graph for viewing'
+        graph_log(arg)
+    
+    complete_logview = cmd2.Cmd.path_complete
     # def do_set(self, args):
     #     'Set the current of the laser: set_current <current>'
     #     # laser_controller = LaserController()
