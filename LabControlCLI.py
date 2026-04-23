@@ -70,23 +70,6 @@ class LabControlCLI(cmd2.Cmd):
         # Collection Loop on or off
         self.collection_loop_running = False
 
-
-    # CUSTOM_CATEGORY = 'Default Commands'
-    # @cmd2.with_category(CUSTOM_CATEGORY)
-    # def do_intro(self, _: cmd2.Statement) -> None:
-    #     """Display the intro banner."""
-    #     self.poutput(self.intro)
-
-    # @cmd2.with_category(CUSTOM_CATEGORY)
-    # def do_echo(self, arg: cmd2.Statement) -> None:
-    #     """Multiline command."""
-    #     self.poutput(
-    #         stylize(
-    #             arg,
-    #             style=Style(color=self.foreground_color),
-    #         )
-    #     )
-
     def preloop(self) -> None:
         # Initiate the log at the beginning of each run
         self.data_logger = DataLogger("./logs")
@@ -129,7 +112,7 @@ class LabControlCLI(cmd2.Cmd):
         # print(self.davll.ramp_controller.print)
 
     def do_record(self, args):
-        'Record all data from the ramp'
+        'Records all data from the ramp. Every ramp signal received is stored in the logfile.'
         result = self.davll.toggle_record()
         if result: print("Recording started")
         else: print("Recording stopped")
