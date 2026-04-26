@@ -4,8 +4,4 @@ from log_data import DataLogger
 from LabControlCLI import LabControlCLI
 
 if __name__ == "__main__":
-    # control_calibrator.gather_data(12950, 14500, 100, 80, 120, 1, digital_davll, data_logger)
-    # while True:
-    #     print(digital_davll.get_data_line())
-    # control_calibrator.gather_data(0, 100, 1, 80, 120, 1)
     LabControlCLI().cmdloop()

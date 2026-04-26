@@ -1,4 +1,4 @@
-from devices import Ramp_Controller, Arduino, PD_Reader
+from devices import Ramp_Controller, Arduino
 from font_colors import color_yellow
 from display_data import Data_Graph
 from log_data import DataLogger
@@ -29,7 +29,6 @@ class Digital_DAVLL():
 
         self.pd_port = pd_port
         self.pd_baud_rate = pd_baud_rate
-        self.pd_reader = PD_Reader(pd_port, pd_baud_rate)
 
         self.channel_mode = 2
 
@@ -77,17 +76,6 @@ class Digital_DAVLL():
             traceback.print_exc()
             self.run_logger.log(str(e))
             return -1
-
-
-        # # Connect the photodiode reader
-        # try:
-        #     self.run_logger.log(f"Attempting to connect DAVLL on port {self.pd_port} with baud rate {self.pd_baud_rate}")
-        #     connection_port = self.pd_reader.connect()
-        #     print(f"DAVLL connected on port {connection_port}")
-        # except Exception as e:
-        #     self.run_logger.log("DAVLL Connection Error")
-        #     self.run_logger.log(str(e))
-        #     exit()
 
     def _start_serial_reader(self):
         print("Starting reader")
@@ -140,15 +128,3 @@ class Digital_DAVLL():
         self.new_output_event.wait()
         self.new_output_event.clear()
         return self.davll_output
-    
-    # # Record a line of data from the ramp
-    # def record_data_line(self):
-
-    
-    def clear_queue(self):
-        self.pd_reader.clear_buffer()
-
-if __name__ == "__main__":
-    graph_davll = Digital_DAVLL()
-    graph_davll.connect()
-    graph_davll.graph_data_loop()

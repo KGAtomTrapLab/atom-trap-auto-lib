@@ -1,7 +1,7 @@
 # Testing devices that send default values for connections
 from devices import Ramp_Controller
 from digital_davll import Digital_DAVLL
-from font_colors import color_red, color_yellow
+from font_colors import color_yellow
 import time
 import math
 import random

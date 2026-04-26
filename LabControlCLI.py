@@ -14,6 +14,8 @@ from cmd2 import (
 from rich.style import Style
 from laser_controller.LaserController import LaserController
 
+# TODO: Go through and clean up - sort commands?
+
 class LabControlCLI(cmd2.Cmd):
     """Cmd2 application to demonstrate many common features."""
 
