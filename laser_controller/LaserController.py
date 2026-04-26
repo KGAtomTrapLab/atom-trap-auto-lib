@@ -8,9 +8,18 @@ class LaserController(InstrumentController):
     
     def __init__(self, resource_manager, resource_address):
         super().__init__(resource_manager, resource_address)
+        # The speed at which the current changes, in mA/sec
+        self.current_change_speed = 5
 
     # Turns the laser on
     def laser_on(self):
+        '''
+            Turns the laser on SAFELY. Verifies safe control of laser
+        '''
+        print("TURNING LASER ON! PRESS ENTER WHEN READY.")
+        # Add beeps to verify
+        # Make sure current is zero
+        self.set_current(0)
         self.send_command(':LASER ON')
 
     def tec_on(self):
@@ -30,9 +39,19 @@ class LaserController(InstrumentController):
         self.send_command(':TEC OFF')
     
     # Sets the current in mA
-    def set_current(self, current):
-        # Convert the current value from mA to A and format it in scientific notation
-        current_in_A = "{:.2e}".format(float(current) * 10**-3)
+    def set_current(self, target_current):
+        # SAFETY LOOP: The current starts at its current position and slowly ramps up to this value.
+        start_current = self.get_current()
+        while abs(start_current - target_current) < self.current_change_speed:
+            next_target_current =  start_current + self.current_change_speed
+            # Convert the current value from mA to A and format it in scientific notation
+            current_in_A = "{:.4e}".format(float(target_current) * 10**-3)
+            self.send_command(f':ILD:SET {current_in_A}')
+            time.sleep(1)
+            start_current = next_target_current
+
+        # Finally, send the actual target
+        current_in_A = "{:.4e}".format(float(target_current) * 10**-3)
         self.send_command(f':ILD:SET {current_in_A}')
         #logging.info(f"Current set to {current_in_A} A")
 

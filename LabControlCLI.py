@@ -188,7 +188,21 @@ class LabControlCLI(cmd2.Cmd):
     #     'Get the current of the laser: get_current'
     #     laser_controller = LaserController()
     #     print(laser_controller.get_current())
+    
+    #Ramp control commands
+    ramp_control_parser = cmd2.Cmd2ArgumentParser()
+    ramp_control_parser.add_argument("--start", type=int)
+    ramp_control_parser.add_argument("--end", type=int)
+    @cmd2.with_argparser(ramp_control_parser)
+    def do_ramp(self, args):
+        if args.start != None:
+            self.davll.ramp_controller.set_start(args.start)
+            print("Set ramp start position to ", args.start)
+        if args.end != None:
+            self.davll.ramp_controller.set_end(args.end)
+            print("Set ramp end position to ", args.end)
 
+    
     
 
     def do_exit(self, arg):

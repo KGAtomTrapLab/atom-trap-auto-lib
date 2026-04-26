@@ -57,6 +57,8 @@ class Ramp_Controller(Arduino):
     def __init__(self, device_port, baud_rate) -> None:
         self.period = 200
         self.pot = 0
+        self.rampstart = 0
+        self.rampend = 4096
         super().__init__(device_port, baud_rate)
 
     def get_status(self):
@@ -112,6 +114,20 @@ class Ramp_Controller(Arduino):
         
         self.send(f"pot {value}")
         self.pot = value
+
+    def set_start(self, value: int):
+        '''
+            Set the starting position of the ramp
+        '''
+        self.send(f"rampstart {value}")
+        self.rampstart = value
+
+    def set_end(self, value: int):
+        '''
+            Set the ending position of the ramp
+        '''
+        self.send(f"rampend {value}")
+        self.rampend = value
 
     def read_short(self):
         first_byte = self.read()

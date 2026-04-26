@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.fft import fft, fftfreq
 
+from filters import filter
+
 from load_log_data import load_log_data
 
 from matplotlib.widgets import Button, Slider
@@ -11,8 +13,7 @@ def graph_log(filename):
     # The parametrized function to be plotted
     def f(t, therm_val, current_val, channel = 0):
         target = file_values[float(current_val)][float(therm_val)][0][channel]
-        # ax.plot(np.abs(fft(target)))
-        return target
+        return filter(target)
 
     # Grab the dictionary
     file_values, current_values, thermistor_values = load_log_data(filename)
@@ -90,7 +91,7 @@ def graph_log(filename):
         amp_slider.reset()
     button.on_clicked(reset)
 
-    ax.set_ylim([0, 1000])
+    ax.set_ylim([-5, 5])
 
     plt.show()
 
