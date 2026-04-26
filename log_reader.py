@@ -2,11 +2,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.fft import fft, fftfreq
 
-from filters import filter
+from filters import filter, template_match
 
 from load_log_data import load_log_data
 
 from matplotlib.widgets import Button, Slider
+
+import pickle
+
+template = None
+# Load the template back in
+with open('template_1.pkl', 'rb') as file:
+
+    template_loaded = pickle.load(file) # deserialize using load()
+    template = template_loaded
+
 
 def graph_log(filename):
 
@@ -25,10 +35,14 @@ def graph_log(filename):
     init_frequency = current_values[2]
 
     # Create the figure and the line that we will manipulate
-    fig, ax = plt.subplots()
-    chnl1, = ax.plot(f(0, init_amplitude, init_frequency, 0), lw=2)
-    chnl2, = ax.plot(f(0, init_amplitude, init_frequency, 1), lw=2)
-    ax.set_xlabel('Time [s]')
+    fig, [ax, ax2, ax3] = plt.subplots(3)
+    output_0 = f(0, init_amplitude, init_frequency, 0)
+    output_1 = f(0, init_amplitude, init_frequency, 1)
+    chnl1, = ax.plot(output_0, lw=2)
+    chnl2, = ax.plot(output_1, lw=2)
+    combined, = ax2.plot(output_0-output_1, lw=2)
+    score, = ax3.plot(template_match(output_0-output_1, template), lw=2)
+    ax3.set_ylim([-1,1])
 
     # adjust the main plot to make room for the sliders
     fig.subplots_adjust(left=0.25, bottom=0.25)
@@ -59,17 +73,35 @@ def graph_log(filename):
 
     # The function to be called anytime a slider's value changes
     def update(val):
-        chnl1values = f(0, amp_slider.val, freq_slider.val, 0)
+        chnl1values = f(0, amp_slider.val, freq_slider.val, 0) #+ 20
         x = np.arange(len(chnl1values))
         chnl1.set_data(x, chnl1values)
 
-        chnl2values = f(0, amp_slider.val, freq_slider.val, 1)
+        chnl2values = f(0, amp_slider.val, freq_slider.val, 1) #- f(0, amp_slider.val, freq_slider.val, 0)
         x = np.arange(len(chnl2values))
         chnl2.set_data(x, chnl2values)
+
+        # if amp_slider.val == 13200 and freq_slider.val == 116:
+        #     result = chnl2values - chnl1values
+        #     with open('template_1.pkl', 'wb') as file:  # open a text file
+        #         pickle.dump(result[213:905], file) # serialize the list
+    
+        combined.set_data(x, chnl2values - chnl1values)
+        result_template = template_match(chnl2values-chnl1values, template)
+        # result_template -= 1
+        temp_x = np.arange(len(result_template))
+        score.set_data(temp_x, result_template ** 5)
 
         
         ax.relim()
         ax.set_xlim([0, len(chnl1values)])
+
+        ax2.relim()
+        ax2.set_xlim([0, len(chnl1values)])
+
+
+        ax3.relim()
+        ax3.set_xlim([0, len(chnl1values)])
 
         # print(list(range(0, len(values))))
         # line.set_xdata(list(range(0, len(values))))
