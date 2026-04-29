@@ -12,7 +12,7 @@ class Data_Graph():
 
     def create_graph(self):
         self.fig, self.ax = plt.subplots()
-        self.ax.set_ylim(-2048, 2048)
+        self.ax.set_ylim(-1, 2048)
         self.line1, = self.ax.plot(self.data)
         self.line2, = self.ax.plot(self.data)
         plt.show()
