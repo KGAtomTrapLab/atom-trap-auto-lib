@@ -1,6 +1,7 @@
 # Testing devices that send default values for connections
 from devices import Ramp_Controller
 from digital_davll import Digital_DAVLL
+from LaserControlCalibrator import LaserControlCalibrator
 from font_colors import color_yellow
 import time
 import math
@@ -69,3 +70,13 @@ class Test_Ramp(Ramp_Controller):
     def get_status(self):
         return self.period, 0
         
+class Test_LaserControlCalibrator(LaserControlCalibrator):
+    def __init__(self):
+        super().__init__()
+
+    def connect_laser_controller(self):
+
+        laser_controller_address = ""
+
+        self.laser_controller = None
+        print("Test Laser Controller Initiated")

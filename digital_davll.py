@@ -25,10 +25,7 @@ class Digital_DAVLL():
 
         self.ramp_port = ramp_port
         self.ramp_baud_rate = ramp_baud_rate
-        self.ramp_controller = Ramp_Controller(ramp_port, ramp_baud_rate) 
-
-        self.pd_port = pd_port
-        self.pd_baud_rate = pd_baud_rate
+        self.ramp_controller = Ramp_Controller(ramp_port, ramp_baud_rate)
 
         self.channel_mode = 2
 
@@ -110,11 +107,14 @@ class Digital_DAVLL():
 
         return first_packet, second_packet
 
-    def display_graph(self):
+    def display_graph(self, laser_status_function):
         self.graphing = True
-        t = threading.Thread(target=self.graph.create_graph, daemon=True)
+        t = threading.Thread(target=self.graph.create_graph, args=[self.get_davll_status, laser_status_function], daemon=True)
         t.start()
     
+    def get_davll_status(self):
+        # TODO: Add something that shows if it's running? A timestamp???
+        return f"RAMP STATUS\nPERIOD: {self.ramp_controller.period} ms\nPOT: {self.ramp_controller.pot}"
 
     def get_data_line(self):
         '''

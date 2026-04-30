@@ -2,7 +2,7 @@
 from log_data import DataLogger
 from digital_davll import Digital_DAVLL
 from LaserControlCalibrator import LaserControlCalibrator
-from test_devices import Test_DAVLL
+from test_devices import Test_DAVLL, Test_LaserControlCalibrator
 from log_reader import graph_log
 
 import pathlib
@@ -85,8 +85,8 @@ class LabControlCLI(cmd2.Cmd):
     connect_parser.add_argument("--port", type=str, default="COM4")
     connect_parser.add_argument("--baud", type=int, default=115200)
     connect_parser.add_argument('-t', '--test', action='store_true', help='Run in test mode(not connected to arduino)')
-    connect_parser.add_argument("--mode", type=str, default="std")
 
+    # TODO: Add the ability to run this command multiple times without an error occuring
     @cmd2.with_argparser(connect_parser)
     def do_connect(self, args):
         """Connect to the ramp and laser controller"""
@@ -95,6 +95,9 @@ class LabControlCLI(cmd2.Cmd):
             print("Creating TEST mode.")
             self.davll = Test_DAVLL(self.data_logger, args.port, args.baud)
             self.davll.connect()
+
+            self.control_calibrator = Test_LaserControlCalibrator()
+            self.control_calibrator.connect_laser_controller()
             return
         self.davll = Digital_DAVLL(self.data_logger, args.port, args.baud)
         if self.davll.connect() < 0: self.perror("Ramp Error. Check log for more info.")
@@ -110,8 +113,9 @@ class LabControlCLI(cmd2.Cmd):
     def do_graph(self, args):
         'View the live graph of data coming from the ramp'
         # self.davll.print = not self.davll.print
-        self.davll.display_graph()
+        self.davll.display_graph(self.control_calibrator.get_status)
         # print(self.davll.ramp_controller.print)
+
 
     def do_record(self, args):
         'Records all data from the ramp. Every ramp signal received is stored in the logfile.'
@@ -154,7 +158,7 @@ class LabControlCLI(cmd2.Cmd):
             self.control_calibrator.laser_controller.laser_off()
             self.control_calibrator.laser_controller.tec_off()
         else: self.perror("Provide a --pwr setting.")
-    
+    # TODO: Commands 
 
 
     def do_collect(self, args):
@@ -173,9 +177,14 @@ class LabControlCLI(cmd2.Cmd):
         self.control_calibrator.gather_data(13800, 14000, 200, 95, 125, 1, self.davll, self.data_logger)
         print("Collection loop finished.")
 
-    def do_logview(self, arg):
+
+    file_parser = cmd2.Cmd2ArgumentParser()
+    file_parser.add_argument('filepath')
+    
+    @cmd2.with_argparser(file_parser)
+    def do_logview(self, args):
         'Load a log file into a graph for viewing'
-        graph_log(arg)
+        graph_log(args.filepath)
     
     complete_logview = cmd2.Cmd.path_complete
     # def do_set(self, args):
@@ -206,8 +215,7 @@ class LabControlCLI(cmd2.Cmd):
 
     
     
-
-    def do_exit(self, arg):
+    def do_quit(self, arg):
         'Exit the CLI'
         self.data_logger.close_log()  # flushes buffer and closes file
         print("Log saved.")
