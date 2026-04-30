@@ -1,7 +1,7 @@
 from devices import Ramp_Controller, Arduino
 from font_colors import color_yellow
 from display_data import Data_Graph
-from log_data import DataLogger
+from DataLogger import DataLogger
 import threading
 import random
 import time

@@ -182,6 +182,8 @@
   },
   "active": "9352c0585480f274",
   "lastOpenFiles": [
+    "DIgitalDavll.py",
+    "DataLogger.py",
     "logs/20260428-122518.log",
     "logs/20260427-201821.log",
     "logs/20260427-200135.log",
@@ -191,8 +193,6 @@
     "logs/20260420-204014.log",
     "logs/20260420-203951.log",
     "logs/20260420-203858.log",
-    "logs/20260420-203634.log",
-    "logs/20260420-203555.log",
     "useful-logs.md",
     "2026-03-03.md",
     "README.md"

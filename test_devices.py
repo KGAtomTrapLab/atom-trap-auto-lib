@@ -1,6 +1,6 @@
 # Testing devices that send default values for connections
 from devices import Ramp_Controller
-from digital_davll import Digital_DAVLL
+from DIgitalDavll import Digital_DAVLL
 from LaserControlCalibrator import LaserControlCalibrator
 from font_colors import color_yellow
 import time

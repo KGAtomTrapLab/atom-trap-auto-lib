@@ -1,6 +1,6 @@
 # Example of using this library with a simple CMD 
-from log_data import DataLogger
-from digital_davll import Digital_DAVLL
+from DataLogger import DataLogger
+from DIgitalDavll import Digital_DAVLL
 from LaserControlCalibrator import LaserControlCalibrator
 from test_devices import Test_DAVLL, Test_LaserControlCalibrator
 from log_reader import graph_log
