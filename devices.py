@@ -151,12 +151,16 @@ class Ramp_Controller(Arduino):
 
         # Read arrays
         result_array = []
+        # Set a timer in case of an error
+        start_time = time.time()
         while True:
             first_byte = self.read()
             second_byte = self.read()
             if first_byte == b'\xcb': break
             result = int.from_bytes(first_byte + second_byte, byteorder='little', signed=True)
             result_array.append(result)
+            if time.time() > (start_time + 3):
+                break
 
         # Await footer
         return arrays_length, result_array
