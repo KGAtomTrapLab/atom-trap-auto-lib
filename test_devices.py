@@ -80,3 +80,15 @@ class Test_LaserControlCalibrator(LaserControlCalibrator):
 
         self.laser_controller = None
         print("Test Laser Controller Initiated")
+
+    def get_status(self):
+        '''Prints the status of the laser. Returns:
+            Laser on/off - TEC on/off
+            Target Current - actual current
+            Target resistance - actual resistance
+        '''
+        return f"""LASER STATUS\nLASER: {"OFF"}—TEC: {"OFF"}
+        CURRENT:
+        TARGET:{0}mA —ACTUAL:{0}mA
+        TEMPERATURE:
+        TARGET:{0}Ω — ACTUAL:{0}Ω\n"""

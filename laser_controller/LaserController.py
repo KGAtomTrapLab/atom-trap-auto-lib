@@ -11,6 +11,13 @@ class LaserController(InstrumentController):
         # The speed at which the current changes, in mA/sec
         self.current_change_speed = 5
 
+        #Desired current and temperature
+        self.target_current = 0
+        self.target_thm_res = 0
+        # Laser/tec on/off - 0 is off and 1 is on
+        self.laser_status = 0
+        self.tec_status = 0
+
     # Turns the laser on
     def laser_on(self):
         '''
@@ -21,27 +28,32 @@ class LaserController(InstrumentController):
         # Make sure current is zero
         self.set_current(0)
         self.send_command(':LASER ON')
+        self.laser_status = 1
 
     def tec_on(self):
         '''
             Enable the thermistor control
         '''
         self.send_command(':TEC ON')
+        self.tec_status = 1
 
     # Turns the laser off
     def laser_off(self):
         self.send_command(':LASER OFF')
+        self.laser_status = 0
 
     def tec_off(self):
         '''
             Disable the thermistor control
         '''
         self.send_command(':TEC OFF')
+        self.tec_status = 0
     
     # Sets the current in mA
     def set_current(self, target_current):
         # SAFETY LOOP: The current starts at its current position and slowly ramps up to this value.
         start_current = self.get_current()
+        self.target_current = target_current
         while abs(start_current - target_current) < self.current_change_speed:
             next_target_current =  start_current + self.current_change_speed
             # Convert the current value from mA to A and format it in scientific notation
@@ -69,6 +81,7 @@ class LaserController(InstrumentController):
     
     # Sets the thermistor resistance in Ohms
     def set_thm_res(self, res):
+        self.target_thm_res = res
         self.send_command(f':RESI:SET {res}')
 
     def get_thm_res(self):
@@ -92,11 +105,7 @@ class LaserController(InstrumentController):
         
         self.set_thm_res(amount)
 
-        print("Target:", amount)
-        print("Actual:", self.get_thm_res())
-
         while abs(amount - self.get_thm_res()) > threshold:
-            print(self.get_thm_res())
             pass
 
         # check that the value is staying consistent

@@ -26,7 +26,11 @@ class LaserControlCalibrator():
             Target Current - actual current
             Target resistance - actual resistance
         '''
-        return f"LASER STATUS\nLASER: {"OFF"}—TEC: {"OFF"}\nCURRENT:\nTARGET:{0}mA —ACTUAL:{0}mA\nTEMPERATURE:\nTARGET:{0}Ω — ACTUAL:{0}Ω\n"
+        return f"""LASER STATUS\nLASER: {"OFF"}—TEC: {"OFF"}
+        CURRENT:
+        TARGET:{self.laser_controller.target_current}mA —ACTUAL:{self.laser_controller.get_current()}mA
+        TEMPERATURE:
+        TARGET:{self.laser_controller.target_thm_res}Ω — ACTUAL:{self.laser_controller.get_thm_res()}Ω\n"""
 
     
     def gather_data(self, res_min, res_max, res_step, cur_min, cur_max, cur_step, digital_davll, data_logger):
@@ -67,3 +71,12 @@ class LaserControlCalibrator():
                     data_logger.log(f"Target Resistance: {target_resistance} Target Current: {target_current}")
                     data_logger.log(f"Actual Resistance: {self.laser_controller.get_thm_res()} Actual Current: {self.laser_controller.get_current()}")
                     data_logger.write_dataline(output_data)
+
+    def lock_laser(self):
+        '''
+            Function to lock the laser - sweeps through a set of currents to find the best scoring window
+            Threading function that takes control of the laser when searching and then gives up control to the
+            user when ready
+
+            After found, the system attempts to center the zero-point by changing the current value to account for drift
+        '''
