@@ -213,6 +213,44 @@ class LabControlCLI(cmd2.Cmd):
             self.davll.ramp_controller.set_end(args.end)
             print("Set ramp end position to ", args.end)
 
+    # Set current and resistance
+    value_parser = cmd2.Cmd2ArgumentParser()
+    value_parser.add_argument("--set", type=float)
+    value_parser.add_argument("--increase", type=float)
+    value_parser.add_argument("--lower", type=float)
+
+    @cmd2.with_argparser(value_parser)
+    def do_current(self, args):
+        if (args.set):
+            print(f"Setting current to {args.set}...")
+            self.control_calibrator.laser_controller.set_current(args.set)
+            return
+        if args.increase :
+            print(f"Raising current by {args.increase}...")
+            self.control_calibrator.laser_controller.raise_current(args.increase)
+            return
+        if args.lower :
+            print(f"Lowering current by {args.lower}...")
+            self.control_calibrator.laser_controller.lower_current(args.lower)
+            return
+        
+    # Called "thm" and not "res" due to reducing confusion with pot command
+    @cmd2.with_argparser(value_parser)
+    def do_thm(self, args):
+        'Sets the resistance of the temperature control.'
+        if (args.set):
+            print(f"Setting resistance to {args.set}...")
+            self.control_calibrator.laser_controller.set_thm_res(args.set)
+            return
+        if args.increase :
+            print(f"Raising resistance by {args.increase}...")
+            self.control_calibrator.laser_controller.raise_thm_res(args.increase)
+            return
+        if args.lower :
+            print(f"Lowering resistance by {args.lower}...")
+            self.control_calibrator.laser_controller.lower_thm_res(args.lower)
+            return
+
     
     
     def do_quit(self, arg):
