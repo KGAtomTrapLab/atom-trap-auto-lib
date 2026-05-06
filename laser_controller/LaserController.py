@@ -2,6 +2,8 @@ from .InstrumentController import InstrumentController
 import logging
 import time
 
+MAX_CURRENT = 140
+
 # Class for controlling the Laser Controller
 # Inherits from InstrumentController
 class LaserController(InstrumentController):
@@ -24,11 +26,13 @@ class LaserController(InstrumentController):
             Turns the laser on SAFELY. Verifies safe control of laser
         '''
         print("TURNING LASER ON! PRESS ENTER WHEN READY.")
-        # Add beeps to verify
+        input()
         # Make sure current is zero
         self.set_current(0)
         self.send_command(':LASER ON')
         self.laser_status = 1
+        # Set tec to current value
+        self.set_thm_res(self.get_thm_res())
 
     def tec_on(self):
         '''
@@ -51,6 +55,9 @@ class LaserController(InstrumentController):
     
     # Sets the current in mA
     def set_current(self, target_current):
+        if target_current > MAX_CURRENT or target_current < 0:
+            print("Error: Current value too large")
+            return
         # SAFETY LOOP: The current starts at its current position and slowly ramps up to this value.
         start_current = self.get_current()
         self.target_current = target_current
@@ -95,6 +102,14 @@ class LaserController(InstrumentController):
     def lower_current(self, amount):
         current = self.get_current()
         self.set_current(current - amount)
+
+    def raise_thm_res(self, amount):
+        res = self.get_thm_res()
+        self.set_current(res + amount)
+
+    def lower_thm_res(self, amount):
+        res = self.get_thm_res()
+        self.set_current(res - amount)
         
     def set_resistance_and_wait(self, amount, threshold=20, check_iterations=400):
         '''

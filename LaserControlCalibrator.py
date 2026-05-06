@@ -26,11 +26,14 @@ class LaserControlCalibrator():
             Target Current - actual current
             Target resistance - actual resistance
         '''
-        return f"""LASER STATUS\nLASER: {"OFF"}—TEC: {"OFF"}
-        CURRENT:
-        TARGET:{self.laser_controller.target_current}mA —ACTUAL:{self.laser_controller.get_current()}mA
-        TEMPERATURE:
-        TARGET:{self.laser_controller.target_thm_res}Ω — ACTUAL:{self.laser_controller.get_thm_res()}Ω\n"""
+        try:
+            return f"""LASER STATUS\nLASER: {"OFF"}—TEC: {"OFF"}
+            CURRENT:
+            TARGET:{self.laser_controller.target_current}mA —ACTUAL:{self.laser_controller.get_current()}mA
+            TEMPERATURE:
+            TARGET:{self.laser_controller.target_thm_res}Ω — ACTUAL:{self.laser_controller.get_thm_res()}Ω\n"""
+        except:
+            return """LASER DISCONNECTED"""
 
     
     def gather_data(self, res_min, res_max, res_step, cur_min, cur_max, cur_step, digital_davll, data_logger):
