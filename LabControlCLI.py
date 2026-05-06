@@ -3,7 +3,7 @@ from DataLogger import DataLogger
 from DIgitalDavll import Digital_DAVLL
 from LaserControlCalibrator import LaserControlCalibrator
 from test_devices import Test_DAVLL, Test_LaserControlCalibrator
-from log_reader import graph_log
+from logview import graph_log
 
 import pathlib
 import cmd2

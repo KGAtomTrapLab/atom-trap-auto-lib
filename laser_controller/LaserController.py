@@ -54,7 +54,8 @@ class LaserController(InstrumentController):
         # SAFETY LOOP: The current starts at its current position and slowly ramps up to this value.
         start_current = self.get_current()
         self.target_current = target_current
-        while abs(start_current - target_current) < self.current_change_speed:
+        while abs(start_current - target_current) > self.current_change_speed:
+            # TODO: Make ability to subtract when actual is above target
             next_target_current =  start_current + self.current_change_speed
             # Convert the current value from mA to A and format it in scientific notation
             current_in_A = "{:.4e}".format(float(target_current) * 10**-3)
