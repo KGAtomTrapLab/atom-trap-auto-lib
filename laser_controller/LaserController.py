@@ -43,6 +43,11 @@ class LaserController(InstrumentController):
 
     # Turns the laser off
     def laser_off(self):
+        # Ramp down the current level to zero
+        while (self.target_current > self.current_change_speed):
+            self.lower_current(self.current_change_speed)
+            # Wait a moment
+            time.sleep(0.25)
         self.send_command(':LASER OFF')
         self.laser_status = 0
 
