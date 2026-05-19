@@ -79,8 +79,7 @@ class Digital_DAVLL():
         def read_loop():
             while True:
                 try:
-                    arrays_length, self.last_packet = self.ramp_controller.read_packet()
-                    self.davll_output = self.process_packet(self.last_packet, arrays_length)
+                    self.davll_output = self.ramp_controller.read_packet()
                     self.new_output_event.set()
                     # Record if enabled
                     if self.recording_all:

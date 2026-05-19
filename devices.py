@@ -132,8 +132,7 @@ class Ramp_Controller(Arduino):
     def read_short(self):
         first_byte = self.read()
         second_byte = self.read()
-
-        return first_byte + second_byte
+        return int.from_bytes(first_byte+second_byte, byteorder='little', signed=True)
 
 
     
@@ -141,26 +140,23 @@ class Ramp_Controller(Arduino):
         '''
             Read a packet being sent across the arduino
         '''
-        read_value = self.read()
-        # Await the header, parse single or dual channel
-        while read_value != b'\xcc' and read_value != b'\xcd':
-            read_value = self.read()
+        # Send a read request
+        self.send("read")
 
-        # Read length
-        arrays_length = int.from_bytes(self.read_short(), byteorder='little', signed=True)
+        # Read the length of the packet
+        pkt_lengths = self.read_short()
+        # Arrays will never be longer than 4096. Send an error if this occurs
+        if (pkt_lengths > 4096):
+            print("Transmission Error Occured!")
+            # TODO: Clear buffer
+        # Read first array
+        first_array = []
+        for i in range(0, pkt_lengths):
+            first_array.append(self.read_short())
 
-        # Read arrays
-        result_array = []
-        # Set a timer in case of an error
-        start_time = time.time()
-        while True:
-            first_byte = self.read()
-            second_byte = self.read()
-            if first_byte == b'\xcb': break
-            result = int.from_bytes(first_byte + second_byte, byteorder='little', signed=True)
-            result_array.append(result)
-            if time.time() > (start_time + 3):
-                break
+        # Read second array
+        second_array = []
+        for i in range(0, pkt_lengths):
+            second_array.append(self.read_short())
 
-        # Await footer
-        return arrays_length, result_array
+        return first_array, second_array
