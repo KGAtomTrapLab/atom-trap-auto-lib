@@ -9,7 +9,7 @@ def filter(input_array):
 
         normalized = z_normalize(smoothed)
 
-        return normalized
+        return smoothed
 
 def reduce_min(input_array):
     min = np.min(input_array)

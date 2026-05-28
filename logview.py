@@ -23,7 +23,7 @@ def graph_log(filename):
     # The parametrized function to be plotted
     def f(t, therm_val, current_val, channel = 0):
         target = file_values[float(current_val)][float(therm_val)][0][channel]
-        return filter(target)
+        return target, filter(target)
 
     # Grab the dictionary
     file_values, current_values, thermistor_values = load_log_data(filename)
@@ -35,14 +35,14 @@ def graph_log(filename):
     init_frequency = current_values[2]
 
     # Create the figure and the line that we will manipulate
-    fig, [ax, ax2, ax3] = plt.subplots(3)
-    output_0 = f(0, init_amplitude, init_frequency, 0)
-    output_1 = f(0, init_amplitude, init_frequency, 1)
+    fig, ax = plt.subplots()
+    output_0, output_1 = f(0, init_amplitude, init_frequency, 0)
+    # output_1 = f(0, init_amplitude, init_frequency, 1)
     chnl1, = ax.plot(output_0, lw=2)
-    chnl2, = ax.plot(output_1, lw=2)
-    combined, = ax2.plot(output_0-output_1, lw=2)
-    score, = ax3.plot(template_match(output_0-output_1, template), lw=2)
-    ax3.set_ylim([-1,1])
+    chnl2, = ax.plot(output_1, lw=5)
+    # combined, = ax2.plot(output_0-output_1, lw=2)
+    # score, = ax3.plot(template_match(output_0-output_1, template), lw=2)
+    # ax3.set_ylim([-1,1])
 
     # adjust the main plot to make room for the sliders
     fig.subplots_adjust(left=0.25, bottom=0.25)
