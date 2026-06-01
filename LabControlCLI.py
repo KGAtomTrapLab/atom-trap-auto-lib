@@ -13,8 +13,15 @@ from cmd2 import (
 )
 from rich.style import Style
 from laser_controller.LaserController import LaserController
+import warnings
 
-# TODO: Go through and clean up - sort commands?
+# Ignore the background thread warning
+warnings.filterwarnings(
+    "ignore",
+    message="Starting a Matplotlib GUI outside of the main thread will likely fail."
+)
+
+
 
 class LabControlCLI(cmd2.Cmd):
     """Cmd2 application to demonstrate many common features."""

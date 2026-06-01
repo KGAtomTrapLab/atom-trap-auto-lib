@@ -14,7 +14,7 @@ class Arduino:
     def connect(self):
         # TODO: Make something that looks for available devices and finds the most likely one
 
-        self.serial_connection = serial.Serial(self.device_port, self.baud_rate)  # open serial port
+        self.serial_connection = serial.Serial(self.device_port, self.baud_rate, timeout=0.5)  # open serial port
         # Read the "Serial Initialized value sent"
         self.serial_connection.readline()
         self.connected = True
@@ -131,7 +131,10 @@ class Ramp_Controller(Arduino):
 
     def read_short(self):
         first_byte = self.read()
+        if (first_byte == b''): raise TimeoutError("Read timed out.")
         second_byte = self.read()
+        # Check for timeouts, return errors if they happen
+        if (second_byte == b''): raise TimeoutError("Read timed out.")
         return int.from_bytes(first_byte+second_byte, byteorder='little', signed=True)
 
 
@@ -142,21 +145,28 @@ class Ramp_Controller(Arduino):
         '''
         # Send a read request
         self.send("read")
-
-        # Read the length of the packet
-        pkt_lengths = self.read_short()
-        # Arrays will never be longer than 4096. Send an error if this occurs
-        if (pkt_lengths > 4096):
-            print("Transmission Error Occured!")
-            # TODO: Clear buffer
-        # Read first array
+        # Create arrays
         first_array = []
-        for i in range(0, pkt_lengths):
-            first_array.append(self.read_short())
-
-        # Read second array
         second_array = []
-        for i in range(0, pkt_lengths):
-            second_array.append(self.read_short())
+        # Wrap all of it into a try-except in case the read times out
+        try:
+            # Read the length of the packet
+            pkt_lengths = self.read_short()
+            # Arrays will never be longer than 4096. Send an error if this occurs
+            if (pkt_lengths > 4096):
+                raise TimeoutError
+                # TODO: Clear buffer
+            # Read first array
+            first_array = []
+            for i in range(0, pkt_lengths):
+                first_array.append(self.read_short())
+
+            # Read second array
+            second_array = []
+            for i in range(0, pkt_lengths):
+                second_array.append(self.read_short())
+        except TimeoutError:
+            print("Timeout. Dumping...")
+            self.serial_connection.reset_input_buffer()
 
         return first_array, second_array
